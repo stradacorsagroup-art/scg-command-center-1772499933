@@ -1127,7 +1127,7 @@ async function openDealsKanban() {
           <div class="payment-grid" id="payGrid"></div>
         `;
 
-        const STORAGE_PAY = 'scg-payment-calendar-overrides-v1';
+        const STORAGE_PAY = 'scg-payment-calendar-overrides-v2';
         const getOverrides = () => { try { return JSON.parse(localStorage.getItem(STORAGE_PAY) || '{}'); } catch { return {}; } };
         const saveOverrides = (o) => localStorage.setItem(STORAGE_PAY, JSON.stringify(o));
         const overrides = getOverrides();
@@ -1155,6 +1155,8 @@ async function openDealsKanban() {
           if (overrides[d.id]) d.nextMonthly = overrides[d.id];
         });
 
+        const trackedDeals = deals.filter(d => parseDate(d.nextMonthly) && safeNum(d.closedMonthly) > 0);
+
         let viewDate = new Date();
 
         function renderPayCalendar() {
@@ -1174,7 +1176,7 @@ async function openDealsKanban() {
 
           for (let day=1; day<=days; day++) {
             const cellDate = new Date(y,m,day);
-            const dueDeals = deals.filter(d => {
+            const dueDeals = trackedDeals.filter(d => {
               const dt = parseDate(d.nextMonthly);
               return dt && dt.getFullYear()===y && dt.getMonth()===m && dt.getDate()===day;
             });
