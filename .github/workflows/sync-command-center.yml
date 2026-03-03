@@ -27,6 +27,9 @@ jobs:
           cp ../scg-site-src/src/data/inventory.ts ../scg-site/src/data/inventory.ts
 
       - name: Build live data
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          DEALS_LIVE_DATA_SOURCE_ID: ${{ secrets.DEALS_LIVE_DATA_SOURCE_ID }}
         run: npm run sync:data
 
       - name: Commit changes

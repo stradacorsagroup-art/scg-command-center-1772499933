@@ -6,6 +6,9 @@ const root = process.cwd();
 const inventoryTsPath = path.join(root, '..', 'scg-site', 'src', 'data', 'inventory.ts');
 const outPath = path.join(root, 'data', 'live.json');
 const overridesPath = path.join(root, 'data', 'overrides.json');
+const NOTION_TOKEN = process.env.NOTION_TOKEN;
+const NOTION_VERSION = '2025-09-03';
+const DEALS_LIVE_DATA_SOURCE_ID = process.env.DEALS_LIVE_DATA_SOURCE_ID || '2fb53b52-84ce-81af-94e7-000b07d7144b';
 
 function nowEtLabel() {
   return new Date().toLocaleString('en-US', {
@@ -36,6 +39,34 @@ async function loadOverrides() {
   }
 }
 
+async function fetchDealsLiveCount() {
+  if (!NOTION_TOKEN) return null;
+  let total = 0;
+  let cursor = undefined;
+  while (true) {
+    const body = { page_size: 100 };
+    if (cursor) body.start_cursor = cursor;
+    const res = await fetch(`https://api.notion.com/v1/data_sources/${DEALS_LIVE_DATA_SOURCE_ID}/query`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${NOTION_TOKEN}`,
+        'Notion-Version': NOTION_VERSION,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) {
+      const t = await res.text();
+      throw new Error(`Deals LIVE query failed (${res.status}): ${t}`);
+    }
+    const j = await res.json();
+    total += (j.results || []).length;
+    if (!j.has_more) break;
+    cursor = j.next_cursor;
+  }
+  return total;
+}
+
 async function main() {
   const inventory = await loadInventory();
   const overrides = await loadOverrides();
@@ -43,12 +74,13 @@ async function main() {
   const inventoryCount = inventory.length;
   const monthlyTotal = inventory.reduce((s, i) => s + (Number(i.monthly) || 0), 0);
   const avgMonthly = inventoryCount ? Math.round(monthlyTotal / inventoryCount) : 0;
+  const dealsLiveCount = await fetchDealsLiveCount().catch(() => null);
 
   const live = {
     syncedAt: new Date().toISOString(),
     syncedAtEt: nowEtLabel(),
     kpis: {
-      carsOnRoad: overrides.kpis?.carsOnRoad ?? inventoryCount,
+      carsOnRoad: overrides.kpis?.carsOnRoad ?? dealsLiveCount ?? inventoryCount,
       cashCollected: overrides.kpis?.cashCollected ?? 0,
       scgProfit: overrides.kpis?.scgProfit ?? 0,
       activeLeads: overrides.kpis?.activeLeads ?? 8,
