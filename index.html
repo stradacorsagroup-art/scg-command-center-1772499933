@@ -814,6 +814,12 @@
         </div>
     </div>
 
+    <!-- PRIORITY MASTER TASK LOG -->
+    <div class="task-log" id="priorityTaskLog">
+        <div class="section-title">Master Task Log (Priority)</div>
+        <div id="priorityTaskList" style="display:grid;grid-template-columns:repeat(2,minmax(260px,1fr));gap:10px"></div>
+    </div>
+
     <!-- CHARTS -->
     <div class="bottom-grid">
         <div class="chart-card">
@@ -1015,6 +1021,24 @@ function updateKPIs() {
     document.getElementById('kpi-profit').textContent = '$' + k.scgProfit.toLocaleString();
     document.getElementById('kpi-leads').textContent = k.activeLeads;
     document.getElementById('kpi-pipeline').textContent = '$' + k.pipelineValue.toLocaleString();
+}
+
+function renderPriorityTasks() {
+    const el = document.getElementById('priorityTaskList');
+    if (!el) return;
+    const list = Array.isArray(data.todayTop3) ? data.todayTop3 : [];
+    if (!list.length) {
+        el.innerHTML = '<div style="color:var(--text-muted)">No priority tasks loaded.</div>';
+        return;
+    }
+    el.innerHTML = list.map((t, i) => {
+        const done = t.done ? '✅' : '🟡';
+        return `<div style="border:1px solid var(--border);background:var(--surface);border-radius:10px;padding:12px">
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">${done} Priority ${i+1}</div>
+          <div style="font-weight:700;margin-bottom:6px">${t.name || 'Task'}</div>
+          <div style="font-size:13px;color:var(--text-dim)">${t.detail || ''}</div>
+        </div>`;
+    }).join('');
 }
 
 // ========== DEALS KANBAN ==========
@@ -1494,6 +1518,7 @@ function renderCharts() {
     await applyLiveData();
     updateMonthGoals();
     updateKPIs();
+    renderPriorityTasks();
     renderCalendar();
     renderTasks();
     renderCharts();
