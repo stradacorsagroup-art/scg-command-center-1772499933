@@ -992,19 +992,47 @@ async function openDealsKanban() {
         columns.forEach(col => {
             const colEl = document.createElement('div');
             colEl.className = 'kanban-col';
-            colEl.innerHTML = `<h4>${col}</h4>`;
+            const colDeals = deals.filter(d => d.status === col);
+            colEl.innerHTML = `<h4>${col} (${colDeals.length})</h4>`;
 
-            deals.filter(d => d.status === col).forEach(d => {
+            colDeals.forEach(d => {
                 const card = document.createElement('div');
                 card.className = 'deal-card';
+
+                const rows = [
+                  ['Closed Down', d.closedDown],
+                  ['Owner Down', d.ownerDown],
+                  ['SCG Down Spread', d.scgDownSpread],
+                  ['Broker Pay', d.brokerPay],
+                  ['Deferral Amount', d.deferralAmount],
+                  ['Deferral Due Date', d.deferralDueDate],
+                  ['Closed Monthly', d.closedMonthly],
+                  ['Owner Monthly', d.ownerMonthly],
+                  ['SCG Monthly Spread', d.scgMonthlySpread],
+                  ['Activation Date', d.activationDate],
+                  ['End Date', d.endDate],
+                  ['Term', d.term],
+                  ['Miles @ Activation', d.milesAtActivation],
+                  ['Miles Allowed', d.milesAllowed],
+                  ['Next Monthly', d.nextMonthly],
+                  ['Late Date', d.lateDate],
+                  ['Buyout', d.buyout],
+                  ['SCG Buyout', d.scgBuyout],
+                  ['Owner Name', d.ownerName],
+                  ['Referral', d.referral],
+                  ['Special Stipulations', d.specialStipulations]
+                ];
+
+                const compact = rows.slice(0,6).map(([k,v]) => `${k}: ${v ?? '—'}`).join('<br>');
+                const allRows = rows.map(([k,v]) => `<div style="display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dashed var(--border)"><span style="color:var(--text-muted)">${k}</span><strong>${v ?? '—'}</strong></div>`).join('');
+
                 card.innerHTML = `
                   <div class="deal-title">${d.car}</div>
-                  <div class="deal-meta">
-                    Down: $${(d.closedDown||0).toLocaleString()} (Owner $${(d.ownerDown||0).toLocaleString()} / SCG $${(d.scgDownSpread||0).toLocaleString()})<br>
-                    Monthly: $${(d.closedMonthly||0).toLocaleString()} · Next Due: ${d.nextMonthly || '—'}<br>
-                    Term: ${d.term || '—'} · Miles @ Activation: ${(d.milesAtActivation||'—')}<br>
-                    Late Date: ${d.lateDate || '—'}
-                  </div>`;
+                  <div class="deal-meta">${compact}</div>
+                  <details style="margin-top:8px">
+                    <summary style="cursor:pointer;color:var(--blue)">View full deal fields</summary>
+                    <div style="margin-top:8px;max-height:240px;overflow:auto">${allRows}</div>
+                  </details>`;
                 colEl.appendChild(card);
             });
 

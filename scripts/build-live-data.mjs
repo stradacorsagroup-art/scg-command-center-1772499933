@@ -39,9 +39,36 @@ async function loadOverrides() {
   }
 }
 
-async function fetchDealsLiveCount() {
-  if (!NOTION_TOKEN) return null;
-  let total = 0;
+function notionValue(prop) {
+  if (!prop) return null;
+  const t = prop.type;
+  if (t === 'title') return (prop.title || []).map((x) => x.plain_text || '').join('').trim() || null;
+  if (t === 'rich_text') return (prop.rich_text || []).map((x) => x.plain_text || '').join('').trim() || null;
+  if (t === 'number') return prop.number;
+  if (t === 'select') return prop.select?.name || null;
+  if (t === 'multi_select') return (prop.multi_select || []).map((x) => x.name).join(', ') || null;
+  if (t === 'date') return prop.date?.start || null;
+  if (t === 'checkbox') return Boolean(prop.checkbox);
+  if (t === 'url') return prop.url || null;
+  if (t === 'email') return prop.email || null;
+  if (t === 'phone_number') return prop.phone_number || null;
+  return null;
+}
+
+function normalizeStatus(row) {
+  const next = row['Next Monthly'] || row['Next Monthly '] || row['First Payment Due'];
+  const late = row['LATE'] || row['Late Date'];
+  const endDate = row['End Date'];
+  const now = new Date();
+  if (late && !Number.isNaN(new Date(late).getTime()) && new Date(late) <= now) return 'Late';
+  if (next && !Number.isNaN(new Date(next).getTime()) && new Date(next) <= now) return 'Payment Due';
+  if (endDate && !Number.isNaN(new Date(endDate).getTime()) && new Date(endDate) <= now) return 'Closeout';
+  return 'Live';
+}
+
+async function fetchDealsLiveRows() {
+  if (!NOTION_TOKEN) return [];
+  const rows = [];
   let cursor = undefined;
   while (true) {
     const body = { page_size: 100 };
@@ -60,11 +87,51 @@ async function fetchDealsLiveCount() {
       throw new Error(`Deals LIVE query failed (${res.status}): ${t}`);
     }
     const j = await res.json();
-    total += (j.results || []).length;
+
+    for (const page of j.results || []) {
+      const props = page.properties || {};
+      const row = {};
+      for (const [key, val] of Object.entries(props)) row[key] = notionValue(val);
+      const car = row.CAR || row.Car || row.Name || Object.values(props).map((p) => notionValue(p)).find(Boolean) || 'Unknown Deal';
+
+      const closedDown = Number(row['Closed Down '] ?? row['SCG Down'] ?? 0) || 0;
+      const ownerDown = Number(row['Owner Down'] ?? 0) || 0;
+      const closedMonthly = Number(row['Closed Mo'] ?? row['SCG Mo'] ?? 0) || 0;
+      const ownerMonthly = Number(row['Owner Mo'] ?? 0) || 0;
+
+      rows.push({
+        id: page.id,
+        car,
+        status: normalizeStatus(row),
+        closedDown,
+        ownerDown,
+        scgDownSpread: closedDown && ownerDown ? closedDown - ownerDown : null,
+        brokerPay: Number(row['Broker Pay'] ?? 0) || null,
+        deferralAmount: Number(row['Deferral Amount'] ?? 0) || null,
+        deferralDueDate: row['Deferral Due Date'] || null,
+        closedMonthly,
+        ownerMonthly,
+        scgMonthlySpread: closedMonthly && ownerMonthly ? closedMonthly - ownerMonthly : null,
+        nextMonthly: row['Next Monthly'] || row['Next Monthly '] || row['First Payment Due'] || null,
+        lateDate: row['LATE'] || row['Late Date'] || null,
+        activationDate: row['Activation Date'] || null,
+        endDate: row['End Date'] || null,
+        term: row['Term'] || null,
+        milesAtActivation: row['Miles at activation'] || null,
+        milesAllowed: row['Miles Allowed'] || null,
+        buyout: Number(row['Buyout'] ?? 0) || null,
+        scgBuyout: Number(row['SCG Buyout'] ?? 0) || null,
+        ownerName: row['Owner Name'] || null,
+        referral: row['Referral'] || null,
+        specialStipulations: row['Special Stipulations'] || row['Stipulations'] || null,
+        rawFields: row,
+      });
+    }
+
     if (!j.has_more) break;
     cursor = j.next_cursor;
   }
-  return total;
+  return rows;
 }
 
 async function main() {
@@ -74,7 +141,8 @@ async function main() {
   const inventoryCount = inventory.length;
   const monthlyTotal = inventory.reduce((s, i) => s + (Number(i.monthly) || 0), 0);
   const avgMonthly = inventoryCount ? Math.round(monthlyTotal / inventoryCount) : 0;
-  const dealsLiveCount = await fetchDealsLiveCount().catch(() => null);
+  const dealsLiveRows = await fetchDealsLiveRows().catch(() => []);
+  const dealsLiveCount = dealsLiveRows.length || null;
 
   const live = {
     syncedAt: new Date().toISOString(),
@@ -113,7 +181,18 @@ async function main() {
   };
 
   await fs.writeFile(outPath, JSON.stringify(live, null, 2) + '\n', 'utf8');
+
+  const dealsKanban = {
+    syncedAt: live.syncedAt,
+    syncedAtEt: live.syncedAtEt,
+    columns: ['Live', 'Payment Due', 'Late', 'Closeout'],
+    deals: dealsLiveRows,
+  };
+  const dealsOutPath = path.join(root, 'data', 'deals-kanban.json');
+  await fs.writeFile(dealsOutPath, JSON.stringify(dealsKanban, null, 2) + '\n', 'utf8');
+
   console.log(`Wrote ${outPath}`);
+  console.log(`Wrote ${dealsOutPath}`);
 }
 
 main().catch((e) => {
