@@ -930,6 +930,30 @@
         "SCG Buyout": null,
         "Miles Allowed": null
       }
+    },
+    {
+      "id": "deal-2020-urus-awd-grey",
+      "car": "2020 Lamborghini Urus AWD Grey",
+      "status": "Live",
+      "closedDown": null,
+      "ownerDown": null,
+      "closedMonthly": null,
+      "ownerMonthly": null,
+      "activationDate": null,
+      "endDate": null,
+      "term": "4 month",
+      "milesAtActivation": null,
+      "milesAllowed": null,
+      "nextMonthly": null,
+      "lateDate": null,
+      "buyout": null,
+      "scgBuyout": null,
+      "ownerName": null,
+      "referral": null,
+      "specialStipulations": "Needs manual field fill from signed DocuSign packet (current PDFs appear template/blank)",
+      "source": "DocuSign contracts (DEAL FLOW)",
+      "scgDownSpread": null,
+      "scgMonthlySpread": null
     }
   ]
 }
