@@ -1,0 +1,8 @@
+{
+  "name": "scg-command-center",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "sync:data": "node scripts/build-live-data.mjs"
+  }
+}

@@ -1,0 +1,42 @@
+name: Sync Command Center Data
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Pull latest site inventory data
+        run: |
+          mkdir -p ../scg-site-src
+          git clone --depth=1 https://github.com/stradacorsagroup-art/scg-site-1772418012.git ../scg-site-src
+          mkdir -p ../scg-site/src/data
+          cp ../scg-site-src/src/data/inventory.ts ../scg-site/src/data/inventory.ts
+
+      - name: Build live data
+        run: npm run sync:data
+
+      - name: Commit changes
+        run: |
+          if [[ -n "$(git status --porcelain data/live.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/live.json
+            git commit -m "chore: sync command center live data"
+            git push
+          else
+            echo "No live data changes"
+          fi

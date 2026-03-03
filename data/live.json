@@ -1,0 +1,47 @@
+{
+  "syncedAt": "2026-03-03T01:05:26.863Z",
+  "syncedAtEt": "Mon, Mar 2, 8:05 PM ET",
+  "kpis": {
+    "carsOnRoad": 11,
+    "cashCollected": 0,
+    "scgProfit": 0,
+    "activeLeads": 8,
+    "pipelineValue": 58475,
+    "avgMonthly": 5316
+  },
+  "monthGoals": {
+    "revenue": {
+      "current": 0,
+      "target": 200000
+    },
+    "deals": {
+      "current": 0,
+      "target": 5
+    },
+    "infra": {
+      "current": 0,
+      "target": 5
+    }
+  },
+  "todayTop3": [
+    {
+      "name": "Close Jerome",
+      "detail": "Sign OA + walk Vision Doc in person",
+      "done": false
+    },
+    {
+      "name": "Website media complete",
+      "detail": "Map all live inventory assets",
+      "done": false
+    },
+    {
+      "name": "File Montana LLC",
+      "detail": "SCG Capital Partners LLC",
+      "done": false
+    }
+  ],
+  "inventory": {
+    "count": 11,
+    "avgMonthly": 5316
+  }
+}
