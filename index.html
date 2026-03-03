@@ -1063,7 +1063,7 @@ async function openDealsKanban() {
         rev.textContent = 'Payments calendar below shows car + next due date';
 
         wrap.innerHTML = '';
-        const liveDeals = deals.filter(d => d.status === 'Live');
+        const liveDeals = deals;
         const liveCol = document.createElement('div');
         liveCol.className = 'kanban-col';
         liveCol.innerHTML = `<h4>Live (${liveDeals.length})</h4>`;
@@ -1106,14 +1106,22 @@ async function openDealsKanban() {
 
         const parseDate = (s) => {
           if (!s) return null;
+          const ymd = String(s).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+          if (ymd) return new Date(Number(ymd[1]), Number(ymd[2]) - 1, Number(ymd[3]));
+          const mdy = String(s).match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+          if (mdy) return new Date(Number(mdy[3].length===2 ? '20'+mdy[3] : mdy[3]), Number(mdy[1]) - 1, Number(mdy[2]));
           const d = new Date(s);
           if (!Number.isNaN(d.getTime())) return d;
-          const m = String(s).match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
-          if (m) return new Date(Number(m[3].length===2?'20'+m[3]:m[3]), Number(m[1])-1, Number(m[2]));
           return null;
         };
         const fmtYMD = (d) => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-        const addMonth = (d) => new Date(d.getFullYear(), d.getMonth()+1, d.getDate());
+        const addMonth = (d) => {
+          const targetDay = d.getDate();
+          const y = d.getFullYear();
+          const m = d.getMonth() + 1;
+          const last = new Date(y, m + 1, 0).getDate();
+          return new Date(y, m, Math.min(targetDay, last));
+        };
 
         deals.forEach(d => {
           if (overrides[d.id]) d.nextMonthly = overrides[d.id];
