@@ -1,28 +1,4 @@
 {
-  "syncedAt": "2026-03-03T05:36:30.269Z",
-  "syncedAtEt": "Tue, Mar 3, 12:36 AM ET",
-  "kpis": {
-    "carsOnRoad": 13,
-    "cashCollected": 0,
-    "scgProfit": 0,
-    "activeLeads": 8,
-    "pipelineValue": 58475,
-    "avgMonthly": 5316
-  },
-  "monthGoals": {
-    "revenue": {
-      "current": 0,
-      "target": 200000
-    },
-    "deals": {
-      "current": 0,
-      "target": 5
-    },
-    "infra": {
-      "current": 0,
-      "target": 5
-    }
-  },
   "todayTop3": [
     {
       "name": "Polish + finalize Command Center",
@@ -44,13 +20,5 @@
       "detail": "Prepare CPA-ready tracking and review workflow",
       "done": false
     }
-  ],
-  "inventory": {
-    "count": 11,
-    "avgMonthly": 5316
-  },
-  "sourceOfTruth": {
-    "deals": "notion:SCG Deals LIVE",
-    "dealsCount": 13
-  }
+  ]
 }
