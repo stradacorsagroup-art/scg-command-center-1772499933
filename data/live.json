@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-03-03T03:29:45.581Z",
-  "syncedAtEt": "Mon, Mar 2, 10:29 PM ET",
+  "syncedAt": "2026-03-03T04:13:04.453Z",
+  "syncedAtEt": "Mon, Mar 2, 11:13 PM ET",
   "kpis": {
     "carsOnRoad": 13,
     "cashCollected": 0,
@@ -43,5 +43,9 @@
   "inventory": {
     "count": 11,
     "avgMonthly": 5316
+  },
+  "sourceOfTruth": {
+    "deals": "notion:SCG Deals LIVE",
+    "dealsCount": 13
   }
 }

@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-03-03T03:29:45.581Z",
-  "syncedAtEt": "Mon, Mar 2, 10:29 PM ET",
+  "syncedAt": "2026-03-03T04:13:04.453Z",
+  "syncedAtEt": "Mon, Mar 2, 11:13 PM ET",
   "columns": [
     "Live",
     "Payment Due",
@@ -930,33 +930,6 @@
         "SCG Buyout": null,
         "Miles Allowed": null
       }
-    },
-    {
-      "id": "deal-2020-urus-awd-grey",
-      "car": "2020 Lamborghini Urus AWD Grey",
-      "status": "Live",
-      "closedDown": null,
-      "ownerDown": null,
-      "closedMonthly": 4000,
-      "ownerMonthly": null,
-      "activationDate": null,
-      "endDate": "4/10/2026",
-      "term": "4 month",
-      "milesAtActivation": null,
-      "milesAllowed": null,
-      "nextMonthly": null,
-      "lateDate": null,
-      "buyout": 175000,
-      "scgBuyout": 175000,
-      "ownerName": "Stage 2 Auto Group Corp",
-      "referral": null,
-      "specialStipulations": "Extracted from OCR; verify against final signed packet | Missing Form Data CSV",
-      "source": "DocuSign EnvelopeList CSV + OCR PDFs",
-      "scgDownSpread": null,
-      "scgMonthlySpread": null,
-      "driverName": "Umar Shehzad",
-      "driverSignedAt": "2/19/2026 22:21",
-      "ownerSignedAt": "3/3/2026 3:42"
     }
   ]
 }

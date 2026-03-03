@@ -929,11 +929,32 @@ async function applyLiveData() {
         if (Array.isArray(live?.todayTop3) && live.todayTop3.length) {
             data.todayTop3 = live.todayTop3;
         }
+
         const el = document.getElementById('liveSync');
-        if (el) el.textContent = 'Live sync: ' + (live.syncedAtEt || live.syncedAt || 'updated');
+        let syncText = 'Live sync: ' + (live.syncedAtEt || live.syncedAt || 'updated');
+
+        try {
+            const kRes = await fetch('./data/deals-kanban.json?ts=' + Date.now(), { cache: 'no-store' });
+            if (kRes.ok) {
+                const k = await kRes.json();
+                const rowCount = Array.isArray(k?.deals) ? k.deals.length : 0;
+                const carsCount = Number(live?.kpis?.carsOnRoad ?? 0);
+                if (rowCount !== carsCount) {
+                    syncText += ` ⚠ mismatch: Cars KPI ${carsCount} vs Deals rows ${rowCount}`;
+                    if (el) el.style.color = 'var(--red)';
+                } else if (el) {
+                    el.style.color = 'var(--green)';
+                }
+            }
+        } catch {}
+
+        if (el) el.textContent = syncText;
     } catch (e) {
         const el = document.getElementById('liveSync');
-        if (el) el.textContent = 'Live sync: offline';
+        if (el) {
+            el.textContent = 'Live sync: offline';
+            el.style.color = 'var(--red)';
+        }
     }
 }
 

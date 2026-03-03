@@ -178,6 +178,10 @@ async function main() {
       count: inventoryCount,
       avgMonthly,
     },
+    sourceOfTruth: {
+      deals: 'notion:SCG Deals LIVE',
+      dealsCount: dealsLiveCount ?? 0,
+    },
   };
 
   await fs.writeFile(outPath, JSON.stringify(live, null, 2) + '\n', 'utf8');
