@@ -1,0 +1,27 @@
+{
+  "syncedAtEt": "Mon Mar 2, 10:15 PM ET",
+  "columns": ["Live", "Payment Due", "Late", "Closeout"],
+  "deals": [
+    {
+      "id": "deal-2019-urus-awd-4-seat",
+      "car": "2019 LAMBORGHINI URUS AWD 4 SEAT",
+      "status": "Live",
+      "activationDate": "2026-02-17",
+      "endDate": "2026-08-01",
+      "term": "5 mo",
+      "milesAtActivation": 61000,
+      "closedDown": 30000,
+      "ownerDown": 25000,
+      "scgDownSpread": 5000,
+      "closedMonthly": 2995,
+      "ownerMonthly": 2995,
+      "nextMonthly": "2026-05-01",
+      "lateDate": "2026-05-04",
+      "buyout": 145000,
+      "scgBuyout": 145000,
+      "referral": null,
+      "specialStipulations": "",
+      "source": "Notion SCG Deals LIVE"
+    }
+  ]
+}
