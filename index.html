@@ -618,10 +618,20 @@
         .mini-kpi .sub { margin-top:8px; font-size:11px; color:var(--text-dim); line-height:1.4; }
         .mini-revenue { padding:10px 14px; border-bottom:1px solid var(--border); font-size:12px; color:var(--text-dim); }
         .kanban-wrap { padding:14px; overflow:auto; display:grid; grid-template-columns: minmax(300px,420px) 1fr; gap:12px; }
-         .calendar-panel { background:var(--surface-2); border:1px solid var(--border); border-radius:10px; }
-         .calendar-panel h4 { font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-dim); padding:10px 12px; border-bottom:1px solid var(--border); }
-         .calendar-list { max-height:420px; overflow:auto; padding:8px 10px; }
-         .calendar-item { display:flex; justify-content:space-between; gap:10px; padding:8px 6px; border-bottom:1px dashed var(--border); font-size:12px; }
+         .calendar-panel { background:var(--surface-2); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+         .calendar-toolbar { display:flex; justify-content:space-between; align-items:center; padding:10px 12px; border-bottom:1px solid var(--border); }
+         .calendar-toolbar h4 { font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-dim); }
+         .calendar-nav { display:flex; gap:6px; }
+         .calendar-nav button { border:1px solid var(--border); background:var(--surface); border-radius:8px; width:30px; height:30px; cursor:pointer; }
+         .month-label { font-size:13px; font-weight:700; color:var(--text); }
+         .payment-grid { display:grid; grid-template-columns:repeat(7,1fr); }
+         .dow { font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; padding:6px; border-bottom:1px solid var(--border); background:var(--surface); }
+         .day-cell { min-height:92px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:4px; }
+         .day-cell:nth-child(7n) { border-right:none; }
+         .day-num { font-size:11px; color:var(--text-dim); margin-bottom:4px; }
+         .pay-chip { border:1px solid var(--border); background:var(--surface); border-radius:8px; padding:4px; margin-bottom:4px; font-size:10px; line-height:1.25; }
+         .pay-chip .row { display:flex; justify-content:space-between; gap:4px; }
+         .pay-chip button { border:none; background:transparent; cursor:pointer; font-size:12px; }
         .kanban-col { background:var(--surface-2); border:1px solid var(--border); border-radius:10px; min-height:180px; }
         .kanban-col h4 { font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-dim); padding:10px 12px; border-bottom:1px solid var(--border); }
         .deal-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px; margin:10px; }
@@ -1075,21 +1085,91 @@ async function openDealsKanban() {
 
         const cal = document.createElement('div');
         cal.className = 'calendar-panel';
-        cal.innerHTML = `<h4>Payment Calendar</h4><div class="calendar-list" id="calendarList"></div>`;
-        const list = cal.querySelector('#calendarList');
-        const dueItems = deals
-          .filter(d => d.nextMonthly)
-          .sort((a,b) => String(a.nextMonthly).localeCompare(String(b.nextMonthly)));
-        if (!dueItems.length) {
-          list.innerHTML = '<div style="padding:8px;color:var(--text-muted)">No payment due dates found.</div>';
-        } else {
-          dueItems.forEach(d => {
-            const item = document.createElement('div');
-            item.className = 'calendar-item';
-            item.innerHTML = `<span>${d.car}</span><strong>${d.nextMonthly}</strong>`;
-            list.appendChild(item);
+        cal.innerHTML = `
+          <div class="calendar-toolbar">
+            <div>
+              <h4>Payment Calendar</h4>
+              <div class="month-label" id="payMonthLabel"></div>
+            </div>
+            <div class="calendar-nav">
+              <button id="payPrev">◀</button>
+              <button id="payNext">▶</button>
+            </div>
+          </div>
+          <div class="payment-grid" id="payGrid"></div>
+        `;
+
+        const STORAGE_PAY = 'scg-payment-calendar-overrides-v1';
+        const getOverrides = () => { try { return JSON.parse(localStorage.getItem(STORAGE_PAY) || '{}'); } catch { return {}; } };
+        const saveOverrides = (o) => localStorage.setItem(STORAGE_PAY, JSON.stringify(o));
+        const overrides = getOverrides();
+
+        const parseDate = (s) => {
+          if (!s) return null;
+          const d = new Date(s);
+          if (!Number.isNaN(d.getTime())) return d;
+          const m = String(s).match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+          if (m) return new Date(Number(m[3].length===2?'20'+m[3]:m[3]), Number(m[1])-1, Number(m[2]));
+          return null;
+        };
+        const fmtYMD = (d) => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        const addMonth = (d) => new Date(d.getFullYear(), d.getMonth()+1, d.getDate());
+
+        deals.forEach(d => {
+          if (overrides[d.id]) d.nextMonthly = overrides[d.id];
+        });
+
+        let viewDate = new Date();
+
+        function renderPayCalendar() {
+          const grid = cal.querySelector('#payGrid');
+          const label = cal.querySelector('#payMonthLabel');
+          const y = viewDate.getFullYear();
+          const m = viewDate.getMonth();
+          label.textContent = viewDate.toLocaleString('en-US', { month:'long', year:'numeric' });
+
+          const first = new Date(y,m,1);
+          const start = first.getDay();
+          const days = new Date(y,m+1,0).getDate();
+
+          const dows = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+          grid.innerHTML = dows.map(d=>`<div class="dow">${d}</div>`).join('');
+          for (let i=0;i<start;i++) grid.innerHTML += `<div class="day-cell"></div>`;
+
+          for (let day=1; day<=days; day++) {
+            const cellDate = new Date(y,m,day);
+            const dueDeals = deals.filter(d => {
+              const dt = parseDate(d.nextMonthly);
+              return dt && dt.getFullYear()===y && dt.getMonth()===m && dt.getDate()===day;
+            });
+            let chips='';
+            dueDeals.forEach(d => {
+              chips += `<div class="pay-chip"><div class="row"><strong>${d.car}</strong><button data-pay="${d.id}">✅</button></div><div class="row"><span>Due</span><span>$${(Number(d.closedMonthly||0)||0).toLocaleString()}</span></div></div>`;
+            });
+            grid.innerHTML += `<div class="day-cell"><div class="day-num">${day}</div>${chips}</div>`;
+          }
+
+          grid.querySelectorAll('button[data-pay]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+              const id = e.currentTarget.getAttribute('data-pay');
+              const deal = deals.find(x => x.id===id);
+              if (!deal) return;
+              const dt = parseDate(deal.nextMonthly);
+              if (!dt) return;
+              const nd = addMonth(dt);
+              const ymd = fmtYMD(nd);
+              deal.nextMonthly = ymd;
+              overrides[id] = ymd;
+              saveOverrides(overrides);
+              renderPayCalendar();
+            });
           });
         }
+
+        cal.querySelector('#payPrev').addEventListener('click', ()=>{ viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth()-1, 1); renderPayCalendar(); });
+        cal.querySelector('#payNext').addEventListener('click', ()=>{ viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 1); renderPayCalendar(); });
+
+        renderPayCalendar();
         wrap.appendChild(cal);
     } catch (e) {
         wrap.innerHTML = `<div style="color:var(--red)">Failed to load Kanban data.</div>`;
