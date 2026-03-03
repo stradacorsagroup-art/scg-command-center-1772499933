@@ -1068,19 +1068,47 @@ async function openDealsKanban() {
         liveCol.className = 'kanban-col';
         liveCol.innerHTML = `<h4>Live (${liveDeals.length})</h4>`;
 
-        const liveDetails = document.createElement('details');
-        liveDetails.style.margin = '10px';
-        liveDetails.open = false;
-        liveDetails.innerHTML = `<summary style="cursor:pointer;color:var(--blue)">Show all live deals</summary>`;
-        liveDeals.forEach(d => {
-          const card = document.createElement('div');
-          card.className = 'deal-card';
-          card.innerHTML = `
-            <div class="deal-title">${d.car}</div>
-            <div class="deal-meta">Closed Down: $${safeNum(d.closedDown).toLocaleString()}<br>Monthly: $${safeNum(d.closedMonthly).toLocaleString()}<br>Activation: ${d.activationDate || '—'}</div>`;
-          liveDetails.appendChild(card);
-        });
-        liveCol.appendChild(liveDetails);
+        const listWrap = document.createElement('div');
+        listWrap.style.margin = '10px';
+
+        [...liveDeals]
+          .sort((a,b) => String(a.car).localeCompare(String(b.car)))
+          .forEach(d => {
+            const dd = document.createElement('details');
+            dd.style.marginBottom = '8px';
+            dd.style.border = '1px solid var(--border)';
+            dd.style.borderRadius = '10px';
+            dd.style.background = 'var(--surface)';
+
+            const rows = [
+              ['Closed Down', d.closedDown ? `$${safeNum(d.closedDown).toLocaleString()}` : '—'],
+              ['Owner Down', d.ownerDown ? `$${safeNum(d.ownerDown).toLocaleString()}` : '—'],
+              ['SCG Down Spread', d.scgDownSpread ? `$${safeNum(d.scgDownSpread).toLocaleString()}` : '—'],
+              ['Closed Mo', d.closedMonthly ? `$${safeNum(d.closedMonthly).toLocaleString()}` : '—'],
+              ['Owner Mo', d.ownerMonthly ? `$${safeNum(d.ownerMonthly).toLocaleString()}` : '—'],
+              ['Next Monthly', d.nextMonthly || '—'],
+              ['Late Date', d.lateDate || '—'],
+              ['Activation Date', d.activationDate || '—'],
+              ['End Date', d.endDate || '—'],
+              ['Term', d.term || '—'],
+              ['Miles @ Activation', d.milesAtActivation || '—'],
+              ['Miles Allowed', d.milesAllowed || '—'],
+              ['Buyout', d.buyout ? `$${safeNum(d.buyout).toLocaleString()}` : '—'],
+              ['SCG Buyout', d.scgBuyout ? `$${safeNum(d.scgBuyout).toLocaleString()}` : '—'],
+              ['Owner Name', d.ownerName || '—'],
+              ['Referral', d.referral || '—'],
+            ];
+
+            const body = rows.map(([k,v]) => `<div style="display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dashed var(--border)"><span style="color:var(--text-muted)">${k}</span><strong>${v}</strong></div>`).join('');
+
+            dd.innerHTML = `
+              <summary style="cursor:pointer;padding:10px 12px;font-weight:700;list-style:none">${d.car}</summary>
+              <div class="deal-card" style="margin:0 10px 10px 10px">${body}</div>
+            `;
+            listWrap.appendChild(dd);
+          });
+
+        liveCol.appendChild(listWrap);
         wrap.appendChild(liveCol);
 
         const cal = document.createElement('div');
