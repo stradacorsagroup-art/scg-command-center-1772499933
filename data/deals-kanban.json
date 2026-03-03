@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-03-03T04:47:24.406Z",
-  "syncedAtEt": "Mon, Mar 2, 11:47 PM ET",
+  "syncedAt": "2026-03-03T05:10:55.659Z",
+  "syncedAtEt": "Tue, Mar 3, 12:10 AM ET",
   "columns": [
     "Live",
     "Payment Due",
@@ -507,7 +507,7 @@
     },
     {
       "id": "30453b52-84ce-81c3-8f4b-d197c5428bf6",
-      "car": "2020 Lamborghini Urus Frozen Gray/Red",
+      "car": "2020 Lamborghini Urus AWD Grey",
       "status": "Live",
       "closedDown": 16900,
       "ownerDown": 14900,
@@ -560,7 +560,7 @@
         "Kill or Push": null,
         "Activation Date": null,
         "Deal Age (Days)": null,
-        "CAR": "2020 Lamborghini Urus Frozen Gray/Red",
+        "CAR": "2020 Lamborghini Urus AWD Grey",
         "SCG Mo": 4400,
         "Term": "3 mo",
         "Mo Spread": null,
@@ -862,7 +862,7 @@
     },
     {
       "id": "31753b52-84ce-8035-bd6a-f4020d9b92ee",
-      "car": "2019 white urus",
+      "car": "2019 LAMBORGHINI URUS WHITE",
       "status": "Live",
       "closedDown": 0,
       "ownerDown": 0,
@@ -915,7 +915,7 @@
         "Kill or Push": null,
         "Activation Date": null,
         "Deal Age (Days)": null,
-        "CAR": "2019 white urus",
+        "CAR": "2019 LAMBORGHINI URUS WHITE",
         "SCG Mo": null,
         "Term": null,
         "Mo Spread": null,
