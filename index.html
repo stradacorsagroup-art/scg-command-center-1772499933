@@ -615,8 +615,13 @@
         .mini-kpi { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px; }
         .mini-kpi .label { font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px; }
         .mini-kpi .value { font-size:18px; font-weight:700; margin-top:4px; }
+        .mini-kpi .sub { margin-top:8px; font-size:11px; color:var(--text-dim); line-height:1.4; }
         .mini-revenue { padding:10px 14px; border-bottom:1px solid var(--border); font-size:12px; color:var(--text-dim); }
-        .kanban-wrap { padding:14px; overflow:auto; display:grid; grid-template-columns: repeat(4, minmax(260px,1fr)); gap:12px; }
+        .kanban-wrap { padding:14px; overflow:auto; display:grid; grid-template-columns: minmax(300px,420px) 1fr; gap:12px; }
+         .calendar-panel { background:var(--surface-2); border:1px solid var(--border); border-radius:10px; }
+         .calendar-panel h4 { font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-dim); padding:10px 12px; border-bottom:1px solid var(--border); }
+         .calendar-list { max-height:420px; overflow:auto; padding:8px 10px; }
+         .calendar-item { display:flex; justify-content:space-between; gap:10px; padding:8px 6px; border-bottom:1px dashed var(--border); font-size:12px; }
         .kanban-col { background:var(--surface-2); border:1px solid var(--border); border-radius:10px; min-height:180px; }
         .kanban-col h4 { font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-dim); padding:10px 12px; border-bottom:1px solid var(--border); }
         .deal-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px; margin:10px; }
@@ -1026,13 +1031,6 @@ async function openDealsKanban() {
         const totalDown = deals.reduce((s,d)=>s+safeNum(d.closedDown),0);
         const avgDown = deals.length ? Math.round(totalDown/deals.length) : 0;
         const dueSoon = deals.filter(d => d.status === 'Payment Due' || d.status === 'Late').length;
-        mini.innerHTML = `
-          <div class="mini-kpi"><div class="label">MTD Cash Collected</div><div class="value">$${mtd.toLocaleString()}</div></div>
-          <div class="mini-kpi"><div class="label">Total Closed Down</div><div class="value">$${totalDown.toLocaleString()}</div></div>
-          <div class="mini-kpi"><div class="label">Avg Closed Down</div><div class="value">$${avgDown.toLocaleString()}</div></div>
-          <div class="mini-kpi"><div class="label">Due / Late</div><div class="value">${dueSoon}</div></div>
-        `;
-
         const byMonth = {};
         deals.forEach(d => {
           const a = d.activationDate;
@@ -1040,59 +1038,59 @@ async function openDealsKanban() {
           const k = a.slice(0,7);
           byMonth[k] = (byMonth[k] || 0) + safeNum(d.closedDown);
         });
-        const monthLines = Object.entries(byMonth).sort(([a],[b]) => a.localeCompare(b)).map(([k,v]) => `${k}: $${v.toLocaleString()}`).join('  •  ');
-        rev.textContent = 'Revenue by activation month (Closed Down): ' + (monthLines || 'No activation dates yet');
+        const monthRows = Object.entries(byMonth)
+          .sort(([a],[b]) => a.localeCompare(b))
+          .map(([k,v]) => `<div>${k}: <strong>$${v.toLocaleString()}</strong></div>`)
+          .join('');
+
+        mini.innerHTML = `
+          <div class="mini-kpi"><div class="label">MTD Cash Collected</div><div class="value">$${mtd.toLocaleString()}</div></div>
+          <div class="mini-kpi"><div class="label">Total Closed Down</div><div class="value">$${totalDown.toLocaleString()}</div><div class="sub">${monthRows || 'No activation months yet'}</div></div>
+          <div class="mini-kpi"><div class="label">Avg Closed Down</div><div class="value">$${avgDown.toLocaleString()}</div></div>
+          <div class="mini-kpi"><div class="label">Due / Late</div><div class="value">${dueSoon}</div></div>
+        `;
+
+        rev.textContent = 'Payments calendar below shows car + next due date';
 
         wrap.innerHTML = '';
-        columns.forEach(col => {
-            const colEl = document.createElement('div');
-            colEl.className = 'kanban-col';
-            const colDeals = deals.filter(d => d.status === col);
-            colEl.innerHTML = `<h4>${col} (${colDeals.length})</h4>`;
+        const liveDeals = deals.filter(d => d.status === 'Live');
+        const liveCol = document.createElement('div');
+        liveCol.className = 'kanban-col';
+        liveCol.innerHTML = `<h4>Live (${liveDeals.length})</h4>`;
 
-            colDeals.forEach(d => {
-                const card = document.createElement('div');
-                card.className = 'deal-card';
-
-                const rows = [
-                  ['Closed Down', d.closedDown],
-                  ['Owner Down', d.ownerDown],
-                  ['SCG Down Spread', d.scgDownSpread],
-                  ['Broker Pay', d.brokerPay],
-                  ['Deferral Amount', d.deferralAmount],
-                  ['Deferral Due Date', d.deferralDueDate],
-                  ['Closed Monthly', d.closedMonthly],
-                  ['Owner Monthly', d.ownerMonthly],
-                  ['SCG Monthly Spread', d.scgMonthlySpread],
-                  ['Activation Date', d.activationDate],
-                  ['End Date', d.endDate],
-                  ['Term', d.term],
-                  ['Miles @ Activation', d.milesAtActivation],
-                  ['Miles Allowed', d.milesAllowed],
-                  ['Next Monthly', d.nextMonthly],
-                  ['Late Date', d.lateDate],
-                  ['Buyout', d.buyout],
-                  ['SCG Buyout', d.scgBuyout],
-                  ['Owner Name', d.ownerName],
-                  ['Referral', d.referral],
-                  ['Special Stipulations', d.specialStipulations]
-                ];
-
-                const compact = rows.slice(0,6).map(([k,v]) => `${k}: ${v ?? '—'}`).join('<br>');
-                const allRows = rows.map(([k,v]) => `<div style="display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dashed var(--border)"><span style="color:var(--text-muted)">${k}</span><strong>${v ?? '—'}</strong></div>`).join('');
-
-                card.innerHTML = `
-                  <div class="deal-title">${d.car}</div>
-                  <div class="deal-meta">${compact}</div>
-                  <details style="margin-top:8px">
-                    <summary style="cursor:pointer;color:var(--blue)">View full deal fields</summary>
-                    <div style="margin-top:8px;max-height:240px;overflow:auto">${allRows}</div>
-                  </details>`;
-                colEl.appendChild(card);
-            });
-
-            wrap.appendChild(colEl);
+        const liveDetails = document.createElement('details');
+        liveDetails.style.margin = '10px';
+        liveDetails.open = false;
+        liveDetails.innerHTML = `<summary style="cursor:pointer;color:var(--blue)">Show all live deals</summary>`;
+        liveDeals.forEach(d => {
+          const card = document.createElement('div');
+          card.className = 'deal-card';
+          card.innerHTML = `
+            <div class="deal-title">${d.car}</div>
+            <div class="deal-meta">Closed Down: $${safeNum(d.closedDown).toLocaleString()}<br>Monthly: $${safeNum(d.closedMonthly).toLocaleString()}<br>Activation: ${d.activationDate || '—'}</div>`;
+          liveDetails.appendChild(card);
         });
+        liveCol.appendChild(liveDetails);
+        wrap.appendChild(liveCol);
+
+        const cal = document.createElement('div');
+        cal.className = 'calendar-panel';
+        cal.innerHTML = `<h4>Payment Calendar</h4><div class="calendar-list" id="calendarList"></div>`;
+        const list = cal.querySelector('#calendarList');
+        const dueItems = deals
+          .filter(d => d.nextMonthly)
+          .sort((a,b) => String(a.nextMonthly).localeCompare(String(b.nextMonthly)));
+        if (!dueItems.length) {
+          list.innerHTML = '<div style="padding:8px;color:var(--text-muted)">No payment due dates found.</div>';
+        } else {
+          dueItems.forEach(d => {
+            const item = document.createElement('div');
+            item.className = 'calendar-item';
+            item.innerHTML = `<span>${d.car}</span><strong>${d.nextMonthly}</strong>`;
+            list.appendChild(item);
+          });
+        }
+        wrap.appendChild(cal);
     } catch (e) {
         wrap.innerHTML = `<div style="color:var(--red)">Failed to load Kanban data.</div>`;
         mini.innerHTML = '';
