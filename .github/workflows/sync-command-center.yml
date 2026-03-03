@@ -34,10 +34,10 @@ jobs:
 
       - name: Commit changes
         run: |
-          if [[ -n "$(git status --porcelain data/live.json data/deals-kanban.json)" ]]; then
+          if [[ -n "$(git status --porcelain data/live.json)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/live.json data/deals-kanban.json
+            git add data/live.json
             git commit -m "chore: sync command center live data"
             git push
           else

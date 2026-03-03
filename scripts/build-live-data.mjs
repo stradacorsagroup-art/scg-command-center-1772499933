@@ -9,6 +9,7 @@ const overridesPath = path.join(root, 'data', 'overrides.json');
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const NOTION_VERSION = '2025-09-03';
 const DEALS_LIVE_DATA_SOURCE_ID = process.env.DEALS_LIVE_DATA_SOURCE_ID || '2fb53b52-84ce-81af-94e7-000b07d7144b';
+const SYNC_DEALS_KANBAN = process.env.SYNC_DEALS_KANBAN === '1';
 
 function nowEtLabel() {
   return new Date().toLocaleString('en-US', {
@@ -186,17 +187,21 @@ async function main() {
 
   await fs.writeFile(outPath, JSON.stringify(live, null, 2) + '\n', 'utf8');
 
-  const dealsKanban = {
-    syncedAt: live.syncedAt,
-    syncedAtEt: live.syncedAtEt,
-    columns: ['Live', 'Payment Due', 'Late', 'Closeout'],
-    deals: dealsLiveRows,
-  };
-  const dealsOutPath = path.join(root, 'data', 'deals-kanban.json');
-  await fs.writeFile(dealsOutPath, JSON.stringify(dealsKanban, null, 2) + '\n', 'utf8');
+  if (SYNC_DEALS_KANBAN) {
+    const dealsKanban = {
+      syncedAt: live.syncedAt,
+      syncedAtEt: live.syncedAtEt,
+      columns: ['Live', 'Payment Due', 'Late', 'Closeout'],
+      deals: dealsLiveRows,
+    };
+    const dealsOutPath = path.join(root, 'data', 'deals-kanban.json');
+    await fs.writeFile(dealsOutPath, JSON.stringify(dealsKanban, null, 2) + '\n', 'utf8');
+    console.log(`Wrote ${dealsOutPath}`);
+  } else {
+    console.log('Skipped deals-kanban sync (SYNC_DEALS_KANBAN != 1)');
+  }
 
   console.log(`Wrote ${outPath}`);
-  console.log(`Wrote ${dealsOutPath}`);
 }
 
 main().catch((e) => {
