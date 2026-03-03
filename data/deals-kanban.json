@@ -948,12 +948,15 @@
       "lateDate": null,
       "buyout": 175000,
       "scgBuyout": 175000,
-      "ownerName": null,
+      "ownerName": "Stage 2 Auto Group Corp",
       "referral": null,
-      "specialStipulations": "Extracted from OCR; verify against final signed packet",
-      "source": "DocuSign contracts (DEAL FLOW)",
+      "specialStipulations": "Extracted from OCR; verify against final signed packet | Missing Form Data CSV",
+      "source": "DocuSign EnvelopeList CSV + OCR PDFs",
       "scgDownSpread": null,
-      "scgMonthlySpread": null
+      "scgMonthlySpread": null,
+      "driverName": "Umar Shehzad",
+      "driverSignedAt": "2/19/2026 22:21",
+      "ownerSignedAt": "3/3/2026 3:42"
     }
   ]
 }
