@@ -611,7 +611,7 @@
         .kanban-header { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
         .kanban-header h3 { font-size:16px; }
         .kanban-close { border:1px solid var(--border); background:var(--surface-2); border-radius:8px; width:32px; height:32px; cursor:pointer; }
-        .kanban-mini-kpis { display:grid; grid-template-columns: repeat(4,minmax(160px,1fr)); gap:10px; padding:12px 14px; border-bottom:1px solid var(--border); background:var(--surface-2); }
+        .kanban-mini-kpis { display:grid; grid-template-columns: repeat(2,minmax(220px,1fr)); gap:10px; padding:12px 14px; border-bottom:1px solid var(--border); background:var(--surface-2); }
         .mini-kpi { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px; }
         .mini-kpi .label { font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px; }
         .mini-kpi .value { font-size:18px; font-weight:700; margin-top:4px; }
@@ -1066,25 +1066,23 @@ async function openDealsKanban() {
         const safeNum = (n) => Number(n || 0) || 0;
         const mtd = deals.filter(d => (d.activationDate || '').startsWith(monthKey)).reduce((s,d)=>s+safeNum(d.closedDown),0);
         const totalDown = deals.reduce((s,d)=>s+safeNum(d.closedDown),0);
-        const avgDown = deals.length ? Math.round(totalDown/deals.length) : 0;
-        const dueSoon = deals.filter(d => d.status === 'Payment Due' || d.status === 'Late').length;
         const byMonth = {};
         deals.forEach(d => {
           const a = d.activationDate;
           if (!a) return;
-          const k = a.slice(0,7);
-          byMonth[k] = (byMonth[k] || 0) + safeNum(d.closedDown);
+          const dt = new Date(a + 'T00:00:00');
+          if (Number.isNaN(dt.getTime())) return;
+          const monthLabel = dt.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+          byMonth[monthLabel] = (byMonth[monthLabel] || 0) + safeNum(d.closedDown);
         });
         const monthRows = Object.entries(byMonth)
-          .sort(([a],[b]) => a.localeCompare(b))
+          .sort((a,b) => new Date(a[0]).getTime() - new Date(b[0]).getTime())
           .map(([k,v]) => `<div>${k}: <strong>$${v.toLocaleString()}</strong></div>`)
           .join('');
 
         mini.innerHTML = `
           <div class="mini-kpi"><div class="label">MTD Cash Collected</div><div class="value">$${mtd.toLocaleString()}</div></div>
           <div class="mini-kpi"><div class="label">Total Closed Down</div><div class="value">$${totalDown.toLocaleString()}</div><div class="sub">${monthRows || 'No activation months yet'}</div></div>
-          <div class="mini-kpi"><div class="label">Avg Closed Down</div><div class="value">$${avgDown.toLocaleString()}</div></div>
-          <div class="mini-kpi"><div class="label">Due / Late</div><div class="value">${dueSoon}</div></div>
         `;
 
         rev.textContent = 'Payments calendar below shows car + next due date';
