@@ -673,7 +673,7 @@
     <div class="header">
         <div class="header-left">
             <h1><span>SCG</span> Command Center</h1>
-            <div class="subtitle">Cars on Road + Inventory first</div>
+            <div class="subtitle">Cars on Road + Membership + Sales</div>
         </div>
         <div class="header-right">
             <div class="date" id="currentDate"></div>
@@ -682,16 +682,21 @@
     </div>
 
     <!-- KPI CARDS -->
-    <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpis" style="grid-template-columns: repeat(3, 1fr);">
         <div class="kpi clickable" onclick="openDealsKanban()">
             <div class="kpi-label">Cars on Road</div>
             <div class="kpi-value" style="color:var(--accent)" id="kpi-cars">0</div>
             <div class="kpi-sub">active deal flow</div>
         </div>
         <div class="kpi clickable" onclick="openInventoryKanban()">
-            <div class="kpi-label">Inventory</div>
+            <div class="kpi-label">Membership Inventory</div>
             <div class="kpi-value" style="color:var(--blue)" id="kpi-inventory">0</div>
             <div class="kpi-sub">ready-to-go vehicles</div>
+        </div>
+        <div class="kpi">
+            <div class="kpi-label">Cars for Sale Inventory</div>
+            <div class="kpi-value" style="color:var(--blue)" id="kpi-cars-sale">0</div>
+            <div class="kpi-sub">cash / financing inventory</div>
         </div>
     </div>
 
@@ -965,7 +970,8 @@ const DEFAULT_DATA = {
         { name: "Close Jerome", detail: "Sign OA + walk Vision Doc in person", done: false },
         { name: "Lovable Site Live", detail: "10 cars, lead capture, ID+Insurance+Drive", done: false },
         { name: "File Montana LLC", detail: "SCG Capital Partners LLC after Jerome signs", done: false }
-    ]
+    ],
+    carsForSaleCount: 0
 };
 
 function loadData() {
@@ -1058,6 +1064,8 @@ function updateKPIs() {
     document.getElementById('kpi-cars').textContent = k.carsOnRoad ?? 0;
     const inv = data.inventoryCount || data.inventory?.count || 0;
     document.getElementById('kpi-inventory').textContent = inv;
+    const sale = data.carsForSaleCount || 0;
+    document.getElementById('kpi-cars-sale').textContent = sale;
 }
 
 async function refreshInventoryCountFromCards() {
