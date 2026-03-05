@@ -754,6 +754,13 @@
                 </div>
             </div>
 
+            <!-- DAILY HABIT TRACKER -->
+            <div class="priorities" id="habitTracker">
+                <div class="section-title">Daily Habit Tracker</div>
+                <div id="habitList"></div>
+                <div style="margin-top:10px;font-size:12px;color:var(--text-muted)" id="habitSummary">0/0 complete</div>
+            </div>
+
             <!-- LONG TERM VISION -->
             <div class="vision">
                 <div class="section-title">Long-Term Roadmap</div>
@@ -1635,6 +1642,67 @@ function closeInventoryKanban() {
     document.getElementById('inventoryModal').classList.remove('visible');
 }
 
+
+// ========== DAILY HABITS ==========
+const HABITS = [
+  'Up by 8:00 AM',
+  'Gym + sauna done by 9:00 AM',
+  '1 bottle of water',
+  '50g protein in morning',
+  'Supplements + Adderall',
+  'Trade (Mon–Thu 9:25–9:50)',
+  '2nd bottle of water',
+  'Coffee shop by 10:00 AM',
+  'Morning work block (10:15–1:15)',
+  'Mini protein snack (20–50g)'
+];
+
+function todayKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+function loadHabits() {
+  try {
+    const k = `scg_habits_${todayKey()}`;
+    const raw = JSON.parse(localStorage.getItem(k) || '{}');
+    return HABITS.map((name, i) => ({ name, done: Boolean(raw[i]) }));
+  } catch {
+    return HABITS.map((name) => ({ name, done: false }));
+  }
+}
+
+function saveHabits(state) {
+  const obj = {};
+  state.forEach((h, i) => { obj[i] = !!h.done; });
+  localStorage.setItem(`scg_habits_${todayKey()}`, JSON.stringify(obj));
+}
+
+let habitState = loadHabits();
+
+function renderHabits() {
+  const el = document.getElementById('habitList');
+  if (!el) return;
+  el.innerHTML = habitState.map((h, i) => `
+    <div class="priority-item">
+      <div class="priority-text">
+        <span class="task-name">${h.name}</span>
+      </div>
+      <div class="priority-check ${h.done ? 'done' : ''}" onclick="toggleHabit(${i})">${h.done ? '&#10003;' : ''}</div>
+    </div>
+  `).join('');
+  const done = habitState.filter(h => h.done).length;
+  const sum = document.getElementById('habitSummary');
+  if (sum) sum.textContent = `${done}/${habitState.length} complete`;
+}
+
+function toggleHabit(i) {
+  if (!habitState[i]) return;
+  habitState[i].done = !habitState[i].done;
+  saveHabits(habitState);
+  renderHabits();
+}
+
 // ========== INIT ==========
 (async function init() {
     await applyLiveData();
@@ -1643,6 +1711,7 @@ function closeInventoryKanban() {
     updateMonthGoals();
     updateKPIs();
     renderPriorityTasks();
+    renderHabits();
     renderCalendar();
     renderTasks();
     renderCharts();
