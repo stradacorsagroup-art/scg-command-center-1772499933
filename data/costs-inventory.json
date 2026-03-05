@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 22,
+  "count": 23,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -698,6 +698,39 @@
       "ownerName": "DAM HOLDINGS LLC",
       "ownerEmail": "stage2autogroup@gmail.com",
       "notes": "Starlight Headliner \u2022 Pink Wrap \u2022 Over $50,000 Invested \u2022 $149,995 cash price \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End",
+      "ownerMonthly": 3500,
+      "scgMonthly": 3500,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2022 Bentley GT",
+      "threeMo": {
+        "ownerDown": 17995,
+        "scgDown": 17995,
+        "ownerMonthly": 3200,
+        "scgMonthly": 3200,
+        "profit": 3200,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 17995,
+        "scgDown": 17995,
+        "ownerMonthly": 3500,
+        "scgMonthly": 3500,
+        "profit": 3500,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "miles": "9,000",
+      "location": "\u2014",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "notes": "PRICE DROP \u2022 Spec is \ud83d\udd25 \u2022 Won\u2019t Find Better Deal Anywhere Else \u2022 Buyouts Available At End",
       "ownerMonthly": 3500,
       "scgMonthly": 3500,
       "monthlySpread": 0
