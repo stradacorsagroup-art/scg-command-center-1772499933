@@ -161,14 +161,14 @@
     {
       "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
       "miles": "38,000",
-      "vin": null,
+      "vin": "ZPBUC3ZL4PLA22334",
       "ownerMonthly": 5900.0,
       "scgMonthly": 5995.0,
       "monthlySpread": 95.0,
       "milesPerYear": "7,500",
       "firstPaymentDueToOwner": "30 days after closing",
       "location": "New York, NY, United States",
-      "ownerName": "DAM HOLDINGS LLC",
+      "ownerName": "PNM Holdings Inc",
       "threeMo": {
         "ownerDown": 24900.0,
         "scgDown": 26900.0,
