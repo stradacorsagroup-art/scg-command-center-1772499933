@@ -693,7 +693,7 @@
             <div class="kpi-value" style="color:var(--blue)" id="kpi-inventory">0</div>
             <div class="kpi-sub">ready-to-go vehicles</div>
         </div>
-        <div class="kpi">
+        <div class="kpi clickable" onclick="openCarsForSaleKanban()">
             <div class="kpi-label">Cars for Sale Inventory</div>
             <div class="kpi-value" style="color:var(--blue)" id="kpi-cars-sale">0</div>
             <div class="kpi-sub">cash / financing inventory</div>
@@ -918,7 +918,7 @@
     <div class="inventory-modal" id="inventoryModal">
         <div class="inventory-sheet">
             <div class="inventory-header">
-                <h3>Inventory — COSTS Cards</h3>
+                <h3 id="inventoryModalTitle">Inventory — COSTS Cards</h3>
                 <button class="kanban-close" onclick="closeInventoryKanban()">&times;</button>
             </div>
             <div class="inventory-grid" id="inventoryGrid"></div>
@@ -1572,6 +1572,8 @@ function renderCharts() {
 async function openInventoryKanban() {
     const modal = document.getElementById('inventoryModal');
     const grid = document.getElementById('inventoryGrid');
+    const title = document.getElementById('inventoryModalTitle');
+    if (title) title.textContent = 'Membership Inventory — COSTS Cards';
     modal.classList.add('visible');
     grid.innerHTML = '<div style="color:var(--text-dim)">Loading inventory…</div>';
     try {
@@ -1649,6 +1651,84 @@ async function openInventoryKanban() {
         }).join('') || '<div style="color:var(--text-dim)">No COSTS inventory rows found.</div>';
     } catch (e) {
         grid.innerHTML = '<div style="color:var(--red)">Failed to load inventory cards.</div>';
+    }
+}
+
+async function openCarsForSaleKanban() {
+    const modal = document.getElementById('inventoryModal');
+    const grid = document.getElementById('inventoryGrid');
+    const title = document.getElementById('inventoryModalTitle');
+    if (title) title.textContent = 'Cars for Sale Inventory — Cards';
+    modal.classList.add('visible');
+    grid.innerHTML = '<div style="color:var(--text-dim)">Loading cars for sale…</div>';
+    try {
+        const res = await fetch('./data/costs-inventory.json?ts=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) throw new Error('Could not load cars-for-sale data');
+        const payload = await res.json();
+        const items = payload.carsForSaleItems || [];
+        const money = (n) => n == null ? '—' : `$${Number(n).toLocaleString()}`;
+
+        const fmt = (v) => {
+            if (v == null || v === '') return '—';
+            if (typeof v === 'number') return money(v);
+            return String(v);
+        };
+
+        grid.innerHTML = items.map(d => {
+            const t3 = d.threeMo || {};
+            const t12 = d.twelveMo || {};
+
+            const ownerMo3 = t3.ownerMonthly ?? d.ownerMonthly;
+            const scgMo3 = t3.scgMonthly ?? d.scgMonthly;
+            const ownerMo12 = t12.ownerMonthly ?? d.ownerMonthly;
+            const scgMo12 = t12.scgMonthly ?? d.scgMonthly;
+
+            const profit3 = scgMo3 != null && t3.scgDown != null && t3.ownerDown != null
+              ? scgMo3 + (t3.scgDown - t3.ownerDown)
+              : null;
+            const profit12 = scgMo12 != null && t12.scgDown != null && t12.ownerDown != null
+              ? scgMo12 + (t12.scgDown - t12.ownerDown)
+              : null;
+
+            const monthlySpread3 = scgMo3 != null && ownerMo3 != null ? scgMo3 - ownerMo3 : null;
+            const monthlySpread12 = scgMo12 != null && ownerMo12 != null ? scgMo12 - ownerMo12 : null;
+
+            const buyoutSpread3 = t3.scgBuyout != null && t3.buyout != null ? t3.scgBuyout - t3.buyout : null;
+            const buyoutSpread12 = t12.scgBuyout != null && t12.buyout != null ? t12.scgBuyout - t12.buyout : null;
+
+            return `
+            <div class="inv-card">
+              <div class="inv-title">${d.car || 'Car'}</div>
+              <div class="inv-row"><span>Miles</span><strong>${fmt(d.miles)}</strong></div>
+              <div class="inv-row"><span>VIN</span><strong>${fmt(d.vin)}</strong></div>
+              <div class="inv-row"><span>3 mo Owner Down</span><strong>${fmt(t3.ownerDown)}</strong></div>
+              <div class="inv-row"><span>3 mo SCG Down</span><strong>${fmt(t3.scgDown)}</strong></div>
+              <div class="inv-row"><span>3 mo Owner Monthly</span><strong>${fmt(ownerMo3)}</strong></div>
+              <div class="inv-row"><span>3 mo SCG Monthly</span><strong>${fmt(scgMo3)}</strong></div>
+              <div class="inv-row"><span>3 mo Spread</span><strong class="value-green">${fmt(monthlySpread3)}</strong></div>
+              <div class="inv-row"><span>3 mo Profit</span><strong class="value-green">${fmt(profit3)}</strong></div>
+              <div class="inv-row"><span>3 month Buyout</span><strong>${fmt(t3.buyout)}</strong></div>
+              <div class="inv-row"><span>3 mo SCG Buyout</span><strong>${fmt(t3.scgBuyout)}</strong></div>
+              <div class="inv-row"><span>3 mo Buyout Spread</span><strong class="value-green">${fmt(buyoutSpread3)}</strong></div>
+              <div class="inv-row"><span>12 mo Owner Down</span><strong>${fmt(t12.ownerDown)}</strong></div>
+              <div class="inv-row"><span>12 mo SCG Down</span><strong>${fmt(t12.scgDown)}</strong></div>
+              <div class="inv-row"><span>12 mo Owner Monthly</span><strong>${fmt(ownerMo12)}</strong></div>
+              <div class="inv-row"><span>12 mo SCG Monthly</span><strong>${fmt(scgMo12)}</strong></div>
+              <div class="inv-row"><span>12 mo Spread</span><strong class="value-green">${fmt(monthlySpread12)}</strong></div>
+              <div class="inv-row"><span>12 mo Profit</span><strong class="value-green">${fmt(profit12)}</strong></div>
+              <div class="inv-row"><span>12 month Buyout</span><strong>${fmt(t12.buyout)}</strong></div>
+              <div class="inv-row"><span>12 mo SCG Buyout</span><strong>${fmt(t12.scgBuyout)}</strong></div>
+              <div class="inv-row"><span>12 mo Buyout Spread</span><strong class="value-green">${fmt(buyoutSpread12)}</strong></div>
+              <div class="inv-row"><span>Miles / Year</span><strong>${fmt(d.milesPerYear)}</strong></div>
+              <div class="inv-row"><span>First Payment Due to Owner</span><strong>${fmt(d.firstPaymentDueToOwner)}</strong></div>
+              <div class="inv-row"><span>Location</span><strong>${fmt(d.location)}</strong></div>
+              <div class="inv-row"><span>Owner Name</span><strong>${fmt(d.ownerName)}</strong></div>
+              <div class="inv-row"><span>Owner Email</span><strong>${fmt(d.ownerEmail)}</strong></div>
+              <div class="inv-row"><span>Notes</span><strong>${fmt(d.notes)}</strong></div>
+            </div>`;
+        }).join('') || '<div style="color:var(--text-dim)">No cars for sale rows found.</div>';
+    } catch (e) {
+        grid.innerHTML = '<div style="color:var(--red)">Failed to load cars-for-sale cards.</div>';
     }
 }
 
