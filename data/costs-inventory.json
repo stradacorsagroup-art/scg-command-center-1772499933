@@ -17,7 +17,7 @@
         "ownerDown": 24900.0,
         "scgDown": 27900.0,
         "scgMonthly": 5595.0,
-        "profit": 2595.0,
+        "profit": 8595.0,
         "buyout": 230000.0,
         "scgBuyout": 229900.0,
         "buyoutSpread": -100.0
@@ -26,7 +26,7 @@
         "ownerDown": 44900.0,
         "scgDown": 47900.0,
         "scgMonthly": 5595.0,
-        "profit": 2595.0,
+        "profit": 8595.0,
         "buyout": 215000.0,
         "scgBuyout": 215000.0,
         "buyoutSpread": 0.0
@@ -46,7 +46,7 @@
         "ownerDown": 24900.0,
         "scgDown": 26900.0,
         "scgMonthly": 6900.0,
-        "profit": 4900.0,
+        "profit": 8900.0,
         "buyout": 245000.0,
         "scgBuyout": 244900.0,
         "buyoutSpread": -100.0
@@ -75,7 +75,7 @@
         "ownerDown": 24900.0,
         "scgDown": 26900.0,
         "scgMonthly": 6900.0,
-        "profit": 4900.0,
+        "profit": 8900.0,
         "buyout": 240000.0,
         "scgBuyout": 239900.0,
         "buyoutSpread": -100.0
@@ -104,7 +104,7 @@
         "ownerDown": 24900.0,
         "scgDown": 26900.0,
         "scgMonthly": 6900.0,
-        "profit": 4900.0,
+        "profit": 8900.0,
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": 0.0
@@ -133,7 +133,7 @@
         "ownerDown": 24900.0,
         "scgDown": 26900.0,
         "scgMonthly": 6900.0,
-        "profit": 4900.0,
+        "profit": 8900.0,
         "buyout": 250000.0,
         "scgBuyout": 250000.0,
         "buyoutSpread": 0.0
@@ -142,7 +142,7 @@
         "ownerDown": 24900.0,
         "scgDown": 26900.0,
         "scgMonthly": 6900.0,
-        "profit": 4900.0,
+        "profit": 8900.0,
         "buyout": 245000.0,
         "scgBuyout": 250000.0,
         "buyoutSpread": 5000.0
@@ -162,7 +162,7 @@
         "ownerDown": 24900.0,
         "scgDown": 26900.0,
         "scgMonthly": 5995.0,
-        "profit": 3995.0,
+        "profit": 7995.0,
         "buyout": 250000.0,
         "scgBuyout": 250000.0,
         "buyoutSpread": 0.0
@@ -200,7 +200,7 @@
         "ownerDown": 54900.0,
         "scgDown": 59900.0,
         "scgMonthly": 6995.0,
-        "profit": 1995.0,
+        "profit": 11995.0,
         "buyout": 229000.0,
         "scgBuyout": 229900.0,
         "buyoutSpread": 900.0
@@ -220,7 +220,7 @@
         "ownerDown": 8990.0,
         "scgDown": 10900.0,
         "scgMonthly": 2495.0,
-        "profit": 585.0,
+        "profit": 4405.0,
         "buyout": 65000.0,
         "scgBuyout": 65000.0,
         "buyoutSpread": 0.0
@@ -229,7 +229,7 @@
         "ownerDown": 11990.0,
         "scgDown": 13900.0,
         "scgMonthly": 2495.0,
-        "profit": 585.0,
+        "profit": 4405.0,
         "buyout": 65000.0,
         "scgBuyout": 65000.0,
         "buyoutSpread": 0.0
@@ -249,7 +249,7 @@
         "ownerDown": 6900.0,
         "scgDown": 10900.0,
         "scgMonthly": 2695.0,
-        "profit": -1305.0,
+        "profit": 6695.0,
         "buyout": 65000.0,
         "scgBuyout": 65000.0,
         "buyoutSpread": 0.0
@@ -258,7 +258,7 @@
         "ownerDown": 9900.0,
         "scgDown": 12900.0,
         "scgMonthly": 2695.0,
-        "profit": -305.0,
+        "profit": 5695.0,
         "buyout": 65000.0,
         "scgBuyout": 65000.0,
         "buyoutSpread": 0.0
@@ -316,7 +316,7 @@
         "ownerDown": 17500.0,
         "scgDown": 19900.0,
         "scgMonthly": 3400.0,
-        "profit": 1000.0,
+        "profit": 5800.0,
         "buyout": 105000.0,
         "scgBuyout": 107000.0,
         "buyoutSpread": 2000.0
@@ -365,7 +365,7 @@
         "ownerDown": 12900.0,
         "scgDown": 14900.0,
         "scgMonthly": 3700.0,
-        "profit": 1700.0,
+        "profit": 5700.0,
         "buyout": 125000.0,
         "scgBuyout": 125000.0,
         "buyoutSpread": 0.0
