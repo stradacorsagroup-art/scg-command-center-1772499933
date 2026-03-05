@@ -1597,6 +1597,7 @@ async function openInventoryKanban() {
               <div class="inv-row"><span>First Payment Due to Owner</span><strong>${fmt(d.firstPaymentDueToOwner)}</strong></div>
               <div class="inv-row"><span>Location</span><strong>${fmt(d.location)}</strong></div>
               <div class="inv-row"><span>Owner Name</span><strong>${fmt(d.ownerName)}</strong></div>
+              <div class="inv-row"><span>Owner Email</span><strong>${fmt(d.ownerEmail)}</strong></div>
             </div>`;
         }).join('') || '<div style="color:var(--text-dim)">No COSTS inventory rows found.</div>';
     } catch (e) {

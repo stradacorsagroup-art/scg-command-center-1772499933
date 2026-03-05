@@ -31,7 +31,8 @@
         "buyout": 215000.0,
         "scgBuyout": 215000.0,
         "buyoutSpread": 0.0
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2020 Rolls-Royce Cullinan White/Red",
@@ -61,7 +62,8 @@
         "buyout": 229900.0,
         "scgBuyout": 229900.0,
         "buyoutSpread": 0.0
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2020 Rolls-Royce Cullinan BB White/White Forgiatos",
@@ -91,7 +93,8 @@
         "buyout": 229900.0,
         "scgBuyout": 229900.0,
         "buyoutSpread": 0.0
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2017 Rolls Royce Dawn White on Red",
@@ -121,7 +124,8 @@
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2018 Ferrari 488 Spider Yellow",
@@ -151,7 +155,8 @@
         "buyout": 245000.0,
         "scgBuyout": 250000.0,
         "buyoutSpread": 5000.0
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
@@ -181,7 +186,8 @@
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2020 McLaren 720s Spyder Satin Black",
@@ -211,7 +217,8 @@
         "buyout": 229000.0,
         "scgBuyout": 229900.0,
         "buyoutSpread": 900.0
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2021 Mercedes-Benz S580 Black on Peanut Butter",
@@ -241,7 +248,8 @@
         "buyout": 65000.0,
         "scgBuyout": 65000.0,
         "buyoutSpread": 0.0
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2022 Mercedes-Benz S580",
@@ -271,7 +279,8 @@
         "buyout": 65000.0,
         "scgBuyout": 65000.0,
         "buyoutSpread": 0.0
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2021 Mercedes G63 1/99 EXCLUSIVE EDITION",
@@ -301,7 +310,8 @@
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2020 Mercedes G63 Satin Black",
@@ -331,7 +341,8 @@
         "buyout": 105000.0,
         "scgBuyout": 107000.0,
         "buyoutSpread": 2000.0
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "RED EVO",
@@ -361,7 +372,8 @@
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2021 Maybach GLS600 Black/Gold",
@@ -391,7 +403,8 @@
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2019 White urus",
@@ -421,7 +434,8 @@
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "2022 green",
@@ -451,7 +465,8 @@
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
       "car": "black urus",
@@ -481,7 +496,8 @@
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
-      }
+      },
+      "ownerEmail": "stage2autogroup@gmail.com"
     }
   ]
 }
