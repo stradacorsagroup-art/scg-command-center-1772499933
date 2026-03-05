@@ -633,6 +633,18 @@
          .pay-chip .row { display:flex; justify-content:space-between; gap:4px; }
          .pay-chip button { border:none; background:transparent; cursor:pointer; font-size:12px; }
         .kanban-col { background:var(--surface-2); border:1px solid var(--border); border-radius:10px; min-height:180px; height:max-content; }
+        .inventory-modal { display:none; position:fixed; inset:0; background:rgba(15,23,42,.45); z-index:1001; }
+        .inventory-modal.visible { display:block; }
+        .inventory-sheet { position:absolute; left:3%; right:3%; top:5%; bottom:5%; background:var(--surface); border:1px solid var(--border); border-radius:14px; overflow:auto; }
+        .inventory-header { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+        .inventory-grid { padding:14px; display:grid; grid-template-columns:repeat(3,minmax(280px,1fr)); gap:12px; }
+        .inv-card { border:1px solid var(--border); background:var(--surface-2); border-radius:10px; padding:12px; }
+        .inv-title { font-size:13px; font-weight:700; margin-bottom:10px; }
+        .inv-row { display:flex; justify-content:space-between; gap:8px; font-size:12px; padding:4px 0; border-bottom:1px dashed var(--border); }
+        .inv-row:last-child { border-bottom:none; }
+        @media (max-width: 1100px) { .inventory-grid { grid-template-columns:repeat(2,minmax(240px,1fr)); } }
+        @media (max-width: 700px) { .inventory-grid { grid-template-columns:1fr; } }
+
         .kanban-col h4 { font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-dim); padding:10px 12px; border-bottom:1px solid var(--border); }
         .deal-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px; margin:10px; }
         .deal-title { font-weight:700; font-size:13px; margin-bottom:6px; }
@@ -674,7 +686,7 @@
             <div class="kpi-value" style="color:var(--accent)" id="kpi-cars">0</div>
             <div class="kpi-sub">active deal flow</div>
         </div>
-        <div class="kpi">
+        <div class="kpi clickable" onclick="openInventoryKanban()">
             <div class="kpi-label">Inventory</div>
             <div class="kpi-value" style="color:var(--blue)" id="kpi-inventory">0</div>
             <div class="kpi-sub">ready-to-go vehicles</div>
@@ -884,6 +896,18 @@
             <div class="kanban-mini-kpis" id="kanbanMiniKpis"></div>
             <div class="mini-revenue" id="kanbanRevenueByMonth"></div>
             <div class="kanban-wrap" id="kanbanWrap"></div>
+        </div>
+    </div>
+
+
+    <!-- INVENTORY KANBAN MODAL -->
+    <div class="inventory-modal" id="inventoryModal">
+        <div class="inventory-sheet">
+            <div class="inventory-header">
+                <h3>Inventory — COSTS Cards</h3>
+                <button class="kanban-close" onclick="closeInventoryKanban()">&times;</button>
+            </div>
+            <div class="inventory-grid" id="inventoryGrid"></div>
         </div>
     </div>
 
@@ -1512,6 +1536,48 @@ function renderCharts() {
             }
         }
     });
+}
+
+
+async function openInventoryKanban() {
+    const modal = document.getElementById('inventoryModal');
+    const grid = document.getElementById('inventoryGrid');
+    modal.classList.add('visible');
+    grid.innerHTML = '<div style="color:var(--text-dim)">Loading inventory…</div>';
+    try {
+        const res = await fetch('./data/deals-kanban.json?ts=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) throw new Error('Could not load inventory data');
+        const payload = await res.json();
+        const deals = (payload.deals || []).filter(d => (d.status || '').toLowerCase() === 'live');
+        const money = (n) => n == null ? '—' : `$${Number(n).toLocaleString()}`;
+
+        grid.innerHTML = deals.map(d => {
+            const term = String(d.term || '').toLowerCase();
+            const owner3 = term.includes('3') ? money(d.ownerDown) : '—';
+            const scg3 = term.includes('3') ? money(d.closedDown) : '—';
+            const owner12 = term.includes('12') ? money(d.ownerDown) : '—';
+            const scg12 = term.includes('12') ? money(d.closedDown) : '—';
+            const miles = d.milesAllowed || d.milesAtActivation || '—';
+            return `
+            <div class="inv-card">
+              <div class="inv-title">${d.car || 'Car'}</div>
+              <div class="inv-row"><span>3 mo Owner Down</span><strong>${owner3}</strong></div>
+              <div class="inv-row"><span>3 mo SCG Down</span><strong>${scg3}</strong></div>
+              <div class="inv-row"><span>12 mo Owner Down</span><strong>${owner12}</strong></div>
+              <div class="inv-row"><span>12 mo SCG Down</span><strong>${scg12}</strong></div>
+              <div class="inv-row"><span>Owner Monthly</span><strong>${money(d.ownerMonthly)}</strong></div>
+              <div class="inv-row"><span>SCG Monthly</span><strong>${money(d.closedMonthly)}</strong></div>
+              <div class="inv-row"><span>Miles / Year</span><strong>${miles}</strong></div>
+              <div class="inv-row"><span>Term</span><strong>${d.term || '—'}</strong></div>
+            </div>`;
+        }).join('') || '<div style="color:var(--text-dim)">No inventory rows found.</div>';
+    } catch (e) {
+        grid.innerHTML = '<div style="color:var(--red)">Failed to load inventory cards.</div>';
+    }
+}
+
+function closeInventoryKanban() {
+    document.getElementById('inventoryModal').classList.remove('visible');
 }
 
 // ========== INIT ==========
