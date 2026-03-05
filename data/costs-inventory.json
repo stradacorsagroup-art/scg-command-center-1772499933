@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 19,
+  "count": 20,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -601,6 +601,39 @@
       "ownerEmail": "stage2autogroup@gmail.com",
       "ownerMonthly": 6400,
       "scgMonthly": 6400,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2023 MC20 Cielo",
+      "threeMo": {
+        "ownerDown": 25995,
+        "scgDown": 25995,
+        "ownerMonthly": 3250,
+        "scgMonthly": 3250,
+        "profit": 3250,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 25995,
+        "scgDown": 25995,
+        "ownerMonthly": 3250,
+        "scgMonthly": 3250,
+        "profit": 3250,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "miles": "24,000",
+      "location": "\u2014",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "notes": "$339,700 MSRP \u2022 6/12 Month Lease To Own \u2022 No Credit/Income Check \u2022 Buyout Option At End",
+      "ownerMonthly": 3250,
+      "scgMonthly": 3250,
       "monthlySpread": 0
     }
   ]
