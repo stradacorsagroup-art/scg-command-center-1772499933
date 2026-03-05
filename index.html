@@ -1554,34 +1554,23 @@ async function openInventoryKanban() {
         const fmt = (v) => {
             if (v == null || v === '') return '—';
             if (typeof v === 'number') return money(v);
-            const s = String(v);
-            if (s.includes('$')) return s;
-            return s;
+            return String(v);
         };
 
         grid.innerHTML = items.map(d => {
-            const c = d._computed || {};
+            const ownerDown = d.ownerDown || {};
+            const scgDown = d.scgDown || {};
             return `
             <div class="inv-card">
               <div class="inv-title">${d.car || 'Car'}</div>
-              <div class="inv-row"><span>Miles</span><strong>${fmt(d['Miles'])}</strong></div>
-              <div class="inv-row"><span>Term</span><strong>${fmt(d['Term'])}</strong></div>
-              <div class="inv-row"><span>Ext?</span><strong>${fmt(d['Ext?'])}</strong></div>
-              <div class="inv-row"><span>Miles Allowed Per Year</span><strong>${fmt(d['Miles Allowed Per Year'])}</strong></div>
-              <div class="inv-row"><span>Buyout</span><strong>${fmt(d['Buyout'])}</strong></div>
-              <div class="inv-row"><span>SCG Buyout</span><strong>${fmt(d['SCG Buyout'])}</strong></div>
-              <div class="inv-row"><span>Buyout Spread</span><strong>${fmt(d['Buyout Spread'])}</strong></div>
-              <div class="inv-row"><span>Owner Down</span><strong>${fmt(d['Owner Down'])}</strong></div>
-              <div class="inv-row"><span>SCG Down</span><strong>${fmt(d['SCG Down'])}</strong></div>
-              <div class="inv-row"><span>Down Spread</span><strong>${fmt(d['Down Spread'])}</strong></div>
-              <div class="inv-row"><span>Owner Mo</span><strong>${fmt(d['Owner Mo'])}</strong></div>
-              <div class="inv-row"><span>SCG Mo</span><strong>${fmt(d['SCG Mo'])}</strong></div>
-              <div class="inv-row"><span>Mo Spread</span><strong>${fmt(d['Mo Spread'])}</strong></div>
-              <div class="inv-row"><span>First Payment Due to Owner</span><strong>${fmt(d['First Payment Due to Owner'])}</strong></div>
-              <div class="inv-row"><span>Location</span><strong>${fmt(d['Location'])}</strong></div>
-              <div class="inv-row"><span>Owner Name</span><strong>${fmt(d['Owner Name'])}</strong></div>
-              <div class="inv-row"><span>Status</span><strong>${fmt(d['Status'])}</strong></div>
-              <div class="inv-row"><span>SCG Profit (Formula)</span><strong>${fmt(c.scgProfitFormula)}</strong></div>
+              <div class="inv-row"><span>3 mo Owner Down</span><strong>${fmt(ownerDown['3 mo'])}</strong></div>
+              <div class="inv-row"><span>3 mo SCG Down</span><strong>${fmt(scgDown['3 mo'])}</strong></div>
+              <div class="inv-row"><span>12 mo Owner Down</span><strong>${fmt(ownerDown['12 mo'])}</strong></div>
+              <div class="inv-row"><span>12 mo SCG Down</span><strong>${fmt(scgDown['12 mo'])}</strong></div>
+              <div class="inv-row"><span>Owner Monthly</span><strong>${fmt(d.ownerMonthly)}</strong></div>
+              <div class="inv-row"><span>SCG Monthly</span><strong>${fmt(d.scgMonthly)}</strong></div>
+              <div class="inv-row"><span>Miles / Year</span><strong>${fmt(d.milesPerYear)}</strong></div>
+              <div class="inv-row"><span>Term</span><strong>${fmt(d.term || (d.terms || []).join(' / '))}</strong></div>
             </div>`;
         }).join('') || '<div style="color:var(--text-dim)">No COSTS inventory rows found.</div>';
     } catch (e) {
