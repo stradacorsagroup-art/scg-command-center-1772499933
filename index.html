@@ -330,6 +330,8 @@
         }
 
         .priority-item:last-child { border-bottom: none; }
+        .priority-item.current-slot { background: var(--accent-dim); border-radius: 8px; padding-left: 8px; padding-right: 8px; }
+        .priority-item.next-slot { background: rgba(29,78,216,0.08); border-radius: 8px; padding-left: 8px; padding-right: 8px; }
 
         .priority-num {
             width: 28px;
@@ -1662,6 +1664,25 @@ const HABITS = [
   'Sleep by 12:00 AM'
 ];
 
+// minutes after midnight [start, end]
+const HABIT_WINDOWS = {
+  0: [480, 495],
+  1: [495, 540],
+  2: [480, 600],
+  3: [480, 600],
+  4: [480, 600],
+  5: [565, 590], // Mon-Thu only
+  6: [540, 615],
+  7: [570, 600],
+  8: [615, 795],
+  9: [780, 840],
+ 10: [840, 1020],
+ 11: [1080, 1140],
+ 12: [1200, 1260],
+ 13: [1260, 1380],
+ 14: [1380, 1440]
+};
+
 function todayKey() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
@@ -1688,17 +1709,40 @@ let habitState = loadHabits();
 function renderHabits() {
   const el = document.getElementById('habitList');
   if (!el) return;
-  el.innerHTML = habitState.map((h, i) => `
-    <div class="priority-item">
+
+  const now = new Date();
+  const nowMin = now.getHours() * 60 + now.getMinutes();
+  const day = now.getDay(); // 0 Sun ... 6 Sat
+
+  let activeIndex = -1;
+  let nextIndex = -1;
+
+  habitState.forEach((h, i) => {
+    const w = HABIT_WINDOWS[i];
+    if (!w) return;
+    if (i === 5 && (day === 0 || day === 5 || day === 6)) return; // trade off Fri/Sat/Sun
+    if (nowMin >= w[0] && nowMin < w[1]) activeIndex = i;
+    if (nextIndex === -1 && nowMin < w[0]) nextIndex = i;
+  });
+
+  el.innerHTML = habitState.map((h, i) => {
+    const cls = i === activeIndex ? 'current-slot' : (i === nextIndex ? 'next-slot' : '');
+    return `
+    <div class="priority-item ${cls}">
       <div class="priority-text">
         <span class="task-name">${h.name}</span>
       </div>
       <div class="priority-check ${h.done ? 'done' : ''}" onclick="toggleHabit(${i})">${h.done ? '&#10003;' : ''}</div>
     </div>
-  `).join('');
+  `;
+  }).join('');
+
   const done = habitState.filter(h => h.done).length;
   const sum = document.getElementById('habitSummary');
-  if (sum) sum.textContent = `${done}/${habitState.length} complete`;
+  if (sum) {
+    const status = activeIndex >= 0 ? ` • now: ${habitState[activeIndex].name}` : '';
+    sum.textContent = `${done}/${habitState.length} complete${status}`;
+  }
 }
 
 function toggleHabit(i) {
@@ -1707,6 +1751,10 @@ function toggleHabit(i) {
   saveHabits(habitState);
   renderHabits();
 }
+
+setInterval(() => {
+  renderHabits();
+}, 60000);
 
 // ========== INIT ==========
 (async function init() {
