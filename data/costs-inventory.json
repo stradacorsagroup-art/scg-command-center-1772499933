@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 18,
+  "count": 19,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -569,6 +569,38 @@
       "ownerEmail": "stage2autogroup@gmail.com",
       "ownerMonthly": 4900,
       "scgMonthly": 4900,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2024 Rolls-Royce Spectre Electric",
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "ownerMonthly": null,
+        "scgMonthly": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 44900,
+        "scgDown": 44900,
+        "ownerMonthly": 6400,
+        "scgMonthly": 6400,
+        "profit": 6400,
+        "buyout": 421900,
+        "scgBuyout": 421900,
+        "buyoutSpread": 0
+      },
+      "miles": "1,096",
+      "location": "Miami, FL",
+      "milesPerYear": "7,500",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "ownerMonthly": 6400,
+      "scgMonthly": 6400,
       "monthlySpread": 0
     }
   ]
