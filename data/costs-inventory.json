@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 21,
+  "count": 22,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -667,6 +667,39 @@
       "notes": "White Exterior / Handcrafted Red Interior \u2022 $235k Purchase Price \u2022 6/12 Month Lease \u2022 No Credit or Income Check \u2022 Buyout Option at End",
       "ownerMonthly": 5995,
       "scgMonthly": 5995,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2019 G63 Brabus Kit",
+      "threeMo": {
+        "ownerDown": 34995,
+        "scgDown": 34995,
+        "ownerMonthly": 3500,
+        "scgMonthly": 3500,
+        "profit": 3500,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 34995,
+        "scgDown": 34995,
+        "ownerMonthly": 3500,
+        "scgMonthly": 3500,
+        "profit": 3500,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "miles": "65,xxx",
+      "location": "\u2014",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "notes": "Starlight Headliner \u2022 Pink Wrap \u2022 Over $50,000 Invested \u2022 $149,995 cash price \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End",
+      "ownerMonthly": 3500,
+      "scgMonthly": 3500,
       "monthlySpread": 0
     }
   ]
