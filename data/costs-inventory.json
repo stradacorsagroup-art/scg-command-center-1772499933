@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 16,
+  "count": 14,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -345,37 +345,6 @@
       "ownerEmail": "stage2autogroup@gmail.com"
     },
     {
-      "car": "RED EVO",
-      "miles": null,
-      "vin": null,
-      "ownerMonthly": null,
-      "scgMonthly": null,
-      "monthlySpread": 0.0,
-      "milesPerYear": null,
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": null,
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "ownerEmail": "stage2autogroup@gmail.com"
-    },
-    {
       "car": "2021 Maybach GLS600 Black/Gold",
       "miles": "36,000",
       "vin": "4JGFF8HB4MA551962",
@@ -439,37 +408,6 @@
     },
     {
       "car": "2022 green",
-      "miles": null,
-      "vin": null,
-      "ownerMonthly": null,
-      "scgMonthly": null,
-      "monthlySpread": 0.0,
-      "milesPerYear": null,
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": null,
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "ownerEmail": "stage2autogroup@gmail.com"
-    },
-    {
-      "car": "black urus",
       "miles": null,
       "vin": null,
       "ownerMonthly": null,
