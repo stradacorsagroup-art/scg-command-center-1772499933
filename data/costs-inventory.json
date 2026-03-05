@@ -1,11 +1,12 @@
 {
-  "syncedAt": "2026-03-05T04:18:18.655496+00:00",
+  "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
   "count": 16,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
-      "miles": "61,000",
+      "miles": "Unlimited",
+      "vin": null,
       "ownerMonthly": 5500.0,
       "scgMonthly": 5995.0,
       "monthlySpread": 95.0,
@@ -35,6 +36,7 @@
     {
       "car": "2020 Rolls-Royce Cullinan White/Red",
       "miles": "47,000",
+      "vin": null,
       "ownerMonthly": 6900.0,
       "scgMonthly": 6900.0,
       "monthlySpread": 0.0,
@@ -64,6 +66,7 @@
     {
       "car": "2020 Rolls-Royce Cullinan BB White/White Forgiatos",
       "miles": "51,000",
+      "vin": null,
       "ownerMonthly": 6900.0,
       "scgMonthly": 6900.0,
       "monthlySpread": 0.0,
@@ -93,6 +96,7 @@
     {
       "car": "2017 Rolls Royce Dawn White on Red",
       "miles": "39,000",
+      "vin": null,
       "ownerMonthly": 6900.0,
       "scgMonthly": 6900.0,
       "monthlySpread": 0.0,
@@ -122,6 +126,7 @@
     {
       "car": "2018 Ferrari 488 Spider Yellow",
       "miles": "27,000",
+      "vin": null,
       "ownerMonthly": 6900.0,
       "scgMonthly": 6900.0,
       "monthlySpread": 0.0,
@@ -151,6 +156,7 @@
     {
       "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
       "miles": "38,000",
+      "vin": null,
       "ownerMonthly": 5900.0,
       "scgMonthly": 5995.0,
       "monthlySpread": 95.0,
@@ -180,6 +186,7 @@
     {
       "car": "2020 McLaren 720s Spyder Satin Black",
       "miles": "23,000",
+      "vin": null,
       "ownerMonthly": 6900.0,
       "scgMonthly": 6995.0,
       "monthlySpread": 95.0,
@@ -209,6 +216,7 @@
     {
       "car": "2021 Mercedes-Benz S580 Black on Peanut Butter",
       "miles": "65,000",
+      "vin": null,
       "ownerMonthly": 2495.0,
       "scgMonthly": 2495.0,
       "monthlySpread": 0.0,
@@ -238,6 +246,7 @@
     {
       "car": "2022 Mercedes-Benz S580",
       "miles": "65,000",
+      "vin": null,
       "ownerMonthly": 2695.0,
       "scgMonthly": 2695.0,
       "monthlySpread": 0.0,
@@ -267,6 +276,7 @@
     {
       "car": "2021 Mercedes G63 1/99 EXCLUSIVE EDITION",
       "miles": null,
+      "vin": null,
       "ownerMonthly": null,
       "scgMonthly": null,
       "monthlySpread": 0.0,
@@ -296,6 +306,7 @@
     {
       "car": "2020 Mercedes G63 Satin Black",
       "miles": "56,000",
+      "vin": null,
       "ownerMonthly": 3500.0,
       "scgMonthly": 3400.0,
       "monthlySpread": -100.0,
@@ -325,6 +336,7 @@
     {
       "car": "RED EVO",
       "miles": null,
+      "vin": null,
       "ownerMonthly": null,
       "scgMonthly": null,
       "monthlySpread": 0.0,
@@ -354,6 +366,7 @@
     {
       "car": "2021 Maybach GLS600 Black/Gold",
       "miles": "36,000",
+      "vin": null,
       "ownerMonthly": 3200.0,
       "scgMonthly": 3700.0,
       "monthlySpread": 500.0,
@@ -383,6 +396,7 @@
     {
       "car": "2019 White urus",
       "miles": null,
+      "vin": null,
       "ownerMonthly": null,
       "scgMonthly": null,
       "monthlySpread": 0.0,
@@ -412,6 +426,7 @@
     {
       "car": "2022 green",
       "miles": null,
+      "vin": null,
       "ownerMonthly": null,
       "scgMonthly": null,
       "monthlySpread": 0.0,
@@ -441,6 +456,7 @@
     {
       "car": "black urus",
       "miles": null,
+      "vin": null,
       "ownerMonthly": null,
       "scgMonthly": null,
       "monthlySpread": 0.0,
