@@ -1,251 +1,439 @@
 {
-  "syncedAt": "2026-03-05T02:29:28.780199+00:00",
+  "syncedAt": "2026-03-05T04:14:25.694271+00:00",
   "source": "workspace:COSTS/New data source",
   "count": 16,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "ownerDown": {
-        "3 mo": 24900.0,
-        "12 mo": 44900.0
-      },
-      "scgDown": {
-        "3 mo": 27900.0,
-        "12 mo": 47900.0
-      },
+      "miles": "Unlimited",
       "ownerMonthly": 5500.0,
       "scgMonthly": 5995.0,
+      "monthlySpread": 95.0,
       "milesPerYear": null,
-      "term": "3 mo"
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 24900.0,
+        "scgDown": 27900.0,
+        "profit": 2995.0,
+        "buyout": 230000.0,
+        "scgBuyout": 229900.0,
+        "buyoutSpread": -100.0
+      },
+      "twelveMo": {
+        "ownerDown": 44900.0,
+        "scgDown": 47900.0,
+        "profit": 2995.0,
+        "buyout": 215000.0,
+        "scgBuyout": 215000.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
       "car": "2020 Rolls-Royce Cullinan White/Red",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "ownerDown": {
-        "12 mo": 49900.0,
-        "3 mo": 24900.0
-      },
-      "scgDown": {
-        "12 mo": 49900.0,
-        "3 mo": 26900.0
-      },
+      "miles": "47,000",
       "ownerMonthly": 6900.0,
       "scgMonthly": 6900.0,
+      "monthlySpread": 0.0,
       "milesPerYear": null,
-      "term": "12 mo"
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 24900.0,
+        "scgDown": 26900.0,
+        "profit": 4900.0,
+        "buyout": 245000.0,
+        "scgBuyout": 244900.0,
+        "buyoutSpread": -100.0
+      },
+      "twelveMo": {
+        "ownerDown": 49900.0,
+        "scgDown": 49900.0,
+        "profit": 6900.0,
+        "buyout": 229900.0,
+        "scgBuyout": 229900.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
       "car": "2020 Rolls-Royce Cullinan BB White/White Forgiatos",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "ownerDown": {
-        "12 mo": 49900.0,
-        "3 mo": 24900.0
-      },
-      "scgDown": {
-        "12 mo": 49900.0,
-        "3 mo": 26900.0
-      },
+      "miles": "51,000",
       "ownerMonthly": 6900.0,
       "scgMonthly": 6900.0,
+      "monthlySpread": 0.0,
       "milesPerYear": null,
-      "term": "12 mo"
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 24900.0,
+        "scgDown": 26900.0,
+        "profit": 4900.0,
+        "buyout": 240000.0,
+        "scgBuyout": 239900.0,
+        "buyoutSpread": -100.0
+      },
+      "twelveMo": {
+        "ownerDown": 49900.0,
+        "scgDown": 49900.0,
+        "profit": 6900.0,
+        "buyout": 229900.0,
+        "scgBuyout": 229900.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
       "car": "2017 Rolls Royce Dawn White on Red",
-      "terms": [
-        "3 mo"
-      ],
-      "ownerDown": {
-        "3 mo": 24900.0
-      },
-      "scgDown": {
-        "3 mo": 26900.0
-      },
+      "miles": "39,000",
       "ownerMonthly": 6900.0,
       "scgMonthly": 6900.0,
-      "milesPerYear": 7500.0,
-      "term": "3 mo"
+      "monthlySpread": 0.0,
+      "milesPerYear": "7,500",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 24900.0,
+        "scgDown": 26900.0,
+        "profit": 4900.0,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": 0.0
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     },
     {
       "car": "2018 Ferrari 488 Spider Yellow",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "ownerDown": {
-        "12 mo": 24900.0,
-        "3 mo": 24900.0
-      },
-      "scgDown": {
-        "12 mo": 26900.0,
-        "3 mo": 26900.0
-      },
+      "miles": "27,000",
       "ownerMonthly": 6900.0,
       "scgMonthly": 6900.0,
-      "milesPerYear": 7500.0,
-      "term": "12 mo"
+      "monthlySpread": 0.0,
+      "milesPerYear": "7,500",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 24900.0,
+        "scgDown": 26900.0,
+        "profit": 4900.0,
+        "buyout": 250000.0,
+        "scgBuyout": 250000.0,
+        "buyoutSpread": 0.0
+      },
+      "twelveMo": {
+        "ownerDown": 24900.0,
+        "scgDown": 26900.0,
+        "profit": 4900.0,
+        "buyout": 245000.0,
+        "scgBuyout": 250000.0,
+        "buyoutSpread": 5000.0
+      }
     },
     {
       "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
-      "terms": [
-        "3 mo"
-      ],
-      "ownerDown": {
-        "3 mo": 24900.0
-      },
-      "scgDown": {
-        "3 mo": 26900.0
-      },
+      "miles": "38,000",
       "ownerMonthly": 5900.0,
       "scgMonthly": 5995.0,
-      "milesPerYear": 7500.0,
-      "term": "3 mo"
+      "monthlySpread": 95.0,
+      "milesPerYear": "7,500",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 24900.0,
+        "scgDown": 26900.0,
+        "profit": 3995.0,
+        "buyout": 250000.0,
+        "scgBuyout": 250000.0,
+        "buyoutSpread": 0.0
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     },
     {
       "car": "2020 McLaren 720s Spyder Satin Black",
-      "terms": [
-        "12 mo"
-      ],
-      "ownerDown": {
-        "12 mo": 54900.0
-      },
-      "scgDown": {
-        "12 mo": 59900.0
-      },
+      "miles": "23,000",
       "ownerMonthly": 6900.0,
       "scgMonthly": 6995.0,
-      "milesPerYear": 7500.0,
-      "term": "12 mo"
+      "monthlySpread": 95.0,
+      "milesPerYear": "7,500",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 54900.0,
+        "scgDown": 59900.0,
+        "profit": 1995.0,
+        "buyout": 229000.0,
+        "scgBuyout": 229900.0,
+        "buyoutSpread": 900.0
+      }
     },
     {
       "car": "2021 Mercedes-Benz S580 Black on Peanut Butter",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "ownerDown": {
-        "3 mo": 8990.0,
-        "12 mo": 11990.0
-      },
-      "scgDown": {
-        "3 mo": 10900.0,
-        "12 mo": 13900.0
-      },
+      "miles": "65,000",
       "ownerMonthly": 2495.0,
       "scgMonthly": 2495.0,
-      "milesPerYear": 7500.0,
-      "term": "3 mo"
+      "monthlySpread": 0.0,
+      "milesPerYear": "7,500",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 8990.0,
+        "scgDown": 10900.0,
+        "profit": 585.0,
+        "buyout": 65000.0,
+        "scgBuyout": 65000.0,
+        "buyoutSpread": 0.0
+      },
+      "twelveMo": {
+        "ownerDown": 11990.0,
+        "scgDown": 13900.0,
+        "profit": 585.0,
+        "buyout": 65000.0,
+        "scgBuyout": 65000.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
       "car": "2022 Mercedes-Benz S580",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "ownerDown": {
-        "3 mo": 6900.0,
-        "12 mo": 9900.0
-      },
-      "scgDown": {
-        "3 mo": 10900.0,
-        "12 mo": 12900.0
-      },
+      "miles": "65,000",
       "ownerMonthly": 2695.0,
       "scgMonthly": 2695.0,
-      "milesPerYear": 10000.0,
-      "term": "3 mo"
+      "monthlySpread": 0.0,
+      "milesPerYear": "10,000",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 6900.0,
+        "scgDown": 10900.0,
+        "profit": -1305.0,
+        "buyout": 65000.0,
+        "scgBuyout": 65000.0,
+        "buyoutSpread": 0.0
+      },
+      "twelveMo": {
+        "ownerDown": 9900.0,
+        "scgDown": 12900.0,
+        "profit": -305.0,
+        "buyout": 65000.0,
+        "scgBuyout": 65000.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
       "car": "2021 Mercedes G63 1/99 EXCLUSIVE EDITION",
-      "terms": [],
-      "ownerDown": {},
-      "scgDown": {},
+      "miles": null,
       "ownerMonthly": null,
       "scgMonthly": null,
+      "monthlySpread": 0.0,
       "milesPerYear": null,
-      "term": ""
+      "firstPaymentDueToOwner": null,
+      "location": null,
+      "ownerName": null,
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     },
     {
       "car": "2020 Mercedes G63 Satin Black",
-      "terms": [
-        "12 mo"
-      ],
-      "ownerDown": {
-        "12 mo": 17500.0
-      },
-      "scgDown": {
-        "12 mo": 19900.0
-      },
+      "miles": "56,000",
       "ownerMonthly": 3500.0,
       "scgMonthly": 3400.0,
-      "milesPerYear": 10000.0,
-      "term": "12 mo"
+      "monthlySpread": -100.0,
+      "milesPerYear": "10,000",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 17500.0,
+        "scgDown": 19900.0,
+        "profit": 1000.0,
+        "buyout": 105000.0,
+        "scgBuyout": 107000.0,
+        "buyoutSpread": 2000.0
+      }
     },
     {
       "car": "RED EVO",
-      "terms": [],
-      "ownerDown": {},
-      "scgDown": {},
+      "miles": null,
       "ownerMonthly": null,
       "scgMonthly": null,
+      "monthlySpread": 0.0,
       "milesPerYear": null,
-      "term": ""
+      "firstPaymentDueToOwner": null,
+      "location": null,
+      "ownerName": null,
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     },
     {
       "car": "2021 Maybach GLS600 Black/Gold",
-      "terms": [
-        "3 mo"
-      ],
-      "ownerDown": {
-        "3 mo": 12900.0
-      },
-      "scgDown": {
-        "3 mo": 14900.0
-      },
+      "miles": "36,000",
       "ownerMonthly": 3200.0,
       "scgMonthly": 3700.0,
+      "monthlySpread": 500.0,
       "milesPerYear": null,
-      "term": "3 mo"
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "Malik",
+      "threeMo": {
+        "ownerDown": 12900.0,
+        "scgDown": 14900.0,
+        "profit": 1700.0,
+        "buyout": 125000.0,
+        "scgBuyout": 125000.0,
+        "buyoutSpread": 0.0
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     },
     {
       "car": "2019 White urus",
-      "terms": [],
-      "ownerDown": {},
-      "scgDown": {},
+      "miles": null,
       "ownerMonthly": null,
       "scgMonthly": null,
+      "monthlySpread": 0.0,
       "milesPerYear": null,
-      "term": ""
+      "firstPaymentDueToOwner": null,
+      "location": null,
+      "ownerName": null,
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     },
     {
       "car": "2022 green",
-      "terms": [],
-      "ownerDown": {},
-      "scgDown": {},
+      "miles": null,
       "ownerMonthly": null,
       "scgMonthly": null,
+      "monthlySpread": 0.0,
       "milesPerYear": null,
-      "term": ""
+      "firstPaymentDueToOwner": null,
+      "location": null,
+      "ownerName": null,
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     },
     {
       "car": "black urus",
-      "terms": [],
-      "ownerDown": {},
-      "scgDown": {},
+      "miles": null,
       "ownerMonthly": null,
       "scgMonthly": null,
+      "monthlySpread": 0.0,
       "milesPerYear": null,
-      "term": ""
+      "firstPaymentDueToOwner": null,
+      "location": null,
+      "ownerName": null,
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     }
   ]
 }
