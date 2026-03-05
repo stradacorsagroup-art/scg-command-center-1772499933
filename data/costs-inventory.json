@@ -1,235 +1,428 @@
 {
-  "syncedAt": "2026-03-05T02:13:48.919375Z",
+  "syncedAt": "2026-03-05T02:24:11.397561+00:00",
   "source": "workspace:COSTS/New data source",
+  "count": 16,
   "items": [
     {
-      "slug": "2017-rolls-royce-dawn-white-on-red",
       "car": "2017 Rolls Royce Dawn White on Red",
-      "terms": [
-        "3 mo"
-      ],
-      "down": {
-        "3 mo": 26900
-      },
-      "ownerDown": {
-        "3 mo": 24900
-      },
-      "ownerMonthly": 6900,
-      "scgMonthly": 6900,
-      "milesPerYear": 7500
+      "sourceFile": "2017 Rolls Royce Dawn White on Red 30453b5284ce8038b87fde94db210ef1.md",
+      "Miles": "39,000",
+      "Term": "3 mo",
+      "Ext?": "No",
+      "Miles Allowed": "7,500",
+      "Buyout Spread": "$0.00",
+      "Owner Down": "$24,900.00",
+      "SCG Down": "$26,900.00",
+      "Down Spread": "$8,900.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,900.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "7,500",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 4900.0,
+        "downSpread": 8900.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
-      "slug": "2018-ferrari-488-spider-yellow",
+      "car": "2018 Ferrari 488 Spider Yellow (12)",
+      "sourceFile": "2018 Ferrari 488 Spider Yellow (12) 30953b5284ce80aabf49dbea1719ce3f.md",
+      "Miles": "27,000",
+      "Term": "12 mo",
+      "Ext?": "3 mo",
+      "Miles Allowed": "7,500",
+      "Buyout": "$245,000.00",
+      "SCG Buyout": "$250,000.00",
+      "Buyout Spread": "$5,000.00",
+      "Owner Down": "$24,900.00",
+      "SCG Down": "$26,900.00",
+      "Down Spread": "$8,900.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,900.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "7,500",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 4900.0,
+        "downSpread": 8900.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 5000.0
+      }
+    },
+    {
       "car": "2018 Ferrari 488 Spider Yellow",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "down": {
-        "12 mo": 26900,
-        "3 mo": 26900
-      },
-      "ownerDown": {
-        "12 mo": 24900,
-        "3 mo": 24900
-      },
-      "ownerMonthly": 6900,
-      "scgMonthly": 6900,
-      "milesPerYear": 7500
+      "sourceFile": "2018 Ferrari 488 Spider Yellow 30453b5284ce81948952cdf00bc4403b.md",
+      "Miles": "27,000",
+      "Term": "3 mo",
+      "Ext?": "3 mo",
+      "Miles Allowed": "7,500",
+      "Buyout": "$250,000.00",
+      "SCG Buyout": "$250,000.00",
+      "Buyout Spread": "$0.00",
+      "Owner Down": "$24,900.00",
+      "SCG Down": "$26,900.00",
+      "Down Spread": "$8,900.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,900.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "7,500",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 4900.0,
+        "downSpread": 8900.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
-      "slug": "2020-lamborghini-urus-frozen-gray-red-45k",
+      "car": "2019 White urus",
+      "sourceFile": "2019 White urus 30f53b5284ce80ab9ccac39368f6fdf3.md",
+      "Buyout Spread": "$0.00",
+      "Down Spread": "$0.00",
+      "Mo Spread": "$0.00",
+      "Miles Allowed Per Year": "",
+      "First Payment Due to Owner": "",
+      "_computed": {
+        "scgProfitFormula": null,
+        "downSpread": 0.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 0.0
+      }
+    },
+    {
       "car": "2020 Lamborghini Urus Frozen Gray/Red 45k",
-      "terms": [
-        "3 mo"
-      ],
-      "down": {
-        "3 mo": 16900
-      },
-      "ownerDown": {
-        "3 mo": 14900
-      },
-      "ownerMonthly": 3900,
-      "scgMonthly": 4400,
-      "milesPerYear": null
+      "sourceFile": "2020 Lamborghini Urus Frozen Gray Red 45k 30453b5284ce81fba439f766c13d5a5d.md",
+      "Buyout": "TBD",
+      "Margin": "$2000 + $500/mo",
+      "Miles": "7500/yr",
+      "Owner": "TBD",
+      "Owner Down": "14,900",
+      "Owner Mo": "3,900",
+      "SCG Down": "16,900",
+      "SCG Mo": "4,400",
+      "Status": "Live",
+      "Term": "3 mo",
+      "Miles Allowed Per Year": "",
+      "First Payment Due to Owner": "",
+      "_computed": {
+        "scgProfitFormula": 2400.0,
+        "downSpread": null,
+        "moSpread": null,
+        "buyoutSpread": null
+      }
     },
     {
-      "slug": "2020-mclaren-720s-spyder-satin-black",
+      "car": "2020 McLaren 720s Spyder Satin Black (12)",
+      "sourceFile": "2020 McLaren 720s Spyder Satin Black (12) 30453b5284ce8087807df8eacbc88433.md",
+      "Miles": "23,000",
+      "Term": "12 mo",
+      "Ext?": "6 mo",
+      "Miles Allowed": "7,500",
+      "Buyout": "$229,000.00",
+      "SCG Buyout": "$229,900.00",
+      "Buyout Spread": "$900.00",
+      "Owner Down": "$54,900.00",
+      "SCG Down": "$59,900.00",
+      "Down Spread": "$11,995.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,995.00",
+      "Mo Spread": "$95.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "7,500",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 1995.0,
+        "downSpread": 11995.0,
+        "moSpread": 95.0,
+        "buyoutSpread": 900.0
+      }
+    },
+    {
       "car": "2020 McLaren 720s Spyder Satin Black",
-      "terms": [
-        "6 mo",
-        "12 mo"
-      ],
-      "down": {
-        "12 mo": 59900,
-        "6 mo": 44900
-      },
-      "ownerDown": {
-        "12 mo": 54900,
-        "6 mo": 39900
-      },
-      "ownerMonthly": 6900,
-      "scgMonthly": 6995,
-      "milesPerYear": 7500
+      "sourceFile": "2020 McLaren 720s Spyder Satin Black 30453b5284ce80188790fafac207137c.md",
+      "Miles": "23,000",
+      "Term": "6 mo",
+      "Ext?": "6 mo",
+      "Miles Allowed": "7,500",
+      "Buyout": "$239,900.00",
+      "SCG Buyout": "$239,900.00",
+      "Buyout Spread": "$0.00",
+      "Owner Down": "$39,900.00",
+      "SCG Down": "$44,900.00",
+      "Down Spread": "$11,995.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,995.00",
+      "Mo Spread": "$95.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "7,500",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 1995.0,
+        "downSpread": 11995.0,
+        "moSpread": 95.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
-      "slug": "2020-mercedes-g63-satin-black",
       "car": "2020 Mercedes G63 Satin Black",
-      "terms": [
-        "12 mo"
-      ],
-      "down": {
-        "12 mo": 19900
-      },
-      "ownerDown": {
-        "12 mo": 17500
-      },
-      "ownerMonthly": 3500,
-      "scgMonthly": 3400,
-      "milesPerYear": 10000
+      "sourceFile": "2020 Mercedes G63 Satin Black 30453b5284ce8021a27bd7f91a520655.md",
+      "Miles": "56,000",
+      "Term": "12 mo",
+      "Ext?": "No",
+      "Miles Allowed": "10,000",
+      "Buyout": "$105,000.00",
+      "SCG Buyout": "$107,000.00",
+      "Buyout Spread": "$2,000.00",
+      "Owner Down": "$17,500.00",
+      "SCG Down": "$19,900.00",
+      "Down Spread": "$5,800.00",
+      "Owner Mo": "$3,500.00",
+      "SCG Mo": "$3,400.00",
+      "Mo Spread": "-$100.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "10,000",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 1000.0,
+        "downSpread": 5800.0,
+        "moSpread": -100.0,
+        "buyoutSpread": 2000.0
+      }
     },
     {
-      "slug": "2020-rolls-royce-cullinan-bb-white-white-forgiatos",
       "car": "2020 Rolls-Royce Cullinan BB White/White Forgiatos",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "down": {
-        "12 mo": 49900,
-        "3 mo": 26900
-      },
-      "ownerDown": {
-        "12 mo": 49900,
-        "3 mo": 24900
-      },
-      "ownerMonthly": 6900,
-      "scgMonthly": 6900,
-      "milesPerYear": null
+      "sourceFile": "2020 Rolls-Royce Cullinan BB White White Forgiatos 30453b5284ce812da9a3dfc0c451e350.md",
+      "Miles": "51,000",
+      "Term": "3 mo",
+      "Ext?": "No",
+      "Buyout": "$240,000.00",
+      "SCG Buyout": "$239,900.00",
+      "Buyout Spread": "-$100.00",
+      "Owner Down": "$24,900.00",
+      "SCG Down": "$26,900.00",
+      "Down Spread": "$8,900.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,900.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Notes": "Black Forgiatos",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 4900.0,
+        "downSpread": 8900.0,
+        "moSpread": 0.0,
+        "buyoutSpread": -100.0
+      }
     },
     {
-      "slug": "2020-rolls-royce-cullinan-white-red",
+      "car": "2020 Rolls-Royce Cullinan BB White/White Forgiatos (12)",
+      "sourceFile": "2020 Rolls-Royce Cullinan BB White White Forgiatos 30953b5284ce80f5bee6daf9f07346fa.md",
+      "Miles": "51,000",
+      "Term": "12 mo",
+      "Ext?": "No",
+      "Buyout": "$229,900.00",
+      "SCG Buyout": "$229,900.00",
+      "Buyout Spread": "$0.00",
+      "Owner Down": "$49,900.00",
+      "SCG Down": "$49,900.00",
+      "Down Spread": "$6,900.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,900.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Notes": "Black Forgiatos",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 6900.0,
+        "downSpread": 6900.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 0.0
+      }
+    },
+    {
+      "car": "2020 Rolls-Royce Cullinan White/Red (12)",
+      "sourceFile": "2020 Rolls-Royce Cullinan White Red (12) 30953b5284ce8093b735dba39ef11e58.md",
+      "Miles": "47,000",
+      "Term": "12 mo",
+      "Ext?": "No",
+      "Buyout": "$229,900.00",
+      "SCG Buyout": "$229,900.00",
+      "Buyout Spread": "$0.00",
+      "Owner Down": "$49,900.00",
+      "SCG Down": "$49,900.00",
+      "Down Spread": "$6,900.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,900.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 6900.0,
+        "downSpread": 6900.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 0.0
+      }
+    },
+    {
       "car": "2020 Rolls-Royce Cullinan White/Red",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "down": {
-        "12 mo": 49900,
-        "3 mo": 26900
-      },
-      "ownerDown": {
-        "12 mo": 49900,
-        "3 mo": 24900
-      },
-      "ownerMonthly": 6900,
-      "scgMonthly": 6900,
-      "milesPerYear": null
+      "sourceFile": "2020 Rolls-Royce Cullinan White Red 30453b5284ce81829bf4f24fe529eb24.md",
+      "Miles": "47,000",
+      "Term": "3 mo",
+      "Ext?": "No",
+      "Buyout": "$245,000.00",
+      "SCG Buyout": "$244,900.00",
+      "Buyout Spread": "-$100.00",
+      "Owner Down": "$24,900.00",
+      "SCG Down": "$26,900.00",
+      "Down Spread": "$8,900.00",
+      "Owner Mo": "$6,900.00",
+      "SCG Mo": "$6,900.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 4900.0,
+        "downSpread": 8900.0,
+        "moSpread": 0.0,
+        "buyoutSpread": -100.0
+      }
     },
     {
-      "slug": "2021-maybach-gls600-black-gold",
       "car": "2021 Maybach GLS600 Black/Gold",
-      "terms": [
-        "3 mo"
-      ],
-      "down": {
-        "3 mo": 14900
-      },
-      "ownerDown": {
-        "3 mo": 12900
-      },
-      "ownerMonthly": 3200,
-      "scgMonthly": 3700,
-      "milesPerYear": null
+      "sourceFile": "2021 Maybach GLS600 Black Gold 30453b5284ce81ccac08c7e3297fda77.md",
+      "Miles": "36,000",
+      "Term": "3 mo",
+      "Buyout": "$125,000.00",
+      "SCG Buyout": "$125,000.00",
+      "Buyout Spread": "$0.00",
+      "Owner Down": "$12,900.00",
+      "SCG Down": "$14,900.00",
+      "Down Spread": "$5,700.00",
+      "Owner Mo": "$3,200.00",
+      "SCG Mo": "$3,700.00",
+      "Mo Spread": "$500.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 1700.0,
+        "downSpread": 5700.0,
+        "moSpread": 500.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
-      "slug": "2021-mercedes-benz-s580",
+      "car": "2021 Mercedes G63 1/99 EXCLUSIVE EDITION",
+      "sourceFile": "2021 Mercedes G63 1 99 EXCLUSIVE EDITION 30953b5284ce80e79effe263bfb89134.md",
+      "Buyout Spread": "$0.00",
+      "Down Spread": "$0.00",
+      "Mo Spread": "$0.00",
+      "Miles Allowed Per Year": "",
+      "First Payment Due to Owner": "",
+      "_computed": {
+        "scgProfitFormula": null,
+        "downSpread": 0.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 0.0
+      }
+    },
+    {
       "car": "2021 Mercedes-Benz S580",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "down": {
-        "3 mo": 10900,
-        "12 mo": 13900
-      },
-      "ownerDown": {
-        "3 mo": 8990,
-        "12 mo": 11990
-      },
-      "ownerMonthly": 2495,
-      "scgMonthly": 2495,
-      "milesPerYear": 7500
+      "sourceFile": "2021 Mercedes-Benz S580 Black on Peanut Butter (12 30953b5284ce802c89c9d108e1784730.md",
+      "Miles": "65,000",
+      "Term": "12 mo",
+      "Miles Allowed": "7,500",
+      "Buyout": "$65,000.00",
+      "SCG Buyout": "$65,000.00",
+      "Buyout Spread": "$0.00",
+      "Owner Down": "$11,990.00",
+      "SCG Down": "$13,900.00",
+      "Down Spread": "$4,405.00",
+      "Owner Mo": "$2,495.00",
+      "SCG Mo": "$2,495.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "7,500",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 585.0,
+        "downSpread": 4405.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 0.0
+      }
     },
     {
-      "slug": "2022-mercedes-benz-s580",
-      "car": "2022 Mercedes-Benz S580",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "down": {
-        "3 mo": 10900,
-        "12 mo": 12900
-      },
-      "ownerDown": {
-        "3 mo": 6900,
-        "12 mo": 9900
-      },
-      "ownerMonthly": 2695,
-      "scgMonthly": 2695,
-      "milesPerYear": 10000
-    },
-    {
-      "slug": "2022-rolls-royce-ghost-black-badge-white-black",
-      "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
-      "terms": [
-        "3 mo",
-        "12 mo"
-      ],
-      "down": {
-        "12 mo": 47900,
-        "3 mo": 27900
-      },
-      "ownerDown": {
-        "12 mo": 44900,
-        "3 mo": 24900
-      },
-      "ownerMonthly": 5500,
-      "scgMonthly": 5595,
-      "milesPerYear": null
-    },
-    {
-      "slug": "2022-rolls-royce-ghost-black-badge-white-black-61k",
-      "car": "2022 Rolls-Royce Ghost Black Badge (White/Black) 61k",
-      "terms": [
-        "3 mo"
-      ],
-      "down": {
-        "3 mo": 26995
-      },
-      "ownerDown": {
-        "3 mo": 24900
-      },
-      "ownerMonthly": 5500,
-      "scgMonthly": 5995,
-      "milesPerYear": null
-    },
-    {
-      "slug": "2023-lamborghini-urus-performante-yellow",
-      "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
-      "terms": [
-        "3 mo"
-      ],
-      "down": {
-        "3 mo": 26900
-      },
-      "ownerDown": {
-        "3 mo": 24900
-      },
-      "ownerMonthly": 5900,
-      "scgMonthly": 5995,
-      "milesPerYear": 7500
+      "car": "2021 Mercedes-Benz S580",
+      "sourceFile": "2021 Mercedes-Benz S580 Black on Peanut Butter 30453b5284ce81c2a555ff3c6ee959cc.md",
+      "Miles": "65,000",
+      "Term": "3 mo",
+      "Miles Allowed": "7,500",
+      "Buyout": "$65,000.00",
+      "SCG Buyout": "$65,000.00",
+      "Buyout Spread": "$0.00",
+      "Owner Down": "$8,990.00",
+      "SCG Down": "$10,900.00",
+      "Down Spread": "$4,405.00",
+      "Owner Mo": "$2,495.00",
+      "SCG Mo": "$2,495.00",
+      "Mo Spread": "$0.00",
+      "First Payment Due": "30 days after closing",
+      "Location": "New York, NY, United States",
+      "Owner Name": "Malik",
+      "Status": "Live",
+      "Miles Allowed Per Year": "7,500",
+      "First Payment Due to Owner": "30 days after closing",
+      "_computed": {
+        "scgProfitFormula": 585.0,
+        "downSpread": 4405.0,
+        "moSpread": 0.0,
+        "buyoutSpread": 0.0
+      }
     }
   ]
 }
