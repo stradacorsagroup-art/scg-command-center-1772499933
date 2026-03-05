@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 16,
+  "count": 17,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -505,6 +505,38 @@
       "ownerEmail": "stage2autogroup@gmail.com",
       "ownerMonthly": 995,
       "scgMonthly": 995,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2026 Jeep Wrangler Rubicon",
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "ownerMonthly": null,
+        "scgMonthly": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 7990,
+        "scgDown": 7990,
+        "ownerMonthly": 1995,
+        "scgMonthly": 1995,
+        "profit": 1995,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "miles": "630",
+      "location": "ATL",
+      "milesPerYear": "10,000",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "ownerMonthly": 1995,
+      "scgMonthly": 1995,
       "monthlySpread": 0
     }
   ]
