@@ -1571,12 +1571,20 @@ async function openInventoryKanban() {
             const t3 = d.threeMo || {};
             const t12 = d.twelveMo || {};
 
-            const profit3 = (t3.scgMonthly ?? d.scgMonthly) != null && t3.scgDown != null && t3.ownerDown != null
-              ? (t3.scgMonthly ?? d.scgMonthly) + (t3.scgDown - t3.ownerDown)
+            const ownerMo3 = t3.ownerMonthly ?? d.ownerMonthly;
+            const scgMo3 = t3.scgMonthly ?? d.scgMonthly;
+            const ownerMo12 = t12.ownerMonthly ?? d.ownerMonthly;
+            const scgMo12 = t12.scgMonthly ?? d.scgMonthly;
+
+            const profit3 = scgMo3 != null && t3.scgDown != null && t3.ownerDown != null
+              ? scgMo3 + (t3.scgDown - t3.ownerDown)
               : null;
-            const profit12 = (t12.scgMonthly ?? d.scgMonthly) != null && t12.scgDown != null && t12.ownerDown != null
-              ? (t12.scgMonthly ?? d.scgMonthly) + (t12.scgDown - t12.ownerDown)
+            const profit12 = scgMo12 != null && t12.scgDown != null && t12.ownerDown != null
+              ? scgMo12 + (t12.scgDown - t12.ownerDown)
               : null;
+
+            const monthlySpread3 = scgMo3 != null && ownerMo3 != null ? scgMo3 - ownerMo3 : null;
+            const monthlySpread12 = scgMo12 != null && ownerMo12 != null ? scgMo12 - ownerMo12 : null;
 
             const buyoutSpread3 = t3.scgBuyout != null && t3.buyout != null
               ? t3.scgBuyout - t3.buyout
@@ -1593,7 +1601,9 @@ async function openInventoryKanban() {
 
               <div class="inv-row"><span>3 mo Owner Down</span><strong>${fmt(t3.ownerDown)}</strong></div>
               <div class="inv-row"><span>3 mo SCG Down</span><strong>${fmt(t3.scgDown)}</strong></div>
-              <div class="inv-row"><span>3 mo SCG Monthly</span><strong>${fmt(t3.scgMonthly ?? d.scgMonthly)}</strong></div>
+              <div class="inv-row"><span>3 mo Owner Monthly</span><strong>${fmt(ownerMo3)}</strong></div>
+              <div class="inv-row"><span>3 mo SCG Monthly</span><strong>${fmt(scgMo3)}</strong></div>
+              <div class="inv-row"><span>3 mo Spread</span><strong class="value-green">${fmt(monthlySpread3)}</strong></div>
               <div class="inv-row"><span>3 mo Profit</span><strong class="value-green">${fmt(profit3)}</strong></div>
               <div class="inv-row"><span>3 month Buyout</span><strong>${fmt(t3.buyout)}</strong></div>
               <div class="inv-row"><span>3 mo SCG Buyout</span><strong>${fmt(t3.scgBuyout)}</strong></div>
@@ -1601,15 +1611,14 @@ async function openInventoryKanban() {
 
               <div class="inv-row"><span>12 mo Owner Down</span><strong>${fmt(t12.ownerDown)}</strong></div>
               <div class="inv-row"><span>12 mo SCG Down</span><strong>${fmt(t12.scgDown)}</strong></div>
-              <div class="inv-row"><span>12 mo SCG Monthly</span><strong>${fmt(t12.scgMonthly ?? d.scgMonthly)}</strong></div>
+              <div class="inv-row"><span>12 mo Owner Monthly</span><strong>${fmt(ownerMo12)}</strong></div>
+              <div class="inv-row"><span>12 mo SCG Monthly</span><strong>${fmt(scgMo12)}</strong></div>
+              <div class="inv-row"><span>12 mo Spread</span><strong class="value-green">${fmt(monthlySpread12)}</strong></div>
               <div class="inv-row"><span>12 mo Profit</span><strong class="value-green">${fmt(profit12)}</strong></div>
               <div class="inv-row"><span>12 month Buyout</span><strong>${fmt(t12.buyout)}</strong></div>
               <div class="inv-row"><span>12 mo SCG Buyout</span><strong>${fmt(t12.scgBuyout)}</strong></div>
               <div class="inv-row"><span>12 mo Buyout Spread</span><strong class="value-green">${fmt(buyoutSpread12)}</strong></div>
 
-              <div class="inv-row"><span>Owner Monthly</span><strong>${fmt(d.ownerMonthly)}</strong></div>
-              <div class="inv-row"><span>SCG Monthly</span><strong>${fmt(d.scgMonthly)}</strong></div>
-              <div class="inv-row"><span>Monthly Spread</span><strong class="value-green">${fmt(d.monthlySpread)}</strong></div>
               <div class="inv-row"><span>Miles / Year</span><strong>${fmt(d.milesPerYear)}</strong></div>
               <div class="inv-row"><span>First Payment Due to Owner</span><strong>${fmt(d.firstPaymentDueToOwner)}</strong></div>
               <div class="inv-row"><span>Location</span><strong>${fmt(d.location)}</strong></div>
