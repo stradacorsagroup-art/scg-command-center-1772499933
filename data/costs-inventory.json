@@ -290,7 +290,7 @@
       "scgMonthly": null,
       "monthlySpread": 0.0,
       "milesPerYear": null,
-      "firstPaymentDueToOwner": null,
+      "firstPaymentDueToOwner": "30 days after closing",
       "location": null,
       "ownerName": "DAM HOLDINGS LLC",
       "threeMo": {
@@ -352,7 +352,7 @@
       "scgMonthly": null,
       "monthlySpread": 0.0,
       "milesPerYear": null,
-      "firstPaymentDueToOwner": null,
+      "firstPaymentDueToOwner": "30 days after closing",
       "location": null,
       "ownerName": "DAM HOLDINGS LLC",
       "threeMo": {
@@ -414,7 +414,7 @@
       "scgMonthly": null,
       "monthlySpread": 0.0,
       "milesPerYear": null,
-      "firstPaymentDueToOwner": null,
+      "firstPaymentDueToOwner": "30 days after closing",
       "location": null,
       "ownerName": "DAM HOLDINGS LLC",
       "threeMo": {
@@ -445,7 +445,7 @@
       "scgMonthly": null,
       "monthlySpread": 0.0,
       "milesPerYear": null,
-      "firstPaymentDueToOwner": null,
+      "firstPaymentDueToOwner": "30 days after closing",
       "location": null,
       "ownerName": "DAM HOLDINGS LLC",
       "threeMo": {
@@ -476,7 +476,7 @@
       "scgMonthly": null,
       "monthlySpread": 0.0,
       "milesPerYear": null,
-      "firstPaymentDueToOwner": null,
+      "firstPaymentDueToOwner": "30 days after closing",
       "location": null,
       "ownerName": "DAM HOLDINGS LLC",
       "threeMo": {
