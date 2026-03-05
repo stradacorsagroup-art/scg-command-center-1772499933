@@ -378,10 +378,10 @@
     {
       "car": "2021 Maybach GLS600 Black/Gold",
       "miles": "36,000",
-      "vin": null,
-      "ownerMonthly": 3200.0,
-      "scgMonthly": 3700.0,
-      "monthlySpread": 500.0,
+      "vin": "4JGFF8HB4MA551962",
+      "ownerMonthly": 3600,
+      "scgMonthly": 3700,
+      "monthlySpread": 100,
       "milesPerYear": null,
       "firstPaymentDueToOwner": "30 days after closing",
       "location": "New York, NY, United States",
@@ -396,12 +396,12 @@
         "buyoutSpread": 0.0
       },
       "twelveMo": {
-        "ownerDown": null,
-        "scgDown": null,
+        "ownerDown": 20000,
+        "scgDown": 24995,
         "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
+        "profit": 8695,
+        "buyout": 115000,
+        "scgBuyout": 116000,
         "buyoutSpread": null
       },
       "ownerEmail": "stage2autogroup@gmail.com"
