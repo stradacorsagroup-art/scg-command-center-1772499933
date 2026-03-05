@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 25,
+  "count": 26,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -799,6 +799,39 @@
       "notes": "Full Stealth PPF \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End of Lease",
       "ownerMonthly": 2500,
       "scgMonthly": 2500,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2025 RR Spectre",
+      "threeMo": {
+        "ownerDown": 49995,
+        "scgDown": 49995,
+        "ownerMonthly": 9000,
+        "scgMonthly": 9000,
+        "profit": 9000,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 49995,
+        "scgDown": 49995,
+        "ownerMonthly": 9000,
+        "scgMonthly": 9000,
+        "profit": 9000,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "miles": "13,xxx",
+      "location": "\u2014",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "notes": "INSANE SPEC \u2022 TEMPESTE GREY \u2022 FACTORY BLUE INTERIOR \u2022 STARLIGHT DOORS \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option Available at End",
+      "ownerMonthly": 9000,
+      "scgMonthly": 9000,
       "monthlySpread": 0
     }
   ]
