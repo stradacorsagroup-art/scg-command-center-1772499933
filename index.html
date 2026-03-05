@@ -1074,7 +1074,9 @@ async function refreshInventoryCountFromCards() {
         if (!res.ok) return;
         const payload = await res.json();
         const items = Array.isArray(payload?.items) ? payload.items : [];
+        const saleItems = Array.isArray(payload?.carsForSaleItems) ? payload.carsForSaleItems : [];
         data.inventoryCount = items.length;
+        data.carsForSaleCount = saleItems.length;
     } catch {}
 }
 
