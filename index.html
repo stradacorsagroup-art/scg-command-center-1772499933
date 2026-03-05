@@ -1050,6 +1050,16 @@ function updateKPIs() {
     document.getElementById('kpi-inventory').textContent = inv;
 }
 
+async function refreshInventoryCountFromCards() {
+    try {
+        const res = await fetch('./data/costs-inventory.json?ts=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) return;
+        const payload = await res.json();
+        const items = Array.isArray(payload?.items) ? payload.items : [];
+        data.inventoryCount = items.length;
+    } catch {}
+}
+
 function renderPriorityTasks() {
     const el = document.getElementById('priorityTaskList');
     if (!el) return;
@@ -1585,6 +1595,7 @@ function closeInventoryKanban() {
 // ========== INIT ==========
 (async function init() {
     await applyLiveData();
+    await refreshInventoryCountFromCards();
     // top simplified
     updateMonthGoals();
     updateKPIs();
