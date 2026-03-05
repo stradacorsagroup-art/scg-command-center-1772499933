@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 20,
+  "count": 21,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -634,6 +634,39 @@
       "notes": "$339,700 MSRP \u2022 6/12 Month Lease To Own \u2022 No Credit/Income Check \u2022 Buyout Option At End",
       "ownerMonthly": 3250,
       "scgMonthly": 3250,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2018 RR Dawn 6.6L V12",
+      "threeMo": {
+        "ownerDown": 19995,
+        "scgDown": 19995,
+        "ownerMonthly": 5995,
+        "scgMonthly": 5995,
+        "profit": 5995,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 19995,
+        "scgDown": 19995,
+        "ownerMonthly": 5995,
+        "scgMonthly": 5995,
+        "profit": 5995,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "miles": "19,780",
+      "location": "West Palm FL",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "notes": "White Exterior / Handcrafted Red Interior \u2022 $235k Purchase Price \u2022 6/12 Month Lease \u2022 No Credit or Income Check \u2022 Buyout Option at End",
+      "ownerMonthly": 5995,
+      "scgMonthly": 5995,
       "monthlySpread": 0
     }
   ]
