@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 23,
+  "count": 24,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -733,6 +733,39 @@
       "notes": "PRICE DROP \u2022 Spec is \ud83d\udd25 \u2022 Won\u2019t Find Better Deal Anywhere Else \u2022 Buyouts Available At End",
       "ownerMonthly": 3500,
       "scgMonthly": 3500,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2018 AMG GTC Competition",
+      "threeMo": {
+        "ownerDown": 17995,
+        "scgDown": 17995,
+        "ownerMonthly": 2000,
+        "scgMonthly": 2000,
+        "profit": 2000,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 17995,
+        "scgDown": 17995,
+        "ownerMonthly": 2000,
+        "scgMonthly": 2000,
+        "profit": 2000,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "miles": "45,xxx",
+      "location": "\u2014",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "notes": "C = Competition (highly sought after trim) \u2022 Silver Matte Paint \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End of Lease",
+      "ownerMonthly": 2000,
+      "scgMonthly": 2000,
       "monthlySpread": 0
     }
   ]
