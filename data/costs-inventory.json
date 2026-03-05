@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 24,
+  "count": 25,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
@@ -766,6 +766,39 @@
       "notes": "C = Competition (highly sought after trim) \u2022 Silver Matte Paint \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End of Lease",
       "ownerMonthly": 2000,
       "scgMonthly": 2000,
+      "monthlySpread": 0
+    },
+    {
+      "car": "2021 RS6 Avant",
+      "threeMo": {
+        "ownerDown": 17995,
+        "scgDown": 17995,
+        "ownerMonthly": 2500,
+        "scgMonthly": 2500,
+        "profit": 2500,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": 17995,
+        "scgDown": 17995,
+        "ownerMonthly": 2500,
+        "scgMonthly": 2500,
+        "profit": 2500,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "miles": "40,xxx",
+      "location": "\u2014",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "at closing",
+      "ownerName": "DAM HOLDINGS LLC",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "notes": "Full Stealth PPF \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End of Lease",
+      "ownerMonthly": 2500,
+      "scgMonthly": 2500,
       "monthlySpread": 0
     }
   ]
