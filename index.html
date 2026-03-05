@@ -1545,32 +1545,29 @@ async function openInventoryKanban() {
     modal.classList.add('visible');
     grid.innerHTML = '<div style="color:var(--text-dim)">Loading inventory…</div>';
     try {
-        const res = await fetch('./data/deals-kanban.json?ts=' + Date.now(), { cache: 'no-store' });
-        if (!res.ok) throw new Error('Could not load inventory data');
+        const res = await fetch('./data/costs-inventory.json?ts=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) throw new Error('Could not load COSTS inventory data');
         const payload = await res.json();
-        const deals = (payload.deals || []).filter(d => (d.status || '').toLowerCase() === 'live');
+        const items = payload.items || [];
         const money = (n) => n == null ? '—' : `$${Number(n).toLocaleString()}`;
 
-        grid.innerHTML = deals.map(d => {
-            const term = String(d.term || '').toLowerCase();
-            const owner3 = term.includes('3') ? money(d.ownerDown) : '—';
-            const scg3 = term.includes('3') ? money(d.closedDown) : '—';
-            const owner12 = term.includes('12') ? money(d.ownerDown) : '—';
-            const scg12 = term.includes('12') ? money(d.closedDown) : '—';
-            const miles = d.milesAllowed || d.milesAtActivation || '—';
+        grid.innerHTML = items.map(d => {
+            const ownerDown = d.ownerDown || {};
+            const scgDown = d.down || {};
+            const miles = d.milesPerYear || '—';
             return `
             <div class="inv-card">
               <div class="inv-title">${d.car || 'Car'}</div>
-              <div class="inv-row"><span>3 mo Owner Down</span><strong>${owner3}</strong></div>
-              <div class="inv-row"><span>3 mo SCG Down</span><strong>${scg3}</strong></div>
-              <div class="inv-row"><span>12 mo Owner Down</span><strong>${owner12}</strong></div>
-              <div class="inv-row"><span>12 mo SCG Down</span><strong>${scg12}</strong></div>
+              <div class="inv-row"><span>3 mo Owner Down</span><strong>${money(ownerDown['3 mo'])}</strong></div>
+              <div class="inv-row"><span>3 mo SCG Down</span><strong>${money(scgDown['3 mo'])}</strong></div>
+              <div class="inv-row"><span>12 mo Owner Down</span><strong>${money(ownerDown['12 mo'])}</strong></div>
+              <div class="inv-row"><span>12 mo SCG Down</span><strong>${money(scgDown['12 mo'])}</strong></div>
               <div class="inv-row"><span>Owner Monthly</span><strong>${money(d.ownerMonthly)}</strong></div>
-              <div class="inv-row"><span>SCG Monthly</span><strong>${money(d.closedMonthly)}</strong></div>
+              <div class="inv-row"><span>SCG Monthly</span><strong>${money(d.scgMonthly)}</strong></div>
               <div class="inv-row"><span>Miles / Year</span><strong>${miles}</strong></div>
-              <div class="inv-row"><span>Term</span><strong>${d.term || '—'}</strong></div>
+              <div class="inv-row"><span>Terms</span><strong>${(d.terms || []).join(' / ') || '—'}</strong></div>
             </div>`;
-        }).join('') || '<div style="color:var(--text-dim)">No inventory rows found.</div>';
+        }).join('') || '<div style="color:var(--text-dim)">No COSTS inventory rows found.</div>';
     } catch (e) {
         grid.innerHTML = '<div style="color:var(--red)">Failed to load inventory cards.</div>';
     }

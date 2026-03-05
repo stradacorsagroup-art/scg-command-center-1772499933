@@ -1,0 +1,174 @@
+{
+  "syncedAt": "2026-03-05T02:04:14.965Z",
+  "source": "notion:COSTS",
+  "items": [
+    {
+      "slug": "2017-rolls-royce-dawn-white-on-red",
+      "car": "2017 Rolls Royce Dawn White on Red",
+      "terms": [
+        "3 mo"
+      ],
+      "down": {
+        "3 mo": 26900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 6900,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2018-ferrari-488-spider-yellow",
+      "car": "2018 Ferrari 488 Spider Yellow",
+      "terms": [
+        "3 mo",
+        "12 mo"
+      ],
+      "down": {
+        "3 mo": 26900,
+        "12 mo": 26900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 6900,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2020-mclaren-720s-spyder-satin-black",
+      "car": "2020 McLaren 720s Spyder Satin Black",
+      "terms": [
+        "6 mo",
+        "12 mo"
+      ],
+      "down": {
+        "6 mo": 44900,
+        "12 mo": 59900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 6995,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2020-mercedes-g63-satin-black",
+      "car": "2020 Mercedes G63 Satin Black",
+      "terms": [
+        "12 mo"
+      ],
+      "down": {
+        "12 mo": 19900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 3400,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2020-rolls-royce-cullinan-bb-whitewhite-forgiatos",
+      "car": "2020 Rolls-Royce Cullinan BB White/White Forgiatos",
+      "terms": [
+        "3 mo",
+        "12 mo"
+      ],
+      "down": {
+        "3 mo": 26900,
+        "12 mo": 49900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 6900,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2020-rolls-royce-cullinan-whitered",
+      "car": "2020 Rolls-Royce Cullinan White/Red",
+      "terms": [
+        "3 mo",
+        "12 mo"
+      ],
+      "down": {
+        "3 mo": 26900,
+        "12 mo": 49900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 6900,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2021-maybach-gls600-blackgold",
+      "car": "2021 Maybach GLS600 Black/Gold",
+      "terms": [
+        "3 mo"
+      ],
+      "down": {
+        "3 mo": 14900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 3700,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2021-mercedes-benz-s580-black-on-peanut-butter",
+      "car": "2021 Mercedes-Benz S580\nBlack on Peanut Butter",
+      "terms": [
+        "3 mo",
+        "12 mo"
+      ],
+      "down": {
+        "3 mo": 10900,
+        "12 mo": 13900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 2495,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2022-mercedes-benz-s580",
+      "car": "2022 Mercedes-Benz S580",
+      "terms": [
+        "3 mo",
+        "12 mo"
+      ],
+      "down": {
+        "12 mo": 12900,
+        "3 mo": 10900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 2695,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2022-rolls-royce-ghost-black-badge-whiteblack",
+      "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
+      "terms": [
+        "3 mo",
+        "12 mo"
+      ],
+      "down": {
+        "3 mo": 27900,
+        "12 mo": 47900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 5595,
+      "milesPerYear": null
+    },
+    {
+      "slug": "2023-lamborghini-urus-performante-yellow",
+      "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
+      "terms": [
+        "3 mo"
+      ],
+      "down": {
+        "3 mo": 26900
+      },
+      "ownerDown": {},
+      "ownerMonthly": null,
+      "scgMonthly": 5995,
+      "milesPerYear": null
+    }
+  ]
+}
