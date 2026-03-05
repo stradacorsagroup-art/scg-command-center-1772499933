@@ -1033,15 +1033,16 @@ async function applyLiveData() {
 // ========== CLOCK ==========
 function updateClock() {
     const now = new Date();
-    const h = now.getHours();
-    const m = String(now.getMinutes()).padStart(2, '0');
-    const ampm = h >= 12 ? 'PM' : 'AM';
-    const h12 = h % 12 || 12;
-    document.getElementById('clock').textContent = `${h12}:${m} ${ampm}`;
+    const hh = String(now.getHours()).padStart(2, '0');
+    const mm = String(now.getMinutes()).padStart(2, '0');
+    document.getElementById('clock').textContent = `${hh}:${mm}`;
 
-    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    document.getElementById('currentDate').textContent = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+    document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', {
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric'
+    });
 }
 updateClock();
 setInterval(updateClock, 10000);
