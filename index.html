@@ -641,7 +641,11 @@
         .inventory-header { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
         .inventory-grid { padding:14px; display:grid; grid-template-columns:repeat(3,minmax(280px,1fr)); gap:12px; }
         .inv-card { border:1px solid var(--border); background:var(--surface-2); border-radius:10px; padding:12px; }
-        .inv-title { font-size:13px; font-weight:700; margin-bottom:10px; }
+        .inv-toggle { cursor:pointer; list-style:none; font-size:13px; font-weight:700; }
+        .inv-toggle::-webkit-details-marker { display:none; }
+        .inv-toggle::after { content:'+'; float:right; color:var(--text-dim); }
+        details[open] .inv-toggle::after { content:'−'; }
+        .inv-body { margin-top:10px; }
         .inv-row { display:flex; justify-content:space-between; gap:8px; font-size:12px; padding:4px 0; border-bottom:1px dashed var(--border); }
         .inv-row:last-child { border-bottom:none; }
         .value-green { color: var(--green); font-weight: 700; }
@@ -1616,8 +1620,9 @@ async function openInventoryKanban() {
               : null;
 
             return `
-            <div class="inv-card">
-              <div class="inv-title">${d.car || 'Car'}</div>
+            <details class="inv-card">
+              <summary class="inv-toggle">${d.car || 'Car'}</summary>
+              <div class="inv-body">
               <div class="inv-row"><span>Miles</span><strong>${fmt(d.miles)}</strong></div>
               <div class="inv-row"><span>VIN</span><strong>${fmt(d.vin)}</strong></div>
 
@@ -1647,7 +1652,8 @@ async function openInventoryKanban() {
               <div class="inv-row"><span>Owner Name</span><strong>${fmt(d.ownerName)}</strong></div>
               <div class="inv-row"><span>Owner Email</span><strong>${fmt(d.ownerEmail)}</strong></div>
               <div class="inv-row"><span>Notes</span><strong>${fmt(d.notes)}</strong></div>
-            </div>`;
+              </div>
+            </details>`;
         }).join('') || '<div style="color:var(--text-dim)">No COSTS inventory rows found.</div>';
     } catch (e) {
         grid.innerHTML = '<div style="color:var(--red)">Failed to load inventory cards.</div>';
@@ -1697,8 +1703,9 @@ async function openCarsForSaleKanban() {
             const buyoutSpread12 = t12.scgBuyout != null && t12.buyout != null ? t12.scgBuyout - t12.buyout : null;
 
             return `
-            <div class="inv-card">
-              <div class="inv-title">${d.car || 'Car'}</div>
+            <details class="inv-card">
+              <summary class="inv-toggle">${d.car || 'Car'}</summary>
+              <div class="inv-body">
               <div class="inv-row"><span>Miles</span><strong>${fmt(d.miles)}</strong></div>
               <div class="inv-row"><span>VIN</span><strong>${fmt(d.vin)}</strong></div>
               <div class="inv-row"><span>3 mo Owner Down</span><strong>${fmt(t3.ownerDown)}</strong></div>
@@ -1725,7 +1732,8 @@ async function openCarsForSaleKanban() {
               <div class="inv-row"><span>Owner Name</span><strong>${fmt(d.ownerName)}</strong></div>
               <div class="inv-row"><span>Owner Email</span><strong>${fmt(d.ownerEmail)}</strong></div>
               <div class="inv-row"><span>Notes</span><strong>${fmt(d.notes)}</strong></div>
-            </div>`;
+              </div>
+            </details>`;
         }).join('') || '<div style="color:var(--text-dim)">No cars for sale rows found.</div>';
     } catch (e) {
         grid.innerHTML = '<div style="color:var(--red)">Failed to load cars-for-sale cards.</div>';
