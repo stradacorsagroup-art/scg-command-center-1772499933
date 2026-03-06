@@ -923,7 +923,10 @@
         <div class="inventory-sheet">
             <div class="inventory-header">
                 <h3 id="inventoryModalTitle">Inventory — COSTS Cards</h3>
-                <button class="kanban-close" onclick="closeInventoryKanban()">&times;</button>
+                <div style="display:flex; gap:8px; align-items:center;">
+                    <input id="inventorySearch" type="text" placeholder="Search car..." style="height:34px; min-width:220px; border:1px solid var(--border); border-radius:8px; padding:0 10px; font-size:12px;" oninput="filterInventoryCards()" />
+                    <button class="kanban-close" onclick="closeInventoryKanban()">&times;</button>
+                </div>
             </div>
             <div class="inventory-grid" id="inventoryGrid"></div>
         </div>
@@ -1655,6 +1658,7 @@ async function openInventoryKanban() {
               </div>
             </details>`;
         }).join('') || '<div style="color:var(--text-dim)">No COSTS inventory rows found.</div>';
+        filterInventoryCards();
     } catch (e) {
         grid.innerHTML = '<div style="color:var(--red)">Failed to load inventory cards.</div>';
     }
@@ -1735,13 +1739,27 @@ async function openCarsForSaleKanban() {
               </div>
             </details>`;
         }).join('') || '<div style="color:var(--text-dim)">No cars for sale rows found.</div>';
+        filterInventoryCards();
     } catch (e) {
         grid.innerHTML = '<div style="color:var(--red)">Failed to load cars-for-sale cards.</div>';
     }
 }
 
+function filterInventoryCards() {
+    const input = document.getElementById('inventorySearch');
+    const q = (input?.value || '').toLowerCase().trim();
+    const cards = document.querySelectorAll('#inventoryGrid .inv-card');
+    cards.forEach((card) => {
+        const t = card.textContent?.toLowerCase() || '';
+        card.style.display = (!q || t.includes(q)) ? '' : 'none';
+    });
+}
+
 function closeInventoryKanban() {
     document.getElementById('inventoryModal').classList.remove('visible');
+    const input = document.getElementById('inventorySearch');
+    if (input) input.value = '';
+    filterInventoryCards();
 }
 
 
