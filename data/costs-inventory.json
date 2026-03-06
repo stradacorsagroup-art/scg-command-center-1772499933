@@ -32,7 +32,8 @@
         "scgBuyout": 215000.0,
         "buyoutSpread": 0.0
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2020 Rolls-Royce Cullinan White/Red",
@@ -63,7 +64,8 @@
         "scgBuyout": 229900.0,
         "buyoutSpread": 0.0
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2020 Rolls-Royce Cullinan BB White/White Forgiatos",
@@ -94,7 +96,8 @@
         "scgBuyout": 229900.0,
         "buyoutSpread": 0.0
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2017 Rolls Royce Dawn White on Red",
@@ -125,7 +128,8 @@
         "scgBuyout": null,
         "buyoutSpread": null
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2018 Ferrari 488 Spider Yellow",
@@ -156,7 +160,8 @@
         "scgBuyout": 250000.0,
         "buyoutSpread": 5000.0
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
@@ -187,7 +192,8 @@
         "scgBuyout": null,
         "buyoutSpread": null
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2020 McLaren 720s Spyder Satin Black",
@@ -218,7 +224,8 @@
         "scgBuyout": 229900.0,
         "buyoutSpread": 900.0
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2021 Mercedes-Benz S580 Black on Peanut Butter",
@@ -249,7 +256,8 @@
         "scgBuyout": 65000.0,
         "buyoutSpread": 0.0
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2022 Mercedes-Benz S580",
@@ -280,7 +288,8 @@
         "scgBuyout": 65000.0,
         "buyoutSpread": 0.0
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2021 Mercedes G63 1/99 EXCLUSIVE EDITION",
@@ -313,7 +322,8 @@
         "scgBuyout": 160000,
         "buyoutSpread": null
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2020 Mercedes G63 Satin Black",
@@ -344,7 +354,8 @@
         "scgBuyout": 107000.0,
         "buyoutSpread": 2000.0
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2021 Maybach GLS600 Black/Gold",
@@ -375,7 +386,8 @@
         "scgBuyout": 116000,
         "buyoutSpread": null
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2019 White urus",
@@ -406,7 +418,8 @@
         "scgBuyout": 119000,
         "buyoutSpread": null
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2019 LAMBORGHINI URUS BLUE",
@@ -439,7 +452,8 @@
         "scgBuyout": 150000,
         "buyoutSpread": null
       },
-      "ownerEmail": "stage2autogroup@gmail.com"
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": null
     },
     {
       "car": "2024 BMW XM",
@@ -473,7 +487,8 @@
         "scgBuyout": null,
         "buyoutSpread": null
       },
-      "notes": "$165k sticker \u2022 6 Month ONE PAY Lease: $17,995 (no monthly payments) \u2022 12 Month ONE PAY Lease: $33,995 (no monthly payments)"
+      "notes": "$165k sticker \u2022 6 Month ONE PAY Lease: $17,995 (no monthly payments) \u2022 12 Month ONE PAY Lease: $33,995 (no monthly payments)",
+      "msrp": null
     },
     {
       "car": "2022 Tesla Model 3 Performance",
@@ -505,7 +520,8 @@
       "ownerEmail": "stage2autogroup@gmail.com",
       "ownerMonthly": 995,
       "scgMonthly": 995,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2026 Jeep Wrangler Rubicon",
@@ -537,7 +553,8 @@
       "ownerEmail": "stage2autogroup@gmail.com",
       "ownerMonthly": 1995,
       "scgMonthly": 1995,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2020 Rolls-Royce Cullinan",
@@ -569,7 +586,8 @@
       "ownerEmail": "stage2autogroup@gmail.com",
       "ownerMonthly": 4900,
       "scgMonthly": 4900,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2024 Rolls-Royce Spectre Electric",
@@ -601,7 +619,8 @@
       "ownerEmail": "stage2autogroup@gmail.com",
       "ownerMonthly": 6400,
       "scgMonthly": 6400,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2023 MC20 Cielo",
@@ -634,7 +653,8 @@
       "notes": "$339,700 MSRP \u2022 6/12 Month Lease To Own \u2022 No Credit/Income Check \u2022 Buyout Option At End",
       "ownerMonthly": 3250,
       "scgMonthly": 3250,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2018 RR Dawn 6.6L V12",
@@ -667,7 +687,8 @@
       "notes": "White Exterior / Handcrafted Red Interior \u2022 $235k Purchase Price \u2022 6/12 Month Lease \u2022 No Credit or Income Check \u2022 Buyout Option at End",
       "ownerMonthly": 5995,
       "scgMonthly": 5995,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2019 G63 Brabus Kit",
@@ -700,7 +721,8 @@
       "notes": "Starlight Headliner \u2022 Pink Wrap \u2022 Over $50,000 Invested \u2022 $149,995 cash price \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End",
       "ownerMonthly": 3500,
       "scgMonthly": 3500,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2022 Bentley GT",
@@ -733,7 +755,8 @@
       "notes": "PRICE DROP \u2022 Spec is \ud83d\udd25 \u2022 Won\u2019t Find Better Deal Anywhere Else \u2022 Buyouts Available At End",
       "ownerMonthly": 3500,
       "scgMonthly": 3500,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2018 AMG GTC Competition",
@@ -766,7 +789,8 @@
       "notes": "C = Competition (highly sought after trim) \u2022 Silver Matte Paint \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End of Lease",
       "ownerMonthly": 2000,
       "scgMonthly": 2000,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2021 RS6 Avant",
@@ -799,7 +823,8 @@
       "notes": "Full Stealth PPF \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End of Lease",
       "ownerMonthly": 2500,
       "scgMonthly": 2500,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     },
     {
       "car": "2025 RR Spectre",
@@ -832,7 +857,8 @@
       "notes": "INSANE SPEC \u2022 TEMPESTE GREY \u2022 FACTORY BLUE INTERIOR \u2022 STARLIGHT DOORS \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option Available at End",
       "ownerMonthly": 9000,
       "scgMonthly": 9000,
-      "monthlySpread": 0
+      "monthlySpread": 0,
+      "msrp": null
     }
   ],
   "carsForSaleItems": [
@@ -865,7 +891,8 @@
       "location": "New York, NY, United States",
       "ownerName": "Top 2 Not 2 LLC",
       "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "\u2014"
+      "notes": "\u2014",
+      "msrp": null
     },
     {
       "car": "2020 Rolls-Royce Cullinan White/Red",
@@ -896,7 +923,8 @@
       "location": "New York, NY, United States",
       "ownerName": "DAM HOLDINGS LLC",
       "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "\u2014"
+      "notes": "\u2014",
+      "msrp": null
     }
   ],
   "carsForSaleCount": 2
