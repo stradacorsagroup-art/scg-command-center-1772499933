@@ -639,18 +639,19 @@
         .inventory-modal.visible { display:block; }
         .inventory-sheet { position:absolute; left:3%; right:3%; top:5%; bottom:5%; background:var(--surface); border:1px solid var(--border); border-radius:14px; overflow:auto; }
         .inventory-header { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
-        .inventory-grid { padding:14px; display:grid; grid-template-columns:repeat(3,minmax(280px,1fr)); gap:12px; }
-        .inv-card { border:1px solid var(--border); background:var(--surface-2); border-radius:10px; padding:12px; }
+        .inventory-grid { padding:14px; column-count:3; column-gap:12px; }
+        .inv-card { border:1px solid var(--border); background:var(--surface-2); border-radius:10px; padding:12px; break-inside:avoid; -webkit-column-break-inside:avoid; margin:0 0 12px; display:block; width:100%; position:relative; overflow:visible; }
         .inv-toggle { cursor:pointer; list-style:none; font-size:13px; font-weight:700; }
         .inv-toggle::-webkit-details-marker { display:none; }
         .inv-toggle::after { content:'+'; float:right; color:var(--text-dim); }
         details[open] .inv-toggle::after { content:'−'; }
-        .inv-body { margin-top:10px; }
+        .inv-body { display:none; position:absolute; left:0; right:0; top:calc(100% + 8px); z-index:50; margin-top:0; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px 12px; box-shadow:0 10px 24px rgba(0,0,0,.18); max-height:60vh; overflow:auto; }
+        details[open] .inv-body { display:block; }
         .inv-row { display:flex; justify-content:space-between; gap:8px; font-size:12px; padding:4px 0; border-bottom:1px dashed var(--border); }
         .inv-row:last-child { border-bottom:none; }
         .value-green { color: var(--green); font-weight: 700; }
-        @media (max-width: 1100px) { .inventory-grid { grid-template-columns:repeat(2,minmax(240px,1fr)); } }
-        @media (max-width: 700px) { .inventory-grid { grid-template-columns:1fr; } }
+        @media (max-width: 1100px) { .inventory-grid { column-count:2; } }
+        @media (max-width: 700px) { .inventory-grid { column-count:1; } }
 
         .kanban-col h4 { font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-dim); padding:10px 12px; border-bottom:1px solid var(--border); }
         .deal-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px; margin:10px; }
