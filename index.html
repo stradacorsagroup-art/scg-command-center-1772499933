@@ -1660,6 +1660,7 @@ async function openInventoryKanban() {
               </div>
             </details>`;
         }).join('') || '<div style="color:var(--text-dim)">No COSTS inventory rows found.</div>';
+        bindInventoryCardToggles();
         filterInventoryCards();
     } catch (e) {
         grid.innerHTML = '<div style="color:var(--red)">Failed to load inventory cards.</div>';
@@ -1742,10 +1743,23 @@ async function openCarsForSaleKanban() {
               </div>
             </details>`;
         }).join('') || '<div style="color:var(--text-dim)">No cars for sale rows found.</div>';
+        bindInventoryCardToggles();
         filterInventoryCards();
     } catch (e) {
         grid.innerHTML = '<div style="color:var(--red)">Failed to load cars-for-sale cards.</div>';
     }
+}
+
+function bindInventoryCardToggles() {
+    const cards = Array.from(document.querySelectorAll('#inventoryGrid details.inv-card'));
+    cards.forEach((card) => {
+        card.addEventListener('toggle', () => {
+            if (!card.open) return;
+            cards.forEach((other) => {
+                if (other !== card) other.open = false;
+            });
+        });
+    });
 }
 
 function filterInventoryCards() {
@@ -1754,7 +1768,9 @@ function filterInventoryCards() {
     const cards = document.querySelectorAll('#inventoryGrid .inv-card');
     cards.forEach((card) => {
         const t = card.textContent?.toLowerCase() || '';
-        card.style.display = (!q || t.includes(q)) ? '' : 'none';
+        const visible = (!q || t.includes(q));
+        card.style.display = visible ? '' : 'none';
+        if (!visible && card.open) card.open = false;
     });
 }
 
