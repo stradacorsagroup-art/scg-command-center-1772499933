@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 26,
+  "count": 23,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge",
@@ -98,38 +98,6 @@
       },
       "ownerEmail": "stage2autogroup@gmail.com",
       "msrp": 332750
-    },
-    {
-      "car": "2017 Rolls Royce Dawn White on Red",
-      "miles": "39,000",
-      "vin": null,
-      "ownerMonthly": 6900.0,
-      "scgMonthly": 6900.0,
-      "monthlySpread": 0.0,
-      "milesPerYear": "7,500",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "New York, NY, United States",
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": 24900.0,
-        "scgDown": 26900.0,
-        "scgMonthly": 6900.0,
-        "profit": 8900.0,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": 0.0
-      },
-      "twelveMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": null
     },
     {
       "car": "2018 Ferrari 488 Spider",
@@ -491,39 +459,6 @@
       "msrp": null
     },
     {
-      "car": "2022 Tesla Model 3 Performance",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 11990,
-        "scgDown": 11990,
-        "ownerMonthly": 995,
-        "scgMonthly": 995,
-        "profit": 995,
-        "buyout": 15000,
-        "scgBuyout": 15000,
-        "buyoutSpread": 0
-      },
-      "miles": "49,000",
-      "location": "ATL",
-      "milesPerYear": "10,000",
-      "firstPaymentDueToOwner": "at closing",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "ownerMonthly": 995,
-      "scgMonthly": 995,
-      "monthlySpread": 0,
-      "msrp": null
-    },
-    {
       "car": "2026 Jeep Wrangler Rubicon",
       "threeMo": {
         "ownerDown": null,
@@ -687,40 +622,6 @@
       "notes": "White Exterior / Handcrafted Red Interior \u2022 $235k Purchase Price \u2022 6/12 Month Lease \u2022 No Credit or Income Check \u2022 Buyout Option at End",
       "ownerMonthly": 5995,
       "scgMonthly": 5995,
-      "monthlySpread": 0,
-      "msrp": null
-    },
-    {
-      "car": "2019 G63 Brabus Kit",
-      "threeMo": {
-        "ownerDown": 34995,
-        "scgDown": 34995,
-        "ownerMonthly": 3500,
-        "scgMonthly": 3500,
-        "profit": 3500,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 34995,
-        "scgDown": 34995,
-        "ownerMonthly": 3500,
-        "scgMonthly": 3500,
-        "profit": 3500,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "miles": "65,xxx",
-      "location": "\u2014",
-      "milesPerYear": "\u2014",
-      "firstPaymentDueToOwner": "at closing",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "Starlight Headliner \u2022 Pink Wrap \u2022 Over $50,000 Invested \u2022 $149,995 cash price \u2022 6/12 Month Lease to Own \u2022 No Credit or Income Check \u2022 Buyout Option at End",
-      "ownerMonthly": 3500,
-      "scgMonthly": 3500,
       "monthlySpread": 0,
       "msrp": null
     },
