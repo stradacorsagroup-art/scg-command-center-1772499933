@@ -120,13 +120,13 @@
         "buyoutSpread": 0.0
       },
       "twelveMo": {
-        "ownerDown": 24900.0,
-        "scgDown": 26900.0,
-        "scgMonthly": 6900.0,
-        "profit": 8900.0,
-        "buyout": 245000.0,
-        "scgBuyout": 250000.0,
-        "buyoutSpread": 5000.0
+        "ownerDown": 44900,
+        "scgDown": 49900,
+        "scgMonthly": 6900,
+        "profit": 8900,
+        "buyout": 235000,
+        "scgBuyout": 235000,
+        "buyoutSpread": 0
       },
       "ownerEmail": "stage2autogroup@gmail.com",
       "msrp": 284650
