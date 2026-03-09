@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 19,
+  "count": 18,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge",
@@ -260,38 +260,6 @@
       },
       "ownerEmail": "stage2autogroup@gmail.com",
       "msrp": 190550
-    },
-    {
-      "car": "2020 Mercedes-Benz G-Class AMG G 63",
-      "miles": "56,000",
-      "vin": "WDCYC7HJ6LX338220",
-      "ownerMonthly": 3500.0,
-      "scgMonthly": 3400.0,
-      "monthlySpread": -100.0,
-      "milesPerYear": "10,000",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "New York, NY, United States",
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 17500.0,
-        "scgDown": 19900.0,
-        "scgMonthly": 3400.0,
-        "profit": 5800.0,
-        "buyout": 105000.0,
-        "scgBuyout": 107000.0,
-        "buyoutSpread": 2000.0
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 182145
     },
     {
       "car": "2021 Mercedes-Benz Maybach GLS 600",
