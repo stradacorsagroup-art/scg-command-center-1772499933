@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 18,
+  "count": 16,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge",
@@ -262,38 +262,6 @@
       "msrp": 190550
     },
     {
-      "car": "2021 Mercedes-Benz Maybach GLS 600",
-      "miles": "36,000",
-      "vin": "4JGFF8HB4MA551962",
-      "ownerMonthly": 3600,
-      "scgMonthly": 3700,
-      "monthlySpread": 100,
-      "milesPerYear": null,
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "New York, NY, United States",
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": 12900.0,
-        "scgDown": 14900.0,
-        "scgMonthly": 3700.0,
-        "profit": 5700.0,
-        "buyout": 125000.0,
-        "scgBuyout": 125000.0,
-        "buyoutSpread": 0.0
-      },
-      "twelveMo": {
-        "ownerDown": 20000,
-        "scgDown": 24995,
-        "scgMonthly": null,
-        "profit": 8695,
-        "buyout": 115000,
-        "scgBuyout": 116000,
-        "buyoutSpread": null
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 167650
-    },
-    {
       "car": "2019 Lamborghini Urus AWD",
       "miles": "111,000",
       "vin": "ZPBUA1ZL6KLA00922",
@@ -392,39 +360,6 @@
         "buyoutSpread": null
       },
       "notes": "$165k sticker • 6 Month ONE PAY Lease: $17,995 (no monthly payments) • 12 Month ONE PAY Lease: $33,995 (no monthly payments)",
-      "msrp": null
-    },
-    {
-      "car": "2026 Jeep Wrangler Rubicon",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 7990,
-        "scgDown": 7990,
-        "ownerMonthly": 1995,
-        "scgMonthly": 1995,
-        "profit": 1995,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "miles": "630",
-      "location": "ATL",
-      "milesPerYear": "10,000",
-      "firstPaymentDueToOwner": "at closing",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "ownerMonthly": 1995,
-      "scgMonthly": 1995,
-      "monthlySpread": 0,
       "msrp": null
     },
     {
