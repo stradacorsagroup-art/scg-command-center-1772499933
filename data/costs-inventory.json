@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 19,
+  "count": 18,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge",
@@ -535,41 +535,6 @@
     },
     {
       "car": "MAYBACH GLS600 BLACK/RED",
-      "miles": "—",
-      "vin": null,
-      "ownerMonthly": null,
-      "scgMonthly": null,
-      "monthlySpread": null,
-      "milesPerYear": "—",
-      "firstPaymentDueToOwner": "—",
-      "location": "—",
-      "ownerName": "—",
-      "ownerEmail": "—",
-      "notes": "—",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "msrp": null
-    },
-    {
-      "car": "MERCEDES S580 'FAYBACH",
       "miles": "—",
       "vin": null,
       "ownerMonthly": null,
