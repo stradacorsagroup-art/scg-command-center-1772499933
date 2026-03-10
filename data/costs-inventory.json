@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 15,
+  "count": 14,
   "items": [
     {
       "car": "2022 Rolls-Royce Ghost Black Badge",
@@ -292,41 +292,6 @@
       },
       "ownerEmail": "stage2autogroup@gmail.com",
       "msrp": 203995
-    },
-    {
-      "car": "2024 BMW XM",
-      "miles": "9,000",
-      "vin": null,
-      "ownerMonthly": 0,
-      "scgMonthly": 0,
-      "monthlySpread": 0,
-      "milesPerYear": "\u2014",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "\u2014",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "notes": "$165k sticker \u2022 6 Month ONE PAY Lease: $17,995 (no monthly payments) \u2022 12 Month ONE PAY Lease: $33,995 (no monthly payments)",
-      "msrp": null
     },
     {
       "car": "2023 Maserati MC20",
