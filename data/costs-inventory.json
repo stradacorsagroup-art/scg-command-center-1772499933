@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 15,
+  "count": 16,
   "items": [
     {
       "car": "2020 McLaren 720S Spider",
@@ -474,6 +474,41 @@
     },
     {
       "car": "2021 MAYBACH GLS600 BLACK/GOLD",
+      "miles": "—",
+      "vin": null,
+      "ownerMonthly": null,
+      "scgMonthly": null,
+      "monthlySpread": null,
+      "milesPerYear": "—",
+      "firstPaymentDueToOwner": "—",
+      "location": "—",
+      "ownerName": "—",
+      "ownerEmail": "—",
+      "notes": "—",
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "ownerMonthly": null,
+        "scgMonthly": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "ownerMonthly": null,
+        "scgMonthly": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "msrp": null
+    },
+    {
+      "car": "2025 C8 2LT",
       "miles": "—",
       "vin": null,
       "ownerMonthly": null,
