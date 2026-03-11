@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 23,
+  "count": 24,
   "items": [
     {
       "car": "2020 McLaren 720S Spider",
@@ -786,6 +786,41 @@
         "buyoutSpread": null
       },
       "msrp": 268666
+    },
+    {
+      "car": "2024 Rolls-Royce Spectre",
+      "miles": "—",
+      "vin": null,
+      "ownerMonthly": null,
+      "scgMonthly": null,
+      "monthlySpread": null,
+      "milesPerYear": "—",
+      "firstPaymentDueToOwner": "—",
+      "location": "—",
+      "ownerName": "—",
+      "ownerEmail": "—",
+      "notes": "—",
+      "threeMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "ownerMonthly": null,
+        "scgMonthly": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "ownerMonthly": null,
+        "scgMonthly": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "msrp": null
     }
   ],
   "carsForSaleItems": [
