@@ -1,136 +1,8 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 18,
+  "count": 15,
   "items": [
-    {
-      "car": "2022 Rolls-Royce Ghost Black Badge",
-      "miles": "61,000",
-      "vin": "SCATD6C05NU213792",
-      "ownerMonthly": 5500.0,
-      "scgMonthly": 5995.0,
-      "monthlySpread": 95.0,
-      "milesPerYear": null,
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "New York, NY, United States",
-      "ownerName": "Top 2 Not 2 LLC",
-      "threeMo": {
-        "ownerDown": 24900.0,
-        "scgDown": 27900.0,
-        "scgMonthly": 5595.0,
-        "profit": 8595.0,
-        "buyout": 230000.0,
-        "scgBuyout": 229900.0,
-        "buyoutSpread": -100.0
-      },
-      "twelveMo": {
-        "ownerDown": 44900.0,
-        "scgDown": 47900.0,
-        "scgMonthly": 5595.0,
-        "profit": 8595.0,
-        "buyout": 215000.0,
-        "scgBuyout": 215000.0,
-        "buyoutSpread": 0.0
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 396000
-    },
-    {
-      "car": "2020 Rolls-Royce Cullinan Black Badge",
-      "miles": "51,000",
-      "vin": "SLATV8C09LU200999",
-      "ownerMonthly": 6900.0,
-      "scgMonthly": 6900.0,
-      "monthlySpread": 0.0,
-      "milesPerYear": null,
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "New York, NY, United States",
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": 24900.0,
-        "scgDown": 26900.0,
-        "scgMonthly": 6900.0,
-        "profit": 8900.0,
-        "buyout": 240000.0,
-        "scgBuyout": 239900.0,
-        "buyoutSpread": -100.0
-      },
-      "twelveMo": {
-        "ownerDown": 49900.0,
-        "scgDown": 49900.0,
-        "scgMonthly": 6900.0,
-        "profit": 6900.0,
-        "buyout": 229900.0,
-        "scgBuyout": 229900.0,
-        "buyoutSpread": 0.0
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 332750
-    },
-    {
-      "car": "2018 Ferrari 488 Spider",
-      "miles": "27,000",
-      "vin": "ZFF80AMA0J0231527",
-      "ownerMonthly": 6900.0,
-      "scgMonthly": 6900.0,
-      "monthlySpread": 0.0,
-      "milesPerYear": "7,500",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "New York, NY, United States",
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": 24900.0,
-        "scgDown": 26900.0,
-        "scgMonthly": 6900.0,
-        "profit": 8900.0,
-        "buyout": 250000.0,
-        "scgBuyout": 250000.0,
-        "buyoutSpread": 0.0
-      },
-      "twelveMo": {
-        "ownerDown": 44900,
-        "scgDown": 49900,
-        "scgMonthly": 6900,
-        "profit": 8900,
-        "buyout": 235000,
-        "scgBuyout": 235000,
-        "buyoutSpread": 0
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 284650
-    },
-    {
-      "car": "2023 Lamborghini Urus Performante",
-      "miles": "38,000",
-      "vin": "ZPBUC3ZL4PLA22334",
-      "ownerMonthly": 5900.0,
-      "scgMonthly": 5995.0,
-      "monthlySpread": 95.0,
-      "milesPerYear": "7,500",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "New York, NY, United States",
-      "ownerName": "PNM Holdings Inc",
-      "threeMo": {
-        "ownerDown": 24900.0,
-        "scgDown": 26900.0,
-        "scgMonthly": 5995.0,
-        "profit": 7995.0,
-        "buyout": 250000.0,
-        "scgBuyout": 250000.0,
-        "buyoutSpread": 0.0
-      },
-      "twelveMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 268666
-    },
     {
       "car": "2020 McLaren 720S Spider",
       "miles": "23,000",
@@ -228,7 +100,7 @@
       "msrp": null
     },
     {
-      "car": "LAMBORGHINI URUS BLUE",
+      "car": "2019 Lamborghini Urus AWD BLUE",
       "miles": "111,000",
       "vin": "ZPBUA1ZL6KLA00922",
       "ownerMonthly": 3995,
@@ -260,7 +132,39 @@
       "msrp": 203995
     },
     {
-      "car": "LAMBORGHINI URUS WHITE",
+      "car": "2019 Lamborghini Urus AWD GREEN",
+      "miles": "38,000",
+      "vin": "ZPBUC3ZL4PLA22334",
+      "ownerMonthly": 5900.0,
+      "scgMonthly": 5995.0,
+      "monthlySpread": 95.0,
+      "milesPerYear": "7,500",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "PNM Holdings Inc",
+      "threeMo": {
+        "ownerDown": 24900.0,
+        "scgDown": 26900.0,
+        "scgMonthly": 5995.0,
+        "profit": 7995.0,
+        "buyout": 250000.0,
+        "scgBuyout": 250000.0,
+        "buyoutSpread": 0.0
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "scgMonthly": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "msrp": 268666
+    },
+    {
+      "car": "2019 Lamborghini Urus AWD WHITE",
       "miles": "40,000",
       "vin": "ZPBUA1ZL5KLA01124",
       "ownerMonthly": 4495,
@@ -464,7 +368,7 @@
       "msrp": null
     },
     {
-      "car": "MERCEDES G63 SATIN BLACK",
+      "car": "2021 MERCEDES G63 SATIN BLACK",
       "miles": "—",
       "vin": null,
       "ownerMonthly": null,
@@ -499,7 +403,7 @@
       "msrp": null
     },
     {
-      "car": "MERCEDES G63 SATIN WHITE",
+      "car": "2021 MERCEDES G63 SATIN WHITE",
       "miles": "—",
       "vin": null,
       "ownerMonthly": null,
@@ -534,7 +438,7 @@
       "msrp": null
     },
     {
-      "car": "MAYBACH GLS600 BLACK/RED",
+      "car": "2021 MAYBACH GLS600 BLACK/RED",
       "miles": "—",
       "vin": null,
       "ownerMonthly": null,
@@ -569,7 +473,7 @@
       "msrp": null
     },
     {
-      "car": "MAYBACH GLS600 BLACK/GOLD",
+      "car": "2021 MAYBACH GLS600 BLACK/GOLD",
       "miles": "—",
       "vin": null,
       "ownerMonthly": null,
