@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 22,
+  "count": 23,
   "items": [
     {
       "car": "2020 McLaren 720S Spider",
@@ -751,6 +751,41 @@
         "buyoutSpread": null
       },
       "msrp": null
+    },
+    {
+      "car": "2023 Lamborghini Urus Performante",
+      "miles": "38,000",
+      "vin": "ZPBUC3ZL4PLA22334",
+      "ownerMonthly": 5900,
+      "scgMonthly": 5995,
+      "monthlySpread": 95,
+      "milesPerYear": "7,500",
+      "firstPaymentDueToOwner": "30 days after closing",
+      "location": "New York, NY, United States",
+      "ownerName": "PNM Holdings Inc",
+      "ownerEmail": "stage2autogroup@gmail.com",
+      "notes": "—",
+      "threeMo": {
+        "ownerDown": 24900,
+        "scgDown": 26900,
+        "ownerMonthly": 5900,
+        "scgMonthly": 5995,
+        "profit": 7995,
+        "buyout": 250000,
+        "scgBuyout": 250000,
+        "buyoutSpread": 0
+      },
+      "twelveMo": {
+        "ownerDown": null,
+        "scgDown": null,
+        "ownerMonthly": null,
+        "scgMonthly": null,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      },
+      "msrp": 268666
     }
   ],
   "carsForSaleItems": [
