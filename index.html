@@ -1630,15 +1630,15 @@ function renderDynamicTermsHtml(d, fmt) {
         const ownerMonthly = term.ownerMonthly ?? d.ownerMonthly;
         const scgMonthly = term.scgMonthly ?? d.scgMonthly;
 
-        const spread = ownerMonthly != null && scgMonthly != null ? ownerMonthly - scgMonthly : null;
-        const baseDownProfit = term.ownerDown != null && term.scgDown != null
-          ? term.ownerDown - term.scgDown
+        const spread = scgMonthly != null && ownerMonthly != null ? scgMonthly - ownerMonthly : null;
+        const baseDownProfit = term.scgDown != null && term.ownerDown != null
+          ? term.scgDown - term.ownerDown
           : null;
         const profit = baseDownProfit == null
           ? null
           : (isAtClose ? baseDownProfit : baseDownProfit + (scgMonthly ?? 0));
-        const buyoutSpread = term.buyout != null && term.scgBuyout != null
-          ? term.buyout - term.scgBuyout
+        const buyoutSpread = term.scgBuyout != null && term.buyout != null
+          ? term.scgBuyout - term.buyout
           : null;
 
         return `
