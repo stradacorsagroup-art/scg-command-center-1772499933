@@ -36,7 +36,17 @@
       },
       "ownerEmail": "stage2autogroup@gmail.com",
       "msrp": 315000,
-      "notes": "6 mo Owner Down: $32,495 \u2022 6 mo SCG Down: $32,495 \u2022 6 mo Owner Monthly: $6,895 \u2022 6 mo SCG Monthly: $6,995"
+      "notes": "\u2014",
+      "sixMo": {
+        "ownerDown": 32495,
+        "scgDown": 32495,
+        "ownerMonthly": 6895,
+        "scgMonthly": 6995,
+        "profit": null,
+        "buyout": null,
+        "scgBuyout": null,
+        "buyoutSpread": null
+      }
     },
     {
       "car": "2021 Lamborghini Urus \"Keyvany Keyrus\"",
