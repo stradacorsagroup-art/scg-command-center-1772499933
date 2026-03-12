@@ -1623,7 +1623,8 @@ function getDynamicTermEntries(d) {
 function renderDynamicTermsHtml(d, fmt) {
     const termEntries = getDynamicTermEntries(d);
     const firstPayment = String(d.firstPaymentDueToOwner || '').toLowerCase();
-    const isAtClose = firstPayment.includes('at close');
+    const isAtClose = /at\s*clos/i.test(firstPayment);
+    const isThirtyDays = /30\s*day/i.test(firstPayment);
 
     return termEntries.map(({ key, label }) => {
         const term = d[key] || {};
@@ -1636,7 +1637,11 @@ function renderDynamicTermsHtml(d, fmt) {
           : null;
         const profit = baseDownProfit == null
           ? null
-          : (isAtClose ? baseDownProfit : baseDownProfit + (scgMonthly ?? 0));
+          : isAtClose
+            ? baseDownProfit
+            : isThirtyDays
+              ? baseDownProfit + (scgMonthly ?? 0)
+              : baseDownProfit;
         const buyoutSpread = term.scgBuyout != null && term.buyout != null
           ? term.scgBuyout - term.buyout
           : null;
