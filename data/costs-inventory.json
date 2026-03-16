@@ -827,7 +827,20 @@
         "buyout": 115000
       },
       "notes": "\u2014"
+    },
+    {
+      "car": "2023 Porsche 911",
+      "miles": "\u2014",
+      "vin": "\u2014",
+      "msrp": 0,
+      "threeMo": {
+        "buyout": 0
+      },
+      "twelveMo": {
+        "buyout": 0
+      },
+      "notes": "\u2014"
     }
   ],
-  "carsForSaleCount": 2
+  "carsForSaleCount": 3
 }
