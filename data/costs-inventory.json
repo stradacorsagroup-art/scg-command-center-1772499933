@@ -172,40 +172,6 @@
       }
     },
     {
-      "car": "2022 LAMBORGHINI URUS GREEN",
-      "miles": "38,000",
-      "vin": "ZPBUC3ZL4PLA22334",
-      "ownerMonthly": 3995,
-      "scgMonthly": 3995,
-      "monthlySpread": 0,
-      "milesPerYear": "7,500",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "New York, NY, United States",
-      "ownerName": "PNM Holdings Inc",
-      "threeMo": {
-        "ownerDown": 17495,
-        "scgDown": 17495,
-        "ownerMonthly": 3995,
-        "scgMonthly": 3995,
-        "profit": null,
-        "buyout": 209995,
-        "scgBuyout": 209995,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 29995,
-        "scgDown": 29995,
-        "ownerMonthly": 3995,
-        "scgMonthly": 3995,
-        "profit": null,
-        "buyout": 199995,
-        "scgBuyout": 199995,
-        "buyoutSpread": null
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 268661
-    },
-    {
       "car": "2019 LAMBORGHINI URUS WHITE",
       "miles": "111,000",
       "vin": null,
