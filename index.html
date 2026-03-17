@@ -1037,8 +1037,12 @@ async function applyLiveData() {
                 const k = await kRes.json();
                 const rowCount = Array.isArray(k?.deals) ? k.deals.length : 0;
                 const carsCount = Number(live?.kpis?.carsOnRoad ?? 0);
+
+                // Always keep Cars on Road KPI aligned with the actual cards rendered from deals-kanban.
+                data.kpis.carsOnRoad = rowCount;
+
                 if (rowCount !== carsCount) {
-                    syncText += ` ⚠ mismatch: Cars KPI ${carsCount} vs Deals rows ${rowCount}`;
+                    syncText += ` ⚠ mismatch fixed: Cars KPI ${carsCount} → Deals rows ${rowCount}`;
                     if (el) el.style.color = 'var(--red)';
                 } else if (el) {
                     el.style.color = 'var(--green)';
@@ -1182,6 +1186,7 @@ async function openDealsKanban() {
             const rows = [
               ['Closed Down', d.closedDown ? `$${safeNum(d.closedDown).toLocaleString()}` : '—'],
               ['Owner Down', d.ownerDown ? `$${safeNum(d.ownerDown).toLocaleString()}` : '—'],
+              ['Broker Pay', d.brokerPay ? `$${safeNum(d.brokerPay).toLocaleString()}` : '—'],
               ['SCG Down Spread', d.scgDownSpread ? `$${safeNum(d.scgDownSpread).toLocaleString()}` : '—'],
               ['Closed Mo', d.closedMonthly ? `$${safeNum(d.closedMonthly).toLocaleString()}` : '—'],
               ['Owner Mo', d.ownerMonthly ? `$${safeNum(d.ownerMonthly).toLocaleString()}` : '—'],
@@ -1733,7 +1738,7 @@ async function openCarsForSaleKanban() {
         };
 
         grid.innerHTML = items.map(d => {
-            const termsHtml = renderDynamicTermsHtml(d, fmt);
+            const price = d.price ?? d.twelveMo?.buyout ?? d.threeMo?.buyout ?? d.msrp;
 
             return `
             <details class="inv-card">
@@ -1743,14 +1748,7 @@ async function openCarsForSaleKanban() {
               <div class="inv-row"><span>Miles</span><strong>${fmt(d.miles)}</strong></div>
               <div class="inv-row"><span>MSRP</span><strong>${fmt(d.msrp)}</strong></div>
               <div class="inv-row"><span>VIN</span><strong>${fmt(d.vin)}</strong></div>
-              ${termsHtml}
-              <div class="inv-section">Ops & owner</div>
-              <div class="inv-row"><span>Miles / Year</span><strong>${fmt(d.milesPerYear)}</strong></div>
-              <div class="inv-row"><span>First Payment Due to Owner</span><strong>${fmt(d.firstPaymentDueToOwner)}</strong></div>
-              <div class="inv-row"><span>Location</span><strong>${fmt(d.location)}</strong></div>
-              <div class="inv-row"><span>Owner Name</span><strong>${fmt(d.ownerName)}</strong></div>
-              <div class="inv-row"><span>Owner Email</span><strong>${fmt(d.ownerEmail)}</strong></div>
-              <div class="inv-row"><span>Notes</span><strong>${fmt(d.notes)}</strong></div>
+              <div class="inv-row"><span>Price</span><strong>${fmt(price)}</strong></div>
               </div>
             </details>`;
         }).join('') || '<div style="color:var(--text-dim)">No cars for sale rows found.</div>';
