@@ -630,6 +630,7 @@
          .dow { font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; padding:6px; border-bottom:1px solid var(--border); background:var(--surface); }
          .day-cell { min-height:92px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:4px; }
          .day-cell:nth-child(7n) { border-right:none; }
+         .day-cell.has-payment { background: rgba(59,130,246,0.06); border-left: 2px solid rgba(59,130,246,0.35); }
          .day-num { font-size:11px; color:var(--text-dim); margin-bottom:4px; }
          .pay-chip { border:1px solid var(--border); background:var(--surface); border-radius:8px; padding:4px; margin-bottom:4px; font-size:10px; line-height:1.25; }
          .pay-chip .row { display:flex; justify-content:space-between; gap:4px; }
@@ -1288,7 +1289,7 @@ async function openDealsKanban() {
             dueDeals.forEach(d => {
               chips += `<div class="pay-chip"><div class="row"><strong>${d.car}</strong><button data-pay="${d.id}">✅</button></div><div class="row"><span>Due</span><span>$${(Number(d.closedMonthly||0)||0).toLocaleString()}</span></div></div>`;
             });
-            grid.innerHTML += `<div class="day-cell"><div class="day-num">${day}</div>${chips}</div>`;
+            grid.innerHTML += `<div class="day-cell${dueDeals.length > 0 ? ' has-payment' : ''}"><div class="day-num">${day}</div>${chips}</div>`;
           }
 
           grid.querySelectorAll('button[data-pay]').forEach(btn => {
