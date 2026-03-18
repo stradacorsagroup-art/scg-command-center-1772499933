@@ -77,7 +77,11 @@
         "Ext?": null,
         "SCG Buyout": 265000,
         "Miles Allowed": null
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30053b52-84ce-8050-b413-fb919915c786",
@@ -148,7 +152,11 @@
         "Ext?": null,
         "SCG Buyout": 145000,
         "Miles Allowed": null
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30453b52-84ce-8032-b60e-d52792a22355",
@@ -219,7 +227,11 @@
         "Ext?": null,
         "SCG Buyout": 130000,
         "Miles Allowed": 7500
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30453b52-84ce-8040-88d1-fdaeb40059fc",
@@ -290,7 +302,11 @@
         "Ext?": "6 mo",
         "SCG Buyout": 105000,
         "Miles Allowed": 15000
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30453b52-84ce-808e-a18e-feb11c415b22",
@@ -361,7 +377,11 @@
         "Ext?": null,
         "SCG Buyout": 130000,
         "Miles Allowed": 10000
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30453b52-84ce-81c3-8f4b-d197c5428bf6",
@@ -432,7 +452,11 @@
         "Ext?": "3 mo",
         "SCG Buyout": 175000,
         "Miles Allowed": 7500
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30753b52-84ce-801b-a1f3-d6ace20e1837",
@@ -503,7 +527,11 @@
         "Ext?": null,
         "SCG Buyout": 150000,
         "Miles Allowed": 15000
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30a53b52-84ce-804e-bb8e-d9006fea6f84",
@@ -574,7 +602,11 @@
         "Ext?": null,
         "SCG Buyout": 109000,
         "Miles Allowed": 15000
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30c53b52-84ce-8009-92b5-e53b471b9b4b",
@@ -645,7 +677,11 @@
         "Ext?": null,
         "SCG Buyout": null,
         "Miles Allowed": null
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
     },
     {
       "id": "30c53b52-84ce-807b-9fec-e351e9d18136",
@@ -716,7 +752,42 @@
         "Ext?": null,
         "SCG Buyout": null,
         "Miles Allowed": null
-      }
+      },
+      "brokerName": null,
+      "clientName": null,
+      "clientPhone": null,
+      "ownerPhone": null
+    },
+    {
+      "id": "73e67c60-236b-42e5-8754-ea1e9eb0a4ca",
+      "car": "2024 Tesla Cybertruck All-Wheel Drive",
+      "status": "Live",
+      "closedDown": 20000,
+      "ownerDown": 10000,
+      "scgDownSpread": 2000,
+      "brokerPay": 8000,
+      "brokerName": "BC",
+      "deferralAmount": 5000,
+      "deferralDueDate": "2026-02-17",
+      "closedMonthly": 2900,
+      "ownerMonthly": 2900,
+      "scgMonthlySpread": 0,
+      "nextMonthly": "2026-03-17",
+      "lateDate": "2026-03-20",
+      "activationDate": "2026-02-17",
+      "endDate": "2027-02-17",
+      "term": "12 mo",
+      "milesAtActivation": 21000,
+      "milesAllowed": 10000,
+      "buyout": null,
+      "scgBuyout": null,
+      "ownerName": "Che Che",
+      "ownerPhone": "786-493-9923",
+      "clientName": "Eyabi",
+      "clientPhone": "321-467-5080",
+      "referral": null,
+      "specialStipulations": null,
+      "rawFields": {}
     }
   ]
 }

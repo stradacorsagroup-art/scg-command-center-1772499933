@@ -1189,6 +1189,7 @@ async function openDealsKanban() {
               ['Owner Down', d.ownerDown ? `$${safeNum(d.ownerDown).toLocaleString()}` : '—'],
               ['Broker Pay', d.brokerPay ? `$${safeNum(d.brokerPay).toLocaleString()}` : '—'],
               ['SCG Down Spread', d.scgDownSpread ? `$${safeNum(d.scgDownSpread).toLocaleString()}` : '—'],
+              ['Deferral', d.deferralAmount ? `$${safeNum(d.deferralAmount).toLocaleString()}${d.deferralDueDate ? ' · due ' + d.deferralDueDate : ''}` : '—'],
               ['Closed Mo', d.closedMonthly ? `$${safeNum(d.closedMonthly).toLocaleString()}` : '—'],
               ['Owner Mo', d.ownerMonthly ? `$${safeNum(d.ownerMonthly).toLocaleString()}` : '—'],
               ['Next Monthly', d.nextMonthly || '—'],
@@ -1200,7 +1201,9 @@ async function openDealsKanban() {
               ['Miles Allowed', d.milesAllowed || '—'],
               ['Buyout', d.buyout ? `$${safeNum(d.buyout).toLocaleString()}` : '—'],
               ['SCG Buyout', d.scgBuyout ? `$${safeNum(d.scgBuyout).toLocaleString()}` : '—'],
-              ['Owner Name', d.ownerName || '—'],
+              ['Owner Name', d.ownerName ? `${d.ownerName}${d.ownerPhone ? ' · ' + d.ownerPhone : ''}` : '—'],
+              ['Client Name', d.clientName ? `${d.clientName}${d.clientPhone ? ' · ' + d.clientPhone : ''}` : '—'],
+              ['Broker Name', d.brokerName || '—'],
               ['Referral', d.referral || '—'],
             ];
 
