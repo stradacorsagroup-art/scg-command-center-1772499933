@@ -788,6 +788,37 @@
       "referral": null,
       "specialStipulations": null,
       "rawFields": {}
+    },
+    {
+      "id": "8167ff8b-3de5-4cd6-b836-b27fa6ba3f7b",
+      "car": "2026 Escalade V-Series AWD",
+      "status": "Live",
+      "closedDown": 100000,
+      "ownerDown": 70000,
+      "scgDownSpread": 20000,
+      "brokerPay": 10000,
+      "brokerName": "Jaylen",
+      "deferralAmount": null,
+      "deferralDueDate": null,
+      "closedMonthly": 4000,
+      "ownerMonthly": 4000,
+      "scgMonthlySpread": 0,
+      "nextMonthly": "2026-03-16",
+      "lateDate": "2026-03-19",
+      "activationDate": "2026-03-16",
+      "endDate": "2027-03-16",
+      "term": "12 mo",
+      "milesAtActivation": 179,
+      "milesAllowed": 10000,
+      "buyout": 128000,
+      "scgBuyout": 98000,
+      "ownerName": "Ted",
+      "ownerPhone": "904-652-4367",
+      "clientName": "Arkeasha Monshay Callaway",
+      "clientPhone": "Jaylen",
+      "referral": null,
+      "specialStipulations": null,
+      "rawFields": {}
     }
   ]
 }
