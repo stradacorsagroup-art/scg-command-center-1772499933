@@ -1240,6 +1240,7 @@ async function openDealsKanban() {
             </div>
           </div>
           <div class="payment-grid" id="payGrid"></div>
+          <div id="paySummary" style="padding:10px 14px;font-size:13px;font-weight:700;border-top:1px solid var(--border);letter-spacing:0.02em;"></div>
         `;
 
         const STORAGE_PAY = 'scg-payment-calendar-overrides-v2';
@@ -1302,6 +1303,18 @@ async function openDealsKanban() {
             });
             const today = new Date(); const isToday = cellDate.getFullYear()===today.getFullYear() && cellDate.getMonth()===today.getMonth() && cellDate.getDate()===today.getDate();
             grid.innerHTML += `<div class="day-cell${isToday ? ' is-today' : ''}"><div class="day-num">${day}</div>${chips}</div>`;
+          }
+
+          // SCG Monthly Income summary — sum of all scgMonthlySpread for deals due this month
+          const monthDeals = trackedDeals.filter(d => {
+            const dt = parseDate(d.nextMonthly);
+            return dt && dt.getFullYear()===y && dt.getMonth()===m;
+          });
+          const totalSpread = monthDeals.reduce((sum, d) => sum + (safeNum(d.scgMonthlySpread) || 0), 0);
+          const summaryEl = cal.querySelector('#paySummary');
+          if (summaryEl) {
+            summaryEl.textContent = `SCG Monthly Income: $${totalSpread.toLocaleString()}`;
+            summaryEl.style.color = totalSpread >= 0 ? 'var(--green, #22c55e)' : 'var(--red)';
           }
 
           grid.querySelectorAll('button[data-pay]').forEach(btn => {
