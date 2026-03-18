@@ -1192,6 +1192,7 @@ async function openDealsKanban() {
               ['Deferral', d.deferralAmount ? `$${safeNum(d.deferralAmount).toLocaleString()}${d.deferralDueDate ? ' · due ' + d.deferralDueDate : ''}` : '—'],
               ['Closed Mo', d.closedMonthly ? `$${safeNum(d.closedMonthly).toLocaleString()}` : '—'],
               ['Owner Mo', d.ownerMonthly ? `$${safeNum(d.ownerMonthly).toLocaleString()}` : '—'],
+              ['SCG Mo Spread', (d.scgMonthlySpread !== null && d.scgMonthlySpread !== undefined) ? `$${safeNum(d.scgMonthlySpread).toLocaleString()}` : '—'],
               ['Next Monthly', d.nextMonthly || '—'],
               ['Late Date', d.lateDate || '—'],
               ['Activation Date', d.activationDate || '—'],
@@ -1296,7 +1297,8 @@ async function openDealsKanban() {
             });
             let chips='';
             dueDeals.forEach(d => {
-              chips += `<div class="pay-chip"><div class="row"><strong>${d.car}</strong><button data-pay="${d.id}">✅</button></div><div class="row"><span>Due</span><span>$${(Number(d.closedMonthly||0)||0).toLocaleString()}</span></div></div>`;
+              const spread = (d.scgMonthlySpread !== null && d.scgMonthlySpread !== undefined) ? `<div class="row"><span>SCG Spread</span><span>$${safeNum(d.scgMonthlySpread).toLocaleString()}</span></div>` : '';
+              chips += `<div class="pay-chip"><div class="row"><strong>${d.car}</strong><button data-pay="${d.id}">✅</button></div><div class="row"><span>Due</span><span>$${(Number(d.closedMonthly||0)||0).toLocaleString()}</span></div>${spread}</div>`;
             });
             const today = new Date(); const isToday = cellDate.getFullYear()===today.getFullYear() && cellDate.getMonth()===today.getMonth() && cellDate.getDate()===today.getDate();
             grid.innerHTML += `<div class="day-cell${isToday ? ' is-today' : ''}"><div class="day-num">${day}</div>${chips}</div>`;
