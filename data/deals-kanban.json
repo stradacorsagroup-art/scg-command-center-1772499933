@@ -81,7 +81,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30053b52-84ce-8050-b413-fb919915c786",
@@ -156,7 +162,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30453b52-84ce-8032-b60e-d52792a22355",
@@ -231,7 +243,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30453b52-84ce-8040-88d1-fdaeb40059fc",
@@ -306,7 +324,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30453b52-84ce-808e-a18e-feb11c415b22",
@@ -381,7 +405,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30453b52-84ce-81c3-8f4b-d197c5428bf6",
@@ -456,7 +486,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30753b52-84ce-801b-a1f3-d6ace20e1837",
@@ -531,7 +567,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30a53b52-84ce-804e-bb8e-d9006fea6f84",
@@ -606,7 +648,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30c53b52-84ce-8009-92b5-e53b471b9b4b",
@@ -681,7 +729,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "30c53b52-84ce-807b-9fec-e351e9d18136",
@@ -756,7 +810,13 @@
       "brokerName": null,
       "clientName": null,
       "clientPhone": null,
-      "ownerPhone": null
+      "ownerPhone": null,
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "73e67c60-236b-42e5-8754-ea1e9eb0a4ca",
@@ -787,7 +847,13 @@
       "clientPhone": "321-467-5080",
       "referral": null,
       "specialStipulations": null,
-      "rawFields": {}
+      "rawFields": {},
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     },
     {
       "id": "8167ff8b-3de5-4cd6-b836-b27fa6ba3f7b",
@@ -818,7 +884,13 @@
       "clientPhone": "Jaylen",
       "referral": null,
       "specialStipulations": null,
-      "rawFields": {}
+      "rawFields": {},
+      "ownerExtDown": null,
+      "ownerExtLength": null,
+      "ownerExtBuyout": null,
+      "scgExtDown": null,
+      "scgExtLength": null,
+      "scgExtBuyout": null
     }
   ]
 }
