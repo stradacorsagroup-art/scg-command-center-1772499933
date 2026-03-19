@@ -737,109 +737,6 @@
         </div>
     </div>
 
-    <!-- MAIN GRID: Calendar + Right Panel -->
-    <div class="main-grid">
-        <div>
-            <!-- CALENDAR -->
-            <div class="calendar-section">
-                <div class="section-title">
-                    <span id="calendarMonth">March 2026</span>
-                    <div class="month-nav">
-                        <button onclick="changeMonth(-1)">&larr;</button>
-                        <button onclick="changeMonth(1)">&rarr;</button>
-                    </div>
-                </div>
-                <div class="calendar-grid" id="calendarGrid"></div>
-            </div>
-
-            <!-- DAY DETAIL -->
-            <div class="day-detail" id="dayDetail">
-                <div class="day-detail-header">
-                    <h3 id="dayDetailTitle"></h3>
-                    <button class="day-detail-close" onclick="closeDayDetail()">&times;</button>
-                </div>
-                <div id="dayDetailContent"></div>
-                <div class="add-task-bar" style="margin-top:12px">
-                    <input type="text" id="dayTaskInput" placeholder="Add task for this day...">
-                    <button onclick="addDayTask()">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="right-panel">
-            <!-- TODAY'S TOP 3 -->
-            <div class="priorities">
-                <div class="section-title">Today's Top 3</div>
-                <div id="todayPriorities">
-                    <div class="priority-item">
-                        <div class="priority-num p1">1</div>
-                        <div class="priority-text">
-                            <span class="task-name">Close Jerome</span>
-                            <span class="task-detail">Sign OA + walk Vision Doc in person</span>
-                        </div>
-                        <div class="priority-check" onclick="toggleCheck(this)"></div>
-                    </div>
-                    <div class="priority-item">
-                        <div class="priority-num p2">2</div>
-                        <div class="priority-text">
-                            <span class="task-name">Lovable Site Live</span>
-                            <span class="task-detail">10 cars, lead capture, ID+Insurance+Drive</span>
-                        </div>
-                        <div class="priority-check" onclick="toggleCheck(this)"></div>
-                    </div>
-                    <div class="priority-item">
-                        <div class="priority-num p3">3</div>
-                        <div class="priority-text">
-                            <span class="task-name">File Montana LLC</span>
-                            <span class="task-detail">SCG Capital Partners LLC after Jerome signs</span>
-                        </div>
-                        <div class="priority-check" onclick="toggleCheck(this)"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DAILY HABIT TRACKER -->
-            <div class="priorities" id="habitTracker">
-                <div class="section-title">Daily Habit Tracker</div>
-                <div id="habitList"></div>
-                <div style="margin-top:10px;font-size:12px;color:var(--text-muted)" id="habitSummary">0/0 complete</div>
-            </div>
-
-            <!-- LONG TERM VISION -->
-            <div class="vision">
-                <div class="section-title">Long-Term Roadmap</div>
-                <div class="vision-phase">
-                    <div class="phase-marker active"></div>
-                    <div class="phase-text">
-                        <strong>Phase 1 &mdash; Foundation</strong>
-                        <span>Mar 2026 &bull; Jerome + LLC + Site + First 5 deals</span>
-                    </div>
-                </div>
-                <div class="vision-phase">
-                    <div class="phase-marker future"></div>
-                    <div class="phase-text">
-                        <strong>Phase 2 &mdash; Fleet Scale</strong>
-                        <span>Q2 2026 &bull; 15-20 cars, paid ads, VA hired, CPA locked</span>
-                    </div>
-                </div>
-                <div class="vision-phase">
-                    <div class="phase-marker future"></div>
-                    <div class="phase-text">
-                        <strong>Phase 3 &mdash; Motor Envy</strong>
-                        <span>Q4 2026 &bull; Brand launch, hangar facility, lounge concept</span>
-                    </div>
-                </div>
-                <div class="vision-phase">
-                    <div class="phase-marker future"></div>
-                    <div class="phase-text">
-                        <strong>Phase 4 &mdash; Platform</strong>
-                        <span>2027+ &bull; Jet charters, membership app, equity fund at scale</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- TABBED BOTTOM PANEL -->
     <div class="tabbed-panel">
       <div class="tab-bar">
@@ -942,6 +839,110 @@
             <div class="vision-phase"><div class="phase-marker future"></div><div class="phase-text"><strong>Phase 4 — Platform</strong><span>2027+ • Jet charters, membership app, equity fund at scale</span></div></div>
         </div>
       </div>
+    </div>
+
+    
+    <!-- MAIN GRID: Calendar + Right Panel -->
+    <div class="main-grid">
+        <div>
+            <!-- CALENDAR -->
+            <div class="calendar-section">
+                <div class="section-title">
+                    <span id="calendarMonth">March 2026</span>
+                    <div class="month-nav">
+                        <button onclick="changeMonth(-1)">&larr;</button>
+                        <button onclick="changeMonth(1)">&rarr;</button>
+                    </div>
+                </div>
+                <div class="calendar-grid" id="calendarGrid"></div>
+            </div>
+
+            <!-- DAY DETAIL -->
+            <div class="day-detail" id="dayDetail">
+                <div class="day-detail-header">
+                    <h3 id="dayDetailTitle"></h3>
+                    <button class="day-detail-close" onclick="closeDayDetail()">&times;</button>
+                </div>
+                <div id="dayDetailContent"></div>
+                <div class="add-task-bar" style="margin-top:12px">
+                    <input type="text" id="dayTaskInput" placeholder="Add task for this day...">
+                    <button onclick="addDayTask()">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <!-- TODAY'S TOP 3 -->
+            <div class="priorities">
+                <div class="section-title">Today's Top 3</div>
+                <div id="todayPriorities">
+                    <div class="priority-item">
+                        <div class="priority-num p1">1</div>
+                        <div class="priority-text">
+                            <span class="task-name">Close Jerome</span>
+                            <span class="task-detail">Sign OA + walk Vision Doc in person</span>
+                        </div>
+                        <div class="priority-check" onclick="toggleCheck(this)"></div>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-num p2">2</div>
+                        <div class="priority-text">
+                            <span class="task-name">Lovable Site Live</span>
+                            <span class="task-detail">10 cars, lead capture, ID+Insurance+Drive</span>
+                        </div>
+                        <div class="priority-check" onclick="toggleCheck(this)"></div>
+                    </div>
+                    <div class="priority-item">
+                        <div class="priority-num p3">3</div>
+                        <div class="priority-text">
+                            <span class="task-name">File Montana LLC</span>
+                            <span class="task-detail">SCG Capital Partners LLC after Jerome signs</span>
+                        </div>
+                        <div class="priority-check" onclick="toggleCheck(this)"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAILY HABIT TRACKER -->
+            <div class="priorities" id="habitTracker">
+                <div class="section-title">Daily Habit Tracker</div>
+                <div id="habitList"></div>
+                <div style="margin-top:10px;font-size:12px;color:var(--text-muted)" id="habitSummary">0/0 complete</div>
+            </div>
+
+            <!-- LONG TERM VISION -->
+            <div class="vision">
+                <div class="section-title">Long-Term Roadmap</div>
+                <div class="vision-phase">
+                    <div class="phase-marker active"></div>
+                    <div class="phase-text">
+                        <strong>Phase 1 &mdash; Foundation</strong>
+                        <span>Mar 2026 &bull; Jerome + LLC + Site + First 5 deals</span>
+                    </div>
+                </div>
+                <div class="vision-phase">
+                    <div class="phase-marker future"></div>
+                    <div class="phase-text">
+                        <strong>Phase 2 &mdash; Fleet Scale</strong>
+                        <span>Q2 2026 &bull; 15-20 cars, paid ads, VA hired, CPA locked</span>
+                    </div>
+                </div>
+                <div class="vision-phase">
+                    <div class="phase-marker future"></div>
+                    <div class="phase-text">
+                        <strong>Phase 3 &mdash; Motor Envy</strong>
+                        <span>Q4 2026 &bull; Brand launch, hangar facility, lounge concept</span>
+                    </div>
+                </div>
+                <div class="vision-phase">
+                    <div class="phase-marker future"></div>
+                    <div class="phase-text">
+                        <strong>Phase 4 &mdash; Platform</strong>
+                        <span>2027+ &bull; Jet charters, membership app, equity fund at scale</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- DEALS KANBAN MODAL -->
