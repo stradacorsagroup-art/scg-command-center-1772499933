@@ -251,50 +251,6 @@
       "msrp": null
     },
     {
-      "car": "2018 Rolls-Royce Dawn",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 19995,
-        "scgDown": 19995,
-        "ownerMonthly": 5995,
-        "scgMonthly": 5995,
-        "profit": 5995,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "miles": "19,780",
-      "location": "West Palm FL",
-      "milesPerYear": "—",
-      "firstPaymentDueToOwner": "at closing",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "White Exterior / Handcrafted Red Interior • $235k Purchase Price",
-      "ownerMonthly": 5995,
-      "scgMonthly": 5995,
-      "monthlySpread": 0,
-      "msrp": null,
-      "sixMo": {
-        "ownerDown": 19995,
-        "scgDown": 19995,
-        "ownerMonthly": 5995,
-        "scgMonthly": 5995,
-        "profit": 5995,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      }
-    },
-    {
       "car": "2018 Mercedes-AMG GT C",
       "threeMo": {
         "ownerDown": null,
