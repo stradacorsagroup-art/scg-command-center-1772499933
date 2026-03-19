@@ -87,7 +87,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "30053b52-84ce-8050-b413-fb919915c786",
@@ -168,7 +170,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "30453b52-84ce-8032-b60e-d52792a22355",
@@ -249,7 +253,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "30453b52-84ce-8040-88d1-fdaeb40059fc",
@@ -330,7 +336,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "30453b52-84ce-808e-a18e-feb11c415b22",
@@ -411,7 +419,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "30453b52-84ce-81c3-8f4b-d197c5428bf6",
@@ -492,7 +502,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "30753b52-84ce-801b-a1f3-d6ace20e1837",
@@ -573,7 +585,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "30a53b52-84ce-804e-bb8e-d9006fea6f84",
@@ -654,14 +668,16 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "30c53b52-84ce-8009-92b5-e53b471b9b4b",
       "car": "2025 BMW XM",
       "status": "Live",
       "closedDown": 50000,
-      "ownerDown": 30000,
+      "ownerDown": 32800,
       "scgDownSpread": 20000,
       "brokerPay": 10000,
       "deferralAmount": null,
@@ -669,16 +685,16 @@
       "closedMonthly": 2500,
       "ownerMonthly": 2500,
       "scgMonthlySpread": 0,
-      "nextMonthly": null,
-      "lateDate": null,
-      "activationDate": null,
-      "endDate": null,
-      "term": null,
-      "milesAtActivation": null,
-      "milesAllowed": null,
-      "buyout": null,
-      "scgBuyout": null,
-      "ownerName": null,
+      "nextMonthly": "2026-03-24",
+      "lateDate": "2026-03-27",
+      "activationDate": "2026-02-24",
+      "endDate": "2027-02-24",
+      "term": "12 mo",
+      "milesAtActivation": 3195,
+      "milesAllowed": 7500,
+      "buyout": 89900,
+      "scgBuyout": 89900,
+      "ownerName": "Ted",
       "referral": null,
       "specialStipulations": null,
       "rawFields": {
@@ -726,16 +742,18 @@
         "SCG Buyout": null,
         "Miles Allowed": null
       },
-      "brokerName": null,
-      "clientName": null,
+      "brokerName": "Jaylen",
+      "clientName": "Jonquail Myers",
       "clientPhone": null,
       "ownerPhone": null,
       "ownerExtDown": null,
-      "ownerExtLength": null,
-      "ownerExtBuyout": null,
-      "scgExtDown": null,
-      "scgExtLength": null,
-      "scgExtBuyout": null
+      "ownerExtLength": "12 mo",
+      "ownerExtBuyout": 69900,
+      "scgExtDown": 30000,
+      "scgExtLength": "12 mo",
+      "scgExtBuyout": 69900,
+      "ownerExtMonthly": 2395,
+      "scgExtMonthly": 2395
     },
     {
       "id": "30c53b52-84ce-807b-9fec-e351e9d18136",
@@ -816,7 +834,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "73e67c60-236b-42e5-8754-ea1e9eb0a4ca",
@@ -853,7 +873,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     },
     {
       "id": "8167ff8b-3de5-4cd6-b836-b27fa6ba3f7b",
@@ -890,7 +912,9 @@
       "ownerExtBuyout": null,
       "scgExtDown": null,
       "scgExtLength": null,
-      "scgExtBuyout": null
+      "scgExtBuyout": null,
+      "ownerExtMonthly": null,
+      "scgExtMonthly": null
     }
   ]
 }
