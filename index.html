@@ -1143,6 +1143,11 @@ async function openDealsKanban() {
         const now = new Date();
         const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
         const safeNum = (n) => Number(n || 0) || 0;
+
+        // Auto-calculate SCG Down Spread = Closed Down - Owner Down - Broker Pay
+        deals.forEach(d => {
+          d.scgDownSpread = safeNum(d.closedDown) - safeNum(d.ownerDown) - safeNum(d.brokerPay);
+        });
         const mtd = deals.filter(d => (d.activationDate || '').startsWith(monthKey)).reduce((s,d)=>s+safeNum(d.closedDown),0);
         const totalDown = deals.reduce((s,d)=>s+safeNum(d.closedDown),0);
         const byMonth = {};
@@ -1188,7 +1193,7 @@ async function openDealsKanban() {
               ['Closed Down', d.closedDown ? `$${safeNum(d.closedDown).toLocaleString()}` : '—'],
               ['Owner Down', d.ownerDown ? `$${safeNum(d.ownerDown).toLocaleString()}` : '—'],
               ['Broker Pay', d.brokerPay ? `$${safeNum(d.brokerPay).toLocaleString()}` : '—'],
-              ['SCG Down Spread', d.scgDownSpread ? `$${safeNum(d.scgDownSpread).toLocaleString()}` : '—'],
+              ['SCG Down Spread', (() => { const v = safeNum(d.closedDown) - safeNum(d.ownerDown) - safeNum(d.brokerPay); return isNaN(v) ? '—' : `$${v.toLocaleString()}`; })()],
               ['Deferral', d.deferralAmount ? `$${safeNum(d.deferralAmount).toLocaleString()}${d.deferralDueDate ? ' · due ' + d.deferralDueDate : ''}` : '—'],
               ['Closed Mo', d.closedMonthly ? `$${safeNum(d.closedMonthly).toLocaleString()}` : '—'],
               ['Owner Mo', d.ownerMonthly ? `$${safeNum(d.ownerMonthly).toLocaleString()}` : '—'],
