@@ -23,28 +23,7 @@
       "target": 5
     }
   },
-  "todayTop3": [
-    {
-      "name": "Polish + finalize Command Center",
-      "detail": "Finalize Cars-on-Road UX, task logs, and payment flow",
-      "done": false
-    },
-    {
-      "name": "Meet Jerome (4:30 PM)",
-      "detail": "Finalize SCG Capital Partners structure (18-month hold, 15% capital return model)",
-      "done": false
-    },
-    {
-      "name": "Finalize client-facing lease website",
-      "detail": "Complete media, offers, sourcing flow, and conversion-ready pages",
-      "done": false
-    },
-    {
-      "name": "Connect DSequence + QuickBooks",
-      "detail": "Prepare CPA-ready tracking and review workflow",
-      "done": false
-    }
-  ],
+  "todayTop3": [],
   "inventory": {
     "count": 11,
     "avgMonthly": 5316
