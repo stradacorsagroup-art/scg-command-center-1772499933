@@ -905,6 +905,8 @@
 <script>
 // ========== DATA STORE (localStorage persistence) ==========
 const STORAGE_KEY = 'scg_command_center_v2';
+// Clear old storage keys on load
+['scg_command_center', 'scg_personal_ops_v1', 'scg-priority-tasks'].forEach(k => localStorage.removeItem(k));
 
 const DEFAULT_DATA = {
     kpis: {
