@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 24,
+  "count": 14,
   "items": [
     {
       "car": "2020 McLaren 720S Spider",
@@ -36,7 +36,7 @@
       },
       "ownerEmail": "stage2autogroup@gmail.com",
       "msrp": 314995,
-      "notes": "—",
+      "notes": "\u2014",
       "sixMo": {
         "ownerDown": 32490,
         "scgDown": 32490,
@@ -55,11 +55,11 @@
       "ownerMonthly": 4495,
       "scgMonthly": 4495,
       "monthlySpread": 0,
-      "milesPerYear": "—",
+      "milesPerYear": "\u2014",
       "firstPaymentDueToOwner": "30 days after signing",
-      "location": "—",
-      "ownerName": "—",
-      "ownerEmail": "—",
+      "location": "\u2014",
+      "ownerName": "\u2014",
+      "ownerEmail": "\u2014",
       "notes": "Factory Matte White on Cardinal Red",
       "threeMo": {
         "ownerDown": null,
@@ -106,8 +106,8 @@
         "buyoutSpread": null
       },
       "miles": "24,000",
-      "location": "—",
-      "milesPerYear": "—",
+      "location": "\u2014",
+      "milesPerYear": "\u2014",
       "firstPaymentDueToOwner": "at closing",
       "ownerName": "DAM HOLDINGS LLC",
       "ownerEmail": "stage2autogroup@gmail.com",
@@ -136,7 +136,7 @@
       "monthlySpread": 0,
       "milesPerYear": "7,500",
       "firstPaymentDueToOwner": "30 days after closing",
-      "location": "—",
+      "location": "\u2014",
       "ownerName": "DAM HOLDINGS LLC",
       "threeMo": {
         "ownerDown": 14995,
@@ -180,7 +180,7 @@
       "monthlySpread": 0,
       "milesPerYear": "10,000",
       "firstPaymentDueToOwner": "30 days after closing",
-      "location": "—",
+      "location": "\u2014",
       "ownerName": "DAM HOLDINGS LLC",
       "threeMo": {
         "ownerDown": null,
@@ -222,11 +222,11 @@
       "ownerMonthly": 8960,
       "scgMonthly": 8960,
       "monthlySpread": null,
-      "milesPerYear": "—",
+      "milesPerYear": "\u2014",
       "firstPaymentDueToOwner": "AT CLOSING",
       "location": "Miami, Florida",
       "ownerName": "Shehan",
-      "ownerEmail": "—",
+      "ownerEmail": "\u2014",
       "notes": "Keyvany Keyrus 1 of 3 imported to North America. Most exclusive custom Urus on the planet. Originally created upon a Pearl Capsule Edition unit from Lamborghini, painted in Green base with heavy Gold metallic flakes. Every piece of bodywork on this vehicle has been hand crafted from the highest Aerograde Carbon Fiber. Only the door shells and roof have remained original aluminum. Full Catless RYFT Titanium Exhaust System with a Stage 2 Tune pushing just around 900 HP. Only Urus seen to shoot 3-4 foot flames. It's sitting on one-off AL13 3-Piece Wheels specially made for this Keyrus, running over $30,000 for the set with tires. Interior is also fully custom down to the floor mats, carbon door sills, and forged carbon fiber steering wheel with the Keyvany crest. Also has a color-changing Starlight Headliner that has twinkle effect, as well as color-changing ambient lighting. + Full Custom Interior",
       "threeMo": {
         "ownerDown": 99995,
@@ -273,8 +273,8 @@
         "buyoutSpread": null
       },
       "miles": "45,xxx",
-      "location": "—",
-      "milesPerYear": "—",
+      "location": "\u2014",
+      "milesPerYear": "\u2014",
       "firstPaymentDueToOwner": "at closing",
       "ownerName": "DAM HOLDINGS LLC",
       "ownerEmail": "stage2autogroup@gmail.com",
@@ -295,94 +295,6 @@
       }
     },
     {
-      "car": "2021 Audi RS 6 Avant",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 17995,
-        "scgDown": 17995,
-        "ownerMonthly": 2495,
-        "scgMonthly": 2495,
-        "profit": 2500,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "miles": "40,xxx",
-      "location": "—",
-      "milesPerYear": "—",
-      "firstPaymentDueToOwner": "at closing",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "Full Stealth PPF",
-      "ownerMonthly": 2495,
-      "scgMonthly": 2495,
-      "monthlySpread": 0,
-      "msrp": null,
-      "sixMo": {
-        "ownerDown": 17995,
-        "scgDown": 17995,
-        "ownerMonthly": 2495,
-        "scgMonthly": 2495,
-        "profit": 2500,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      }
-    },
-    {
-      "car": "2025 Rolls-Royce Spectre",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 49995,
-        "scgDown": 49995,
-        "ownerMonthly": 8995,
-        "scgMonthly": 8995,
-        "profit": 9000,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "miles": "13,xxx",
-      "location": "—",
-      "milesPerYear": "—",
-      "firstPaymentDueToOwner": "at closing",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "INSANE SPEC • TEMPESTE GREY • FACTORY BLUE INTERIOR • STARLIGHT DOORS",
-      "ownerMonthly": 8995,
-      "scgMonthly": 8995,
-      "monthlySpread": 0,
-      "msrp": null,
-      "sixMo": {
-        "ownerDown": 49995,
-        "scgDown": 49995,
-        "ownerMonthly": 8995,
-        "scgMonthly": 8995,
-        "profit": 9000,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      }
-    },
-    {
       "car": "2020 Mercedes G63 Satin Black",
       "miles": "56,000",
       "vin": "WDCYC7HJ6LX338220",
@@ -394,7 +306,7 @@
       "location": "New York, NY, United States",
       "ownerName": "DAM HOLDINGS LLC",
       "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "—",
+      "notes": "\u2014",
       "threeMo": {
         "ownerDown": null,
         "scgDown": null,
@@ -426,10 +338,10 @@
       "monthlySpread": 0,
       "milesPerYear": "10,000",
       "firstPaymentDueToOwner": "30 days after closing",
-      "location": "—",
-      "ownerName": "—",
-      "ownerEmail": "—",
-      "notes": "—",
+      "location": "\u2014",
+      "ownerName": "\u2014",
+      "ownerEmail": "\u2014",
+      "notes": "\u2014",
       "threeMo": {
         "ownerDown": null,
         "scgDown": null,
@@ -469,12 +381,12 @@
       "ownerMonthly": 3195,
       "scgMonthly": 3195,
       "monthlySpread": 0,
-      "milesPerYear": "—",
+      "milesPerYear": "\u2014",
       "firstPaymentDueToOwner": "30 days after closing",
       "location": "New York, NY, United States",
       "ownerName": "DAM HOLDINGS LLC",
       "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "—",
+      "notes": "\u2014",
       "threeMo": {
         "ownerDown": 12895,
         "scgDown": 12895,
@@ -504,12 +416,12 @@
       "ownerMonthly": 1645,
       "scgMonthly": 1645,
       "monthlySpread": 0,
-      "milesPerYear": "—",
-      "firstPaymentDueToOwner": "—",
-      "location": "—",
-      "ownerName": "—",
-      "ownerEmail": "—",
-      "notes": "Hysteria Purple❗️Tons of Mods❗️\nLifetime Engine Warranty + 2 Years Left Factory Warranty❗️",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "\u2014",
+      "location": "\u2014",
+      "ownerName": "\u2014",
+      "ownerEmail": "\u2014",
+      "notes": "Hysteria Purple\u2757\ufe0fTons of Mods\u2757\ufe0f\nLifetime Engine Warranty + 2 Years Left Factory Warranty\u2757\ufe0f",
       "threeMo": {
         "ownerDown": null,
         "scgDown": null,
@@ -549,12 +461,12 @@
       "ownerMonthly": 6495,
       "scgMonthly": 6495,
       "monthlySpread": 0,
-      "milesPerYear": "—",
+      "milesPerYear": "\u2014",
       "firstPaymentDueToOwner": "at closing",
       "location": "Miami, FL",
-      "ownerName": "—",
-      "ownerEmail": "—",
-      "notes": "—",
+      "ownerName": "\u2014",
+      "ownerEmail": "\u2014",
+      "notes": "\u2014",
       "threeMo": {
         "ownerDown": null,
         "scgDown": null,
@@ -594,12 +506,12 @@
       "ownerMonthly": 4495,
       "scgMonthly": 4495,
       "monthlySpread": 0,
-      "milesPerYear": "—",
-      "firstPaymentDueToOwner": "—",
-      "location": "—",
-      "ownerName": "—",
-      "ownerEmail": "—",
-      "notes": "—",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "\u2014",
+      "location": "\u2014",
+      "ownerName": "\u2014",
+      "ownerEmail": "\u2014",
+      "notes": "\u2014",
       "threeMo": {
         "ownerDown": null,
         "scgDown": null,
@@ -639,11 +551,11 @@
       "ownerMonthly": 2245,
       "scgMonthly": 2245,
       "monthlySpread": 0,
-      "milesPerYear": "—",
-      "firstPaymentDueToOwner": "—",
-      "location": "—",
-      "ownerName": "—",
-      "ownerEmail": "—",
+      "milesPerYear": "\u2014",
+      "firstPaymentDueToOwner": "\u2014",
+      "location": "\u2014",
+      "ownerName": "\u2014",
+      "ownerEmail": "\u2014",
       "notes": "No Credit or Income Check",
       "threeMo": {
         "ownerDown": null,
@@ -690,7 +602,7 @@
       "twelveMo": {
         "buyout": 115000
       },
-      "notes": "—"
+      "notes": "\u2014"
     },
     {
       "car": "2023 Nisan GTR",
@@ -703,12 +615,12 @@
       "twelveMo": {
         "buyout": 115000
       },
-      "notes": "—"
+      "notes": "\u2014"
     },
     {
       "car": "2023 Porsche 911",
-      "miles": "—",
-      "vin": "—",
+      "miles": "\u2014",
+      "vin": "\u2014",
       "msrp": 0,
       "threeMo": {
         "buyout": 0
@@ -716,7 +628,7 @@
       "twelveMo": {
         "buyout": 0
       },
-      "notes": "—"
+      "notes": "\u2014"
     }
   ],
   "carsForSaleCount": 3
