@@ -717,7 +717,20 @@
         "buyout": 0
       },
       "notes": "—"
+    },
+    {
+      "car": "2025 Porsche 911",
+      "miles": "—",
+      "vin": "—",
+      "msrp": 0,
+      "threeMo": {
+        "buyout": 0
+      },
+      "twelveMo": {
+        "buyout": 0
+      },
+      "notes": "—"
     }
   ],
-  "carsForSaleCount": 3
+  "carsForSaleCount": 4
 }
