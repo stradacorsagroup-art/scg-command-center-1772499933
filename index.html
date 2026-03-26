@@ -813,6 +813,12 @@
           <div class="priority-item"><div class="priority-num p2">2</div><div class="priority-text"><span class="task-name" contenteditable="true">—</span><span class="task-detail" contenteditable="true">Add detail...</span></div><div class="priority-check" onclick="toggleCheck(this)"></div></div>
           <div class="priority-item"><div class="priority-num p3">3</div><div class="priority-text"><span class="task-name" contenteditable="true">—</span><span class="task-detail" contenteditable="true">Add detail...</span></div><div class="priority-check" onclick="toggleCheck(this)"></div></div>
         </div>
+
+        <div class="section-title" style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;">
+          Additional Tasks
+          <button onclick="addTodo()" style="font-size:11px;padding:3px 10px;border:1px solid var(--border);background:var(--surface);border-radius:6px;cursor:pointer">+ Add</button>
+        </div>
+        <div id="top3TodosEl"></div>
       </div>
 
       <!-- HABITS TAB -->
@@ -1517,6 +1523,7 @@ function renderAllOps() {
   renderOpsSection('appointmentsEl', d.appointments || [], 'toggleAppointment', 'deleteAppointment');
   renderOpsSection('doctorsEl', d.doctors || [], 'toggleDoctor', 'deleteDoctor');
   renderOpsSection('todosEl', d.todos || [], 'toggleTodo', 'deleteTodo');
+  renderOpsSection('top3TodosEl', d.todos || [], 'toggleTodo', 'deleteTodo');
 }
 
 function addOpsItem(key, promptTitle, metaLabel) {
