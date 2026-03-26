@@ -1420,6 +1420,50 @@ function addDayTask() {
 }
 
 // ========== TODAY'S TOP 3 ==========
+const TOP3_KEY = 'scg_top3_state_v1';
+
+function getTop3Rows() {
+    return Array.from(document.querySelectorAll('#todayPriorities .priority-item'));
+}
+
+function saveTop3() {
+    const rows = getTop3Rows();
+    const payload = rows.map((row) => ({
+        name: row.querySelector('.task-name')?.textContent?.trim() || '—',
+        detail: row.querySelector('.task-detail')?.textContent?.trim() || 'Add detail...',
+        done: row.querySelector('.priority-check')?.classList.contains('done') || false,
+    }));
+    localStorage.setItem(TOP3_KEY, JSON.stringify(payload));
+}
+
+function loadTop3() {
+    let saved = [];
+    try { saved = JSON.parse(localStorage.getItem(TOP3_KEY) || '[]'); } catch { saved = []; }
+    const rows = getTop3Rows();
+    rows.forEach((row, i) => {
+        const item = saved[i];
+        if (!item) return;
+        const nameEl = row.querySelector('.task-name');
+        const detailEl = row.querySelector('.task-detail');
+        const checkEl = row.querySelector('.priority-check');
+        if (nameEl) nameEl.textContent = item.name || '—';
+        if (detailEl) detailEl.textContent = item.detail || 'Add detail...';
+        if (checkEl) {
+            checkEl.classList.toggle('done', !!item.done);
+            checkEl.innerHTML = item.done ? '&#10003;' : '';
+        }
+    });
+}
+
+function bindTop3Persistence() {
+    getTop3Rows().forEach((row) => {
+        row.querySelectorAll('.task-name, .task-detail').forEach((el) => {
+            el.addEventListener('input', saveTop3);
+            el.addEventListener('blur', saveTop3);
+        });
+    });
+}
+
 function toggleCheck(el) {
     el.classList.toggle('done');
     if (el.classList.contains('done')) {
@@ -1427,6 +1471,7 @@ function toggleCheck(el) {
     } else {
         el.innerHTML = '';
     }
+    saveTop3();
 }
 
 // ========== TASK TABLE ==========
@@ -1957,6 +2002,8 @@ setInterval(() => {
     renderTasks();
     renderCharts();
     renderAllOps();
+    bindTop3Persistence();
+    loadTop3();
     // Set today's date on date input default
     document.getElementById('newTaskDue').valueAsDate = new Date();
 })();
