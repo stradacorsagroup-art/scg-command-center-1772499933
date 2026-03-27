@@ -1547,25 +1547,62 @@ function switchTab(id) {
 
 // ========== PERSONAL OPS ==========
 const OPS_KEY = 'scg_personal_ops_v2';
-function loadOps() {
-  // Primary source: data object persisted under STORAGE_KEY
-  if (data && data.ops && typeof data.ops === 'object') return data.ops;
+const OPS_COOKIE_KEY = 'scg_ops_backup_v1';
 
-  // Legacy/fallback source: separate ops localStorage key
+function readCookie(name) {
+  const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+  return m ? decodeURIComponent(m[1]) : '';
+}
+function writeCookie(name, value, days = 365) {
+  const exp = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${exp}; path=/; SameSite=Lax`;
+}
+
+function loadOps() {
+  // 1) main dashboard store
+  if (data && data.ops && typeof data.ops === 'object' && Object.keys(data.ops).length) return data.ops;
+
+  // 2) localStorage dedicated key
   try {
     const ls = localStorage.getItem(OPS_KEY);
     if (ls) return JSON.parse(ls);
   } catch {}
 
+  // 3) window.name fallback (survives refresh even if localStorage blocked)
+  try {
+    if (window.name) {
+      const wn = JSON.parse(window.name);
+      if (wn && wn.ops && typeof wn.ops === 'object') return wn.ops;
+    }
+  } catch {}
+
+  // 4) cookie fallback
+  try {
+    const c = readCookie(OPS_COOKIE_KEY);
+    if (c) return JSON.parse(c);
+  } catch {}
+
   return {};
 }
+
 function saveOps(d) {
-  // Always persist to main dashboard store (authoritative)
+  // 1) main dashboard store
   data.ops = d;
   saveData();
 
-  // Also mirror to legacy key for backwards compatibility
+  // 2) localStorage mirror
   try { localStorage.setItem(OPS_KEY, JSON.stringify(d)); } catch {}
+
+  // 3) window.name mirror
+  try {
+    let wn = {};
+    try { wn = window.name ? JSON.parse(window.name) : {}; } catch {}
+    wn.ops = d;
+    window.name = JSON.stringify(wn);
+  } catch {}
+
+  // 4) cookie mirror
+  try { writeCookie(OPS_COOKIE_KEY, JSON.stringify(d)); } catch {}
 }
 
 function renderOpsSection(listId, items, onToggle, onDelete) {
