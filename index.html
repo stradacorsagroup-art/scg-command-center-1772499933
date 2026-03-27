@@ -960,9 +960,10 @@ async function applyLiveData() {
         if (live?.monthGoals) {
             data.monthGoals = { ...data.monthGoals, ...live.monthGoals };
         }
-        if (Array.isArray(live?.todayTop3) && live.todayTop3.length) {
-            data.todayTop3 = live.todayTop3;
-        }
+        // Keep Top 3 local/persistent per user browser session; do not override from live.json
+        // if (Array.isArray(live?.todayTop3) && live.todayTop3.length) {
+        //     data.todayTop3 = live.todayTop3;
+        // }
         if (live?.inventory?.count != null) {
             data.inventoryCount = Number(live.inventory.count) || 0;
         }
@@ -1434,11 +1435,15 @@ function saveTop3() {
         done: row.querySelector('.priority-check')?.classList.contains('done') || false,
     }));
     localStorage.setItem(TOP3_KEY, JSON.stringify(payload));
+    data.todayTop3 = payload;
+    saveData();
 }
 
 function loadTop3() {
     let saved = [];
     try { saved = JSON.parse(localStorage.getItem(TOP3_KEY) || '[]'); } catch { saved = []; }
+    if (!saved.length && Array.isArray(data.todayTop3) && data.todayTop3.length) saved = data.todayTop3;
+
     const rows = getTop3Rows();
     rows.forEach((row, i) => {
         const item = saved[i];
@@ -1543,8 +1548,18 @@ function switchTab(id) {
 
 // ========== PERSONAL OPS ==========
 const OPS_KEY = 'scg_personal_ops_v2';
-function loadOps() { try { return JSON.parse(localStorage.getItem(OPS_KEY) || '{}'); } catch { return {}; } }
-function saveOps(d) { localStorage.setItem(OPS_KEY, JSON.stringify(d)); }
+function loadOps() {
+  try {
+    const ls = localStorage.getItem(OPS_KEY);
+    if (ls) return JSON.parse(ls);
+  } catch {}
+  return (data && data._opsBackup) ? data._opsBackup : {};
+}
+function saveOps(d) {
+  localStorage.setItem(OPS_KEY, JSON.stringify(d));
+  data._opsBackup = d;
+  saveData();
+}
 
 function renderOpsSection(listId, items, onToggle, onDelete) {
   const el = document.getElementById(listId);
