@@ -1463,10 +1463,16 @@ function loadTop3() {
 function bindTop3Persistence() {
     getTop3Rows().forEach((row) => {
         row.querySelectorAll('.task-name, .task-detail').forEach((el) => {
-            el.addEventListener('input', saveTop3);
-            el.addEventListener('blur', saveTop3);
+            ['input','blur','keyup','paste','change'].forEach(evt => el.addEventListener(evt, saveTop3));
         });
     });
+
+    // Safety net: autosave every 2 seconds and on page unload
+    if (!window.__top3AutoSaveBound) {
+        window.__top3AutoSaveBound = true;
+        setInterval(saveTop3, 2000);
+        window.addEventListener('beforeunload', saveTop3);
+    }
 }
 
 function toggleCheck(el) {
@@ -1549,16 +1555,24 @@ function switchTab(id) {
 // ========== PERSONAL OPS ==========
 const OPS_KEY = 'scg_personal_ops_v2';
 function loadOps() {
+  // Primary source: data object persisted under STORAGE_KEY
+  if (data && data.ops && typeof data.ops === 'object') return data.ops;
+
+  // Legacy/fallback source: separate ops localStorage key
   try {
     const ls = localStorage.getItem(OPS_KEY);
     if (ls) return JSON.parse(ls);
   } catch {}
-  return (data && data._opsBackup) ? data._opsBackup : {};
+
+  return {};
 }
 function saveOps(d) {
-  localStorage.setItem(OPS_KEY, JSON.stringify(d));
-  data._opsBackup = d;
+  // Always persist to main dashboard store (authoritative)
+  data.ops = d;
   saveData();
+
+  // Also mirror to legacy key for backwards compatibility
+  try { localStorage.setItem(OPS_KEY, JSON.stringify(d)); } catch {}
 }
 
 function renderOpsSection(listId, items, onToggle, onDelete) {
