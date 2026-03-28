@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 8,
+  "count": 7,
   "items": [
     {
       "car": "2020 McLaren 720S Spider",
@@ -211,50 +211,6 @@
         "scgMonthly": 3995,
         "profit": null,
         "buyout": 124995,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      }
-    },
-    {
-      "car": "2018 Mercedes-AMG GT C",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 17995,
-        "scgDown": 17995,
-        "ownerMonthly": 1995,
-        "scgMonthly": 1995,
-        "profit": 2000,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "miles": "45,xxx",
-      "location": "\u2014",
-      "milesPerYear": "\u2014",
-      "firstPaymentDueToOwner": "at closing",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "Silver Matte Paint",
-      "ownerMonthly": 1995,
-      "scgMonthly": 1995,
-      "monthlySpread": 0,
-      "msrp": null,
-      "sixMo": {
-        "ownerDown": 17995,
-        "scgDown": 17995,
-        "ownerMonthly": 1995,
-        "scgMonthly": 1995,
-        "profit": 2000,
-        "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
       }
