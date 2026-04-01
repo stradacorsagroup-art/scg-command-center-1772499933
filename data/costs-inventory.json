@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 4,
+  "count": 2,
   "items": [
     {
       "car": "2020 McLaren 720S Spider",
@@ -82,95 +82,6 @@
         "buyoutSpread": null
       },
       "msrp": null
-    },
-    {
-      "car": "2023 Maserati MC20",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 25995,
-        "scgDown": 25995,
-        "ownerMonthly": 3245,
-        "scgMonthly": 3245,
-        "profit": 3250,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "miles": "24,000",
-      "location": "\u2014",
-      "milesPerYear": "\u2014",
-      "firstPaymentDueToOwner": "at closing",
-      "ownerName": "DAM HOLDINGS LLC",
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "notes": "24,000",
-      "ownerMonthly": 3245,
-      "scgMonthly": 3245,
-      "monthlySpread": 0,
-      "msrp": 339695,
-      "sixMo": {
-        "ownerDown": 25995,
-        "scgDown": 25995,
-        "ownerMonthly": 3245,
-        "scgMonthly": 3245,
-        "profit": 3250,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      }
-    },
-    {
-      "car": "2019 Ferrari Portofino",
-      "miles": "15,500",
-      "vin": null,
-      "ownerMonthly": 4495,
-      "scgMonthly": 4495,
-      "monthlySpread": 0,
-      "milesPerYear": "\u2014",
-      "firstPaymentDueToOwner": "\u2014",
-      "location": "\u2014",
-      "ownerName": "\u2014",
-      "ownerEmail": "\u2014",
-      "notes": "\u2014",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 34995,
-        "scgDown": 34995,
-        "ownerMonthly": 4495,
-        "scgMonthly": 4495,
-        "profit": null,
-        "buyout": 169995,
-        "scgBuyout": 169995,
-        "buyoutSpread": null
-      },
-      "msrp": 209995,
-      "sixMo": {
-        "ownerDown": 34995,
-        "scgDown": 34995,
-        "ownerMonthly": 4495,
-        "scgMonthly": 4495,
-        "profit": null,
-        "buyout": 179995,
-        "scgBuyout": 179995,
-        "buyoutSpread": null
-      }
     }
   ],
   "carsForSaleItems": [
