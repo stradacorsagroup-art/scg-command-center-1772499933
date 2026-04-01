@@ -1,7 +1,7 @@
 {
   "syncedAt": "2026-03-05T04:26:03.492990+00:00",
   "source": "workspace:COSTS/New data source",
-  "count": 7,
+  "count": 4,
   "items": [
     {
       "car": "2020 McLaren 720S Spider",
@@ -122,139 +122,6 @@
         "ownerMonthly": 3245,
         "scgMonthly": 3245,
         "profit": 3250,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      }
-    },
-    {
-      "car": "2019 LAMBORGHINI URUS BLUE",
-      "miles": "40,000",
-      "vin": "ZPBUA1ZL5KLA01124",
-      "ownerMonthly": 4495,
-      "scgMonthly": 4495,
-      "monthlySpread": 0,
-      "milesPerYear": "7,500",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "\u2014",
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": 14995,
-        "scgDown": 14995,
-        "ownerMonthly": 4495,
-        "scgMonthly": 4495,
-        "profit": null,
-        "buyout": 164995,
-        "scgBuyout": 164995,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 27995,
-        "scgDown": 27995,
-        "ownerMonthly": 4495,
-        "scgMonthly": 4495,
-        "profit": null,
-        "buyout": 149995,
-        "scgBuyout": 149995,
-        "buyoutSpread": null
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 203995,
-      "sixMo": {
-        "ownerDown": 19995,
-        "scgDown": 19995,
-        "ownerMonthly": 4495,
-        "scgMonthly": 4495,
-        "profit": null,
-        "buyout": 154995,
-        "scgBuyout": 154995,
-        "buyoutSpread": null
-      }
-    },
-    {
-      "car": "2019 LAMBORGHINI URUS WHITE",
-      "miles": "111,000",
-      "vin": null,
-      "ownerMonthly": 3995,
-      "scgMonthly": 3995,
-      "monthlySpread": 0,
-      "milesPerYear": "10,000",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "\u2014",
-      "ownerName": "DAM HOLDINGS LLC",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 29995,
-        "scgDown": 29995,
-        "ownerMonthly": 3995,
-        "scgMonthly": 3995,
-        "profit": null,
-        "buyout": 117995,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "ownerEmail": "stage2autogroup@gmail.com",
-      "msrp": 203995,
-      "sixMo": {
-        "ownerDown": 13995,
-        "scgDown": 14995,
-        "ownerMonthly": 3995,
-        "scgMonthly": 3995,
-        "profit": null,
-        "buyout": 124995,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      }
-    },
-    {
-      "car": "2023 Maybach GLS600 Black/Red",
-      "miles": "23,000",
-      "vin": null,
-      "ownerMonthly": 3595,
-      "scgMonthly": 3595,
-      "monthlySpread": 0,
-      "milesPerYear": "10,000",
-      "firstPaymentDueToOwner": "30 days after closing",
-      "location": "\u2014",
-      "ownerName": "\u2014",
-      "ownerEmail": "\u2014",
-      "notes": "\u2014",
-      "threeMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
-        "buyout": null,
-        "scgBuyout": null,
-        "buyoutSpread": null
-      },
-      "twelveMo": {
-        "ownerDown": 19995,
-        "scgDown": 19995,
-        "ownerMonthly": 3595,
-        "scgMonthly": 3595,
-        "profit": null,
-        "buyout": 129995,
-        "scgBuyout": 129995,
-        "buyoutSpread": null
-      },
-      "msrp": null,
-      "sixMo": {
-        "ownerDown": null,
-        "scgDown": null,
-        "ownerMonthly": null,
-        "scgMonthly": null,
-        "profit": null,
         "buyout": null,
         "scgBuyout": null,
         "buyoutSpread": null
